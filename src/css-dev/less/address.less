@@ -1,0 +1,133 @@
+/*****收货地址****/
+
+.address {
+    position: relative;
+    padding: 10px 20px;
+    background: #fff;
+    ul {
+        padding: 0;
+        //phone
+        .tel {
+            span+span {
+                margin-left: 10px;
+            }
+        }
+        li {
+            padding: 0 20px 0 10px;
+        }
+        //默认地址
+        .address-df {
+            .btn-addr {
+                .create-btn-outline(@text-susess, 24px, 80px);
+                font-size: 12px;
+                //选中的样式
+                &.active {
+                    .create-btn-outline(@text-danger, 24px, 80px);
+                }
+            }
+        }
+        li+li {
+            margin-top: 5px;
+        }
+    }
+    //图标
+    .icon-bianji {
+        position: absolute;
+        top: 35px;
+        right: 20px;
+        font-size: 24px;
+    }
+    &+.address {
+        border-top: 1px solid @text-ash-3;
+    }
+}
+
+//添加收货地址按钮
+.address-btn {
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    .btn {
+        .create-btn(@text-danger, 40px, 100%);
+        font-size: 16px;
+        border-radius: 4px;
+    }
+    &+.mui-content {
+        padding-bottom: 60px;
+    }
+}
+
+
+/***编辑收货地址****/
+
+.address-edit {
+    background: #fff;
+    .mui-input-row {
+        position: relative;
+        padding: 5px;
+        input,
+        textarea {
+            font-size: 14px;
+        }
+        textarea {
+            height: 60px;
+        }
+        //图标
+        .mui-icon.mui-icon-arrowright {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 18px;
+        }
+        &+.mui-input-row {
+            border-top: 1px solid @text-ash-3;
+        }
+    }
+    //提交按钮
+    .btns {
+        margin-top: 20px;
+        padding: 10px;
+        .btn {
+            .create-btn(@text-primary, 40px, 100%);
+            font-size: 16px;
+        }
+    }
+    //自定义标签
+    .cst-tab {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+        border-top: 1px solid @text-ash-3;
+        border-bottom: 1px solid @text-ash-3;
+        .mui-col-xs-2 {
+            width: 20%;
+            text-align: center !important;
+        }
+        a {
+            margin-bottom: 5px;
+            .create-btn(#fff, 24px, 50px);
+            color: @text-777;
+        }
+        //自定义标签添加项
+        .cst-btn {
+            .create-btn(#fff, 24px, 70px);
+            color: @text-777;
+        }
+    }
+}
+
+//选择地址
+
+    .mui-poppicker-body .mui-picker {
+        background: #fafafa;
+    }
+    .mui-poppicker-body .mui-picker ul li {
+        color: #666;
+    }
+    .mui-pciker-rule.mui-pciker-rule-ft {
+//      background: orange;
+//      opacity: .5;
+    }

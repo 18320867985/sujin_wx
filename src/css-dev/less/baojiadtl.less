@@ -1,0 +1,143 @@
+/*报价详情*/
+
+.baojiadtl {}
+
+//头像
+.baojiadtl-timg {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    height: 180px;
+    background: #fff;
+    text-align: center;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+    }
+}
+
+//导航链接
+.baojiadtl-nav {
+    border-top: 1px solid @text-ash-3;
+    border-bottom: 1px solid @text-ash-3;
+    background: #fff;
+    .item {
+        padding: 15px 5px 10px 5px;
+        margin: 0;
+        text-align: center;
+        img {
+            width: 28px;
+            height: 28px;
+        }
+        h4 {
+            margin: 0 auto;
+            margin-top: 10px;
+            max-height: 38px;
+            min-height: 38px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &+.item {
+            border-left: 1px solid @text-ash-3;
+        }
+    }
+}
+
+//厂商信息
+.baojiadtl-xx {
+    //描述
+    .des {
+        padding: 10px;
+        background: @text-ash-3;
+        .iconfont.icon-shizhong-copy {
+            margin-right: 5px;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+        
+        //现圆图
+        .rdt{
+            position: relative;
+       
+            float: left;
+            width: 24px;
+            height: 24px;
+            
+            margin-right: 10px;
+            line-height: 24px;
+            text-align: center;
+            color:#fff;
+            font-size: 14px;
+            border-radius: 50%;
+            background: @text-primary;
+          
+        }
+    }
+    //列表说明属性
+    ul.list {
+        margin-top: 0;
+        padding: 10px 10px 20px 10px;
+        background: #fff;
+        li {
+            &.price {
+                padding: 10px 0;
+                font-size: 16px;
+                font-weight: 600;
+                color: @text-warning;
+                vertical-align: middle;
+                .iconfont {
+                    font-size: 16px;
+                
+                    margin-right: -5px;
+                    font-weight: 600;
+                }
+                //在线洽谈
+                .btn-link {
+                    margin-right: 10px;
+                    .create-btn(@text-warning,24px);
+                    font-weight: 500;
+                    border-radius: 4px;
+                }
+            }
+        }
+        li+li {
+            margin-top: 8px;
+        }
+    }
+}
+
+//其他报价信息
+.baojiadtl-other {
+    margin-top: -15px !important;
+    background: @text-ash-3;
+    .des {
+        padding: 10px;
+        .iconfont {
+            margin-right: 5px;
+        }
+    }
+    .table {
+        background: #fff;
+        @pad: 15px 5px;
+        thead tr th {
+            padding: @pad;
+            border: none !important;
+            font-weight: 500;
+            text-align: center;
+        }
+        tr td {
+            padding: @pad;
+            .mui-icon {
+                font-size: 18px;
+            }
+        }
+    }
+}

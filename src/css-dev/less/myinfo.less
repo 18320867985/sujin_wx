@@ -1,0 +1,184 @@
+/*我的信息*/
+
+
+
+//我的图片
+.myinfo-img {
+    position: relative;
+    padding: 0 !important;
+    .img-lg {
+        width: 100%;
+        margin: 0 !important;
+        max-height: 300px;
+        min-height: 200px;
+    }
+}
+
+
+
+
+.myinfo-img-cont {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -100px;
+    z-index: 888;
+    width: 200px;
+    height: 160px;
+    text-align: center;
+    //我的头像
+    .my-pt {
+        display: inline-block;
+        float: none;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: none;
+    }
+    .my-name {
+        margin-top: 10px;
+        height: 28px;
+        line-height: 28px;
+        padding: 0;
+      
+    }
+    //我的名称
+    .ttl {
+        display: inline-block;
+        margin: 0 !important;
+        text-align: center;
+        color: @text-777;
+        font-size: 28px;
+        color: #fff;
+        vertical-align: top;
+    }
+    img {
+        display: inline-block;
+        margin: 0 !important;
+        margin-left: 10px;
+        vertical-align:  bottom;
+    }
+}
+
+.myinfo-item {
+   
+    padding: 0 10px;
+    background: #fff;
+    .mui-table-view {
+        margin: 0;
+        border: none !important;
+    }
+    .mui-pull-left,
+    .mui-pull-right {
+        padding: 5px 0;
+        span {
+            vertical-align: middle;
+        }
+    }
+    //审核
+    .myinfo-order-hw {
+        padding: 15px 0 10px 0;
+        .iconfont {
+            font-size: 28px;
+            color: @text-777;
+        }
+        //h4
+        h4 {
+            margin: 10px;
+            font-size: 14px;
+            font-weight: 200;
+        }
+    }
+    //横线
+    li+li {
+        border-top: 1px solid @text-ash-2;
+    }
+    ul {
+        padding: 0;
+        li {
+            padding: 10px 5px;
+        }
+    }
+    //图标
+    //定制
+    .iconfont {
+        margin-right: 3px;
+        font-size: 24px;
+        margin-left: 0px;
+    }
+    .icon-dingdan {
+        color: rgb(149, 88, 218);
+        font-size: 18px;
+    }
+    .iconfont.icon-paging-r {
+        font-size: 14px;
+    }
+    //商品图标
+    .icon-shangpinguanli {
+        color: #F862D7;
+    }
+}
+
+
+// 信息通知
+.myinfo-notice{
+    margin-top: -5px;
+    padding: 10px;
+    background: #fff;
+    h4{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    //每一项
+    .myinfo-notice-item+ .myinfo-notice-item{
+        
+        border-top: 1px solid @text-ash-3;
+    }
+    
+      .mui-col-xs-4{
+          position: relative;
+            text-align: center;
+            margin: 10px 0;
+            
+                h5{
+                    font-weight: 400;
+                    color: @text-base;
+                };
+            &+.mui-col-xs-4{
+                padding: 5px;
+                border-left: 1px solid @text-ash-3;
+                
+                
+            }
+            
+            //badge
+            .mui-badge {
+                position: absolute;
+                top: -8px;
+            }
+        }
+    
+}
+
+.myinfo-set{
+    h4{
+        font-weight: 400;
+        font-size: 16px;
+        
+    }
+    
+}
+
+
+
+//退出
+.myinfo-out {
+    padding: 10px;
+    .btn{
+        
+        .create-btn(@text-primary,46px,100%);
+        font-size: 16px;
+    }
+    
+}

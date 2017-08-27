@@ -1,0 +1,217 @@
+/*var*/
+
+//text 文本颜色值
+@text-base: #3e444c; //默认字体颜色
+@text-ash: #aab2bd;
+@text-ash-2: #e6e9ed;
+@text-ash-3: #f0f3f5;
+@text-777: #7a7a7a;
+@text-999: #9a9a9a;
+@text-susess: #009984; //成功
+@text-success: @text-susess; //成功
+@text-warning: #f85043; //警告
+@text-danger: #e52c67; //危险
+@text-hover: @text-danger;
+@text-white: #fff;
+@text-primary: #09a2e9;
+@text-h：#666;
+@background-menu-active: #f9f9f9;
+//label 标签
+@label-color: @text-base;
+//a 链接
+@a-color: @text-base;
+@a-hover-color: @text-hover;
+@a-active-color: @text-danger;
+//分隔线color
+@jiangge-color: @text-ash-2;
+//font-size 字体 16px
+@base-a-fontsize: 16px;
+//input 输入框
+@input-size: 14px;
+@input-color: @text-base;
+@input-br: @text-ash;
+@input-focus-color :@text-hover;
+@placeholder-color: #999;
+//页脚h4字体color
+@text-band: #666;
+
+/*默认样式*/
+
+body {
+    font-family: "微软雅黑,宋体, 楷体  ";
+    color: @text-base;
+    font-size: 14px;
+}
+
+.body-bg {
+    background: @text-ash-3;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+
+/*公共部分*/
+
+//前景色
+.text-base {
+    color: @text-base;
+}
+
+.text-ash {
+    color: @text-ash;
+}
+
+.text-ash-2 {
+    color: @text-ash-2;
+}
+
+.text-ash-3 {
+    color: @text-ash-3;
+}
+
+.text-777 {
+    color: @text-777;
+}
+
+.text-999 {
+    color: @text-999;
+}
+
+.text-susess {
+    color: @text-susess;
+}
+.text-success {
+    color: @text-susess;
+}
+.text-warning {
+    color: @text-warning;
+}
+
+.text-danger {
+    color: @text-danger;
+}
+
+.text-primary{
+    color: @text-primary;
+}
+
+//背景色
+.bg-susess {
+    background: @text-susess;
+}
+
+.bg-warning {
+    background: @text-warning;
+}
+
+.bg-danger {
+    background: @text-danger;
+}
+
+.bg-primary{
+    background: rgb(9,162,232);
+}
+
+/* 输入框focus焦点*/
+
+//input[type=text]:focus,
+//input[type=password]:focus,
+//select:focus,
+//textarea:focus {
+//  border: 1px solid @text-warning !important;
+//  outline: none !important;
+//}
+//a link
+a:active {
+    text-decoration: none;
+    color: @text-warning ;
+}
+
+select option {
+    outline: none !important;
+}
+
+//placeholder
+
+/*webkit*/
+
+input::-webkit-input-placeholder {
+    color: @placeholder-color;
+}
+
+
+/*IE10+*/
+
+input:-ms-input-placeholder {
+    color: @placeholder-color;
+}
+
+
+/*Firefox4-18*/
+
+input:-moz-placeholder {
+    color: @placeholder-color;
+}
+
+
+/*Firefox19+*/
+
+input::-moz-placeholder {
+    color: @placeholder-color;
+}
+
+//创建按钮
+.create-btn(@bgcolor: @text-danger, @height: 28px, @width: 80px, @pad-l-r: 0, @font-size: 14px, @color: #fff) {
+    display: inline-block;
+    height: @height;
+    line-height: @height;
+    width: @width ;
+    padding: @pad-l-r;
+    text-align: center;
+    color: @color;
+    background: @bgcolor;
+    font-size: @font-size;
+    transform: all .5;
+    border: 1px solid darken(@bgcolor, 5%);
+    &:active {
+        background: darken( @bgcolor, 10%) !important;
+        border: 1px solid darken(@bgcolor, 15%);
+    }
+}
+
+//创建无底色按钮
+.create-btn-outline(@br-color: @text-777, @height: 28px, @width: 80px, @pad-l-r: 0, @font-size: 14px) {
+    display: inline-block;
+    height: @height !important;
+    line-height: @height  !important;
+    width: @width !important;
+    padding: @pad-l-r !important;
+    text-align: center;
+    color: @br-color;
+    background: #fff;
+    font-size: @font-size;
+    vertical-align: middle;
+    transform: all .8;
+    border: 1px solid darken(@br-color, 5%);
+    border-radius: 4px;
+    &:active {
+        color: #fff;
+        background: darken( @br-color, 5%) !important;
+        border: 1px solid darken(@br-color, 10%);
+    }
+}
+
+//头部背影
+.mui-bar.mui-bar-nav {
+    background: @text-white;
+}
+
+//=================下面编写less页面代码======================

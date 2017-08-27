@@ -1,0 +1,63 @@
+
+/*会员信息*/
+
+.member-cont{
+    margin-top:  10px;
+    padding: 10px;
+    background: #fff;
+    
+    //标题
+    h4{
+        margin-top: 10px;
+        padding-bottom: 15px;
+        padding-left: 5px;
+        text-align: left;
+        color: @text-base;
+        font-weight:500;
+        font-size: 16px;
+        border-bottom: 1px solid @text-ash-3;
+    }
+    
+    //列表
+    ul{
+        padding: 0;
+       
+        li+li{
+            margin-top: 10px;
+         }
+        
+        //op
+        .op{
+            font-size: 14px;
+            @media (max-width:330px){
+              font-size: 12px;  
+            }
+            span{
+                margin: 0;
+                padding: 0;
+                font-weight: 200;
+                color:@text-ash-2;
+            }
+        }
+        
+    }
+    
+      //相连的每一项
+        .member-cont-item+.member-cont-item{
+            padding-top: 15px;
+            border-top: 1px solid @text-ash-3;
+        }
+}
+
+
+//提交
+
+.member-cont-btns{
+    padding: 10px 10px 20px 10px;
+    text-align: center;
+    .btn{
+        .create-btn(@text-primary,40px,150px);
+        font-size: 16px;
+        border-radius: 0;
+    }
+}

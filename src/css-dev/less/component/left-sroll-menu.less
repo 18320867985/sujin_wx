@@ -1,0 +1,64 @@
+/*****left-sroll-menu 左侧菜单组件 start**********/
+//左侧菜单组件
+.left-sroll-menu {
+    position: fixed;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+   
+    background: #fafafa;
+   
+    
+}
+
+//左侧菜单组件标题
+.left-sroll-menu-ttl{
+    height: 100%;
+    padding: 0;
+  
+    overflow-y: scroll;
+
+    .menu{
+        
+        margin: 0;
+        padding:  0;
+     
+        
+        li{
+       
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;    
+            
+            
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 10px 5px  10px 5px;
+                color:#777;
+                text-align: center;
+            }
+            
+            //选择样式
+            &.active a{
+                background: #fff;
+                color: red;
+                
+            }
+            
+        }
+    }
+} 
+
+//左侧菜单组件内容
+
+.left-sroll-menu-content{
+      height: 100%;
+     padding: 0;
+  
+    overflow-y: scroll;
+}
+
+/*****左侧菜单组件 end**********/

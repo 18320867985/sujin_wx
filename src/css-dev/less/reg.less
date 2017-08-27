@@ -1,0 +1,84 @@
+/****注册******/
+
+.reg {
+    margin-top: 10px;
+    .reg-form {
+        padding: 5px 10px;
+        background: #fff;
+        label {
+            display: block;
+            height: 45px;
+            line-height: 45px;
+            width: 25%;
+            float: left;
+            padding-left: 10px;
+            font-size: 16px;
+        }
+        
+        .input-box{
+            position: relative;
+              width: 70%;
+               float: left;
+                 
+           //获取验证码
+          a.req-yzm{
+             position: absolute;
+             top:0;
+             right: -10px;
+            display: block;
+            height: 45px;
+            line-height: 45px;
+            width: 100px;
+            text-align: center;
+            font-size: 14px;
+           
+            
+            border-left: 1px solid @text-ash-2 ;
+            color:@text-ash;
+            
+            //选择
+              &.mui-active{
+                  color: @text-susess;  
+              }
+           
+          }
+        }
+        input {
+            
+            height: 45px;
+            line-height: 45px;
+            
+            margin: 0 !important;
+            font-size: 16px;
+            border: none;
+        }
+        
+        //横线
+          .mui-row +.mui-row {
+              border-top:1px solid @text-ash-2;
+          } 
+          
+        
+          
+          
+          
+    }
+    //按钮
+    .reg-btn {
+        margin-top: 40px;
+        padding: 0 10px;
+        input {
+             .create-btn(@text-ash,48px,100%,0,16px);
+        }
+        
+        &.mui-active input{
+            
+            .create-btn(@text-danger,48px,100%,0,16px);
+        }
+    }
+}
+
+
+
+
+

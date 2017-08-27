@@ -1,0 +1,57 @@
+
+/*求购*/
+
+.qiugou-cont{
+    margin-top:  10px;
+    padding: 10px;
+    background: #fff;
+    
+    //标题
+    h4{
+        margin-top: 10px;
+        padding-bottom: 20px;
+        text-align: center;
+        color: @text-primary;
+        font-weight: 500;
+        border-bottom: 1px solid @text-ash-3;
+    }
+    
+    //列表
+    ul{
+        padding: 0;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        
+        li+li{
+            margin-top: 10px;
+         }
+        
+        //op
+        .op{
+            span{
+                margin:  0 3px;
+                font-weight: 200;
+                color:@text-ash-2;
+            }
+        }
+        
+        //相连的每一项
+        
+            border-bottom: 1px solid @text-ash-3;
+        
+        
+    }
+}
+
+
+//提交
+
+.qiugou-cont-btns{
+    padding: 10px 10px 20px 10px;
+    text-align: center;
+    .btn{
+        .create-btn(@text-primary,40px,150px);
+        font-size: 16px;
+        border-radius: 0;
+    }
+}

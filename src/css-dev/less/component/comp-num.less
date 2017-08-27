@@ -1,0 +1,89 @@
+
+
+/*
+ <div class="number" >
+   <button class="minus btn" type="button">-</button>
+     <input class="num" type="number" value="1"  data-min="1"/>
+    <button class="plus btn" type="button">+</button>
+ </div>
+ * */
+//.number创建数字框的类1
+.create-num(@width:90px,@height:24px,@br:#ddd,@fonf-size:14px){
+    display: inline-block;
+    float: left;
+         width:@width;
+         .btn,
+         .num
+         {
+             display: inline-block;
+             float: left;
+           
+             height: @height;
+             line-height:@height;
+             padding: 0;
+             text-align: center;
+             font-size: @fonf-size;
+             border-radius:0 ;
+             border: 1px solid @br;
+            
+         }
+         .btn{
+               width:@width*0.3; 
+                background: transparent;
+                 color:#333;
+                 &:active{
+                    background:@text-ash-3; 
+                    border: 1px solid @br;  
+                 }
+         }
+        .num{
+         width:@width*0.4; 
+            border-left: none;
+            border-right: none;
+             background: #fff;
+           
+        }
+    
+
+}
+
+//.number创建数字框的类2
+.comp-num(@width:90px,@height:24px,@br:#ddd,@fonf-size:14px){
+   
+   .comp-number {
+        
+         width:@width;
+         .btn,
+         .num
+         {
+             display: inline-block;
+             float: left;
+           
+             height: @height;
+             line-height:@height;
+             padding: 0;
+             text-align: center;
+             font-size: @fonf-size;
+             border-radius:0 ;
+             border: 1px solid @br;
+            
+         }
+         .btn{
+               width:@width*0.3; 
+                background: transparent;
+                 color:#333;
+                 &:active{
+                    background:@text-ash-3; 
+                    border: 1px solid @br;  
+                 }
+         }
+        .num{
+         width:@width*0.4; 
+            border-left: none;
+            border-right: none;
+             background: #fff;
+           
+        }
+    
+    }
+}

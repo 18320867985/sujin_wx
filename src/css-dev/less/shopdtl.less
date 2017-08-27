@@ -1,0 +1,118 @@
+/*现货商城详情*/
+.shopdtl{
+    
+}
+
+
+//厂商信息
+.shopdtl-xx {
+    //描述
+    .des {
+        padding: 10px;
+        background: #fafafa;
+        .iconfont.icon-shizhong-copy {
+            margin-right: 5px;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+        
+        .icon-yuanshixin{
+            font-size: 12px; padding-right: 10px;
+        }
+        
+       
+    }
+    //列表说明属性
+    ul.list {
+        margin-top: 0;
+        padding: 10px 10px 20px 10px;
+        background: #fff;
+        li {
+            &.price {
+                padding: 10px 0;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+                color: @text-warning;
+                vertical-align: middle ;
+                .iconfont {
+                    font-size: 16px;
+                
+                    margin-right: -5px;
+                    font-weight: 600;
+                }
+                //在线洽谈
+                .btn-link {
+                    margin-right: 10px;
+                    .create-btn(@text-warning,24px);
+                    font-weight: 500;
+                    border-radius: 4px;
+                }
+            }
+        }
+        li+li {
+            margin-top: 8px;
+        }
+    }
+}
+
+
+//联系电话
+.shopdtl-tel{
+    margin-top: -15px;
+    padding: 15px;
+     border-top: 1px solid @text-ash-2;
+    border-bottom: 1px solid @text-ash-2;
+    background: #fafafa;
+    
+    .iconfont{
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    
+    .phone{
+        font-weight: 600;
+        color:@text-777;
+    }
+}
+
+//价格走势
+
+.shopdtl-price{
+   
+   background: #fafafa;
+  
+    .ttl{
+         padding: 15px;
+         border-bottom: 1px solid @text-ash-2;
+        .rdt{
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .wz{
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    
+    //描述
+    .ms{
+         padding: 15px;
+         border-bottom: 1px solid @text-ash-2;
+         text-align: center;
+         
+         .new{padding-bottom: 5px;}
+         
+         .iconfont{
+             font-weight: 600;
+             margin-right: -3px;
+             font-size: 16px;
+             color:@text-warning;
+          
+         }
+         .ct{
+             font-weight: bold;
+               color:@text-warning;
+         }
+    }
+}

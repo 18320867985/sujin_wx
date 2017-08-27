@@ -1,0 +1,113 @@
+
+/*****登陆******/
+
+.login{
+ 
+}
+
+//标题
+.login-ttl{
+    
+    margin-top: 10px;
+       background: #fff;
+   .mui-col-xs-6{
+      
+       border-bottom: 1px solid @text-ash-2;;
+          h5{
+               height: 40px;
+       line-height: 40px;
+            font-size: 18px;
+         };
+         &+.mui-col-xs-6{
+             border-left: 1px solid @text-ash-2;
+         }
+         
+         //选择 的样式
+         
+         &.mui-active h5{
+             color:@text-danger;
+         }
+         
+    }
+  
+
+}
+
+//login-form 表单
+
+.login-form {
+        padding: 5px 10px;
+        background: #fff;
+        label {
+            display: block;
+            height: 45px;
+            line-height: 45px;
+            width: 10%;
+            float: left;
+           padding-left:8px;
+            
+            .iconfont.icon-mima1,
+             .iconfont.icon-ren-copy,
+             {
+               font-size: 24px !important;  
+               color:@text-ash;
+            }
+        }
+        
+        .input-box{
+              width: 80%;
+                 float: left;
+        }
+        input {
+            height: 45px;
+            line-height: 45px;
+            
+            margin: 0 !important;
+            font-size: 16px;
+            border: none;
+        }
+        
+        .mui-row+.mui-row{
+            border-top:1px solid @text-ash-2;
+        }
+    }
+    
+
+//btn
+
+.login-btn{
+   
+   margin-top: 40px; 
+   padding: 0 10px;
+   .mui-btn{
+         .create-btn(@text-ash,48px, 100%);
+         display: block;
+         font-size: 16px;
+         letter-spacing: 2px;
+       
+         
+   }
+   .mui-btn.mui-active{
+         .create-btn(@text-danger,48px, 100%);
+         display: block;
+         font-size: 16px;
+         letter-spacing: 2px;
+       
+         
+   }
+
+}
+
+//快速注册与找回密码
+.login-findpwd{
+    
+    margin-top: 20px;
+    padding: 0 15px;
+    a{
+        color:@text-777;
+        transition:  all .8;
+        &:active{
+            color:@text-warning;
+        }
+    }
+}

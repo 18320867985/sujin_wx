@@ -1,0 +1,72 @@
+
+/***企业基本信息****/
+
+        .qy-baseinfo .mui-navigate-right span.mui-pull-right{
+            margin-right: 25px;
+        }
+        
+       .qy-baseinfo-item{
+          
+           .mui-table-view-cell{
+               
+              height: 60px;
+             
+              vertical-align: middle;
+              
+               span{
+                   display: inline-block;
+                    height: 40px;
+                    line-height: 40px;
+                    width: 20%;
+                    text-align: center;
+                   vertical-align: middle;
+               }
+               input[type='text']{
+                width: 80%;
+                   padding: 6px 12px;
+                   font-size: 14px;
+                   border: none;
+                 
+               }
+               
+               //获取验证码按钮
+               
+               .ref-btn.mui-active{
+                   position: absolute;
+                   top: 15px ;
+                   right: 10px;
+                   
+                       .create-btn(@text-primary,30px,110px);
+                       padding: 0;
+                   
+                  
+               }
+               .ref-btn{
+                   position: absolute;
+                   top: 15px ;
+                   right: 10px;
+                   .create-btn(@text-ash,30px,110px);
+                   
+                     padding: 0 !important;
+                       
+                     span{ margin: 0 !important;
+                     padding: 0 !important;}
+                   
+                  
+               }
+               
+           }
+           
+           
+       }
+     
+     
+     //下一步
+     .qy-baseinfo-btns{
+         margin-top: 20px;
+         padding: 10px;
+         .btn{
+              .create-btn(@text-primary,44px,100%);  
+              font-size: 16px;
+         }
+     }  

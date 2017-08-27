@@ -1,0 +1,94 @@
+
+/*报价列表*/
+.baojia{
+    
+   
+   //导航条
+   .shop-nav a.mui-control-item{
+     
+       font-size: 14px !important;
+       font-weight: 500 !important;
+   }
+}
+
+//head背景
+.baojia-head.mui-bar.mui-bar-nav {
+    background: #fff !important;
+    box-shadow: 0 1px 1px #ddd;
+    
+    h1.mui-title,
+    .mui-action-back{
+        color:@text-base;
+    }
+    
+}
+
+
+.baojia-cont{
+  margin-top: 10px;
+    padding: 10px;
+    background: #fff;
+    
+    //标题
+    h4{
+        margin-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        color: @text-primary;
+        font-weight: 500;
+        font-size: 16px;
+        border-bottom: 1px solid @text-ash-3;
+    }
+    
+    //列表
+    ul{
+        padding: 0;
+     
+        padding-left: 10px;
+        
+        li+li{
+            margin-top: 10px;
+         }
+        
+        //op
+        .op{
+            span{
+                margin:  0 3px;
+                font-weight: 200;
+                color:@text-ash-2;
+            }
+        }
+        
+        //相连的每一项
+        &+ul{
+            padding-top: 10px;
+            border-top: 1px solid @text-ash-3;
+        
+        }
+        
+        //按钮
+        .btns {
+            .btn{
+                .create-btn(@text-warning,22px,60px);
+                font-size: 12px;
+                border-radius: 0;
+            }
+            label{
+                vertical-align: top;
+                margin-left: 5px;
+            }
+            
+            select{
+                display: inline-block !important;
+                width: 60px;
+                height: 22px;
+                padding: 0 5px;
+                text-indent: 5px;
+              
+                border-radius: 0;
+                border:1px solid  @text-ash !important;
+                vertical-align: top;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+
+/***test.less***/
+
+
+
+//.mixin (@h:20px,@a:50px) {
+//height: @h;
+//}
+//
+//.mixin (@h:20px,@a:50px) when (@a>= 50px) {
+// width:50px;
+//}
+//
+//.mixin (@h:20px,@a:50px) when (@a< 50px) {
+//width:20px;
+//}
+
+//
+//.test-class2 { .mixin(10px,20px) }
+
+//创建按钮
+//.test-create-btn(@bgcolor: @text-danger, @height: 28px, @width: 80px, @pad-l-r: 0, @font-size: 14px, @color: #fff) {
+//  display: inline-block;
+//  height: @height;
+//  line-height: @height;
+//  width: @width ;
+//  padding: @pad-l-r;
+//  text-align: center;
+//  color: @color;
+//  background: @bgcolor;
+//  font-size: @font-size;
+//  transform: all .5;
+//  border: 1px solid darken(@bgcolor, 5%);
+//  &:active {
+//      background: darken( @bgcolor, 20%) !important;
+//      border: 1px solid darken(@bgcolor, 15%);
+//  }
+//}
+//
+////创建按钮
+//.test-create-btn(@bgcolor: @text-danger, @height: 28px, @width: 80px, @pad-l-r: 0, @font-size: 14px, @color: #fff)
+//when(@height<28px)
+// {
+// font-size: 10px;
+//}
+//
+//
+//.test{
+//  
+// .test-create-btn(#ccc,20px,100%);   
+//}
