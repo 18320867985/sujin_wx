@@ -3,7 +3,12 @@
 	mui.init({
 				swipeBack: true //启用右滑关闭功能
 	});
+//跳转的链接
+$(".mui-bar.mui-bar-tab .mui-tab-item").on("tap", function() {
+	//	mui('.mui-popover').popover('hide'); //show hide toggle
+	window.location.href = this.href ;
 
+});
 	
 //
 ///*****置顶组件start*********/

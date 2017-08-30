@@ -10,7 +10,7 @@
 		<title>行情中心</title>
 		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
 		<link rel="stylesheet" href="Content/Home/all.css" />
-		<link rel="stylesheet" type="text/css" href="Content/Home/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="Content/Home/mui.picker.min.css" />
 	</head>
 
 	<body>
@@ -18,7 +18,7 @@
 		<header class="quotation-head  mui-clearfix ">
 			<!--日历-->
 			<div class="date-box">
-				<span class="iconfont icon-rili"  data-options='{"type":"date"}'></span>
+				<span class="iconfont icon-rili" data-options='{"type":"date"}'></span>
 			</div>
 
 			<!--search-->
@@ -249,58 +249,69 @@
 
 		<script src="js/Home/all.js " type="text/javascript " charset="utf-8 "></script>
 		<script src="js/Home/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
-		
+
 		<script>
-			(function($){
+			(function($) {
 				
+				//选择的样式1
+				$(".suotation-cont-box1 li").on("tap",function(){
+					
+					$(".suotation-cont-box1 li").removeClass("active");
+					$(".suotation-cont-box2 li").removeClass("active");
+					$(this).addClass("active");
+				})
+				
+				//选择的样式2
+				$(".suotation-cont-box2 li").on("tap",function(){
+					
+					$(".suotation-cont-box2 li").removeClass("active");
+					$(".suotation-cont-box1 li").removeClass("active");
+					$(this).addClass("active");
+				})
+
 				$(".suotation-cont-box1 .btn1").on("click", function() {
 
-				$(this).parents(".suotation-cont-box1").hide(400);
-				$(".suotation-cont-box2").show(400);
+					$(this).parents(".suotation-cont-box1").hide(400);
+					$(".suotation-cont-box2").show(400);
 
-			})
+				})
 
-			$(".suotation-cont-box2 .btn2").on("click", function() {
+				$(".suotation-cont-box2 .btn2").on("click", function() {
 
-				$(this).parents(".suotation-cont-box2").hide(400);
-				$(".suotation-cont-box1").show(400);
+					$(this).parents(".suotation-cont-box2").hide(400);
+					$(".suotation-cont-box1").show(400);
 
-			})
+				})
+
+			})(window.Zepto);
 			
-			
-			
-			
-			
-			})(window.Zepto)
-			
-			
-				mui.init();
-			
-				var btns = mui('.icon-rili');
-				btns.each(function(i, btn) {
-					
-					btn.addEventListener('tap', function() {
-						var optionsJson = this.getAttribute('data-options') || '{}';
-						var options = JSON.parse(optionsJson);
-						var id = this.getAttribute('id');
-						/*
-						 * 首次显示时实例化组件
-						 * 示例为了简洁，将 options 放在了按钮的 dom 上
-						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
-						 */
-						var picker = new mui.DtPicker(options);
-						picker.show(function(rs) {
-							
-							document.querySelector(".txt-box").value=rs.text;
-							
+
+			mui.init();
+
+			var btns = mui('.icon-rili');
+			btns.each(function(i, btn) {
+
+				btn.addEventListener('tap', function() {
+					var optionsJson = this.getAttribute('data-options') || '{}';
+					var options = JSON.parse(optionsJson);
+					var id = this.getAttribute('id');
+					/*
+					 * 首次显示时实例化组件
+					 * 示例为了简洁，将 options 放在了按钮的 dom 上
+					 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+					 */
+					var picker = new mui.DtPicker(options);
+					picker.show(function(rs) {
+
+						document.querySelector(".txt-box").value = rs.text;
+
 						//	alert( rs.text);
-						
+
 						picker.dispose();
-					
-						});
-					}, false);
-				});
-			
+
+					});
+				}, false);
+			});
 		</script>
 	</body>
 
