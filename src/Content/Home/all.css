@@ -4416,7 +4416,7 @@ input::-moz-placeholder {
 }
 /*************confirm按钮改写mui样式********/
 .mui-popup-buttons .mui-popup-button {
-  color: #09a2e9;
+  color: #e52c67;
 }
 .mui-popup-buttons .mui-popup-button.mui-popup-button-bold {
   color: #3e444c;
@@ -4425,7 +4425,7 @@ input::-moz-placeholder {
 /*
  <div class="number" >
    <button class="minus btn" type="button">-</button>
-     <input class="num" type="number" value="1"  data-min="1"/>
+  <input class="num" type="number" value="1"data-min="0" data-max="9999" data-step="1" />
     <button class="plus btn" type="button">+</button>
  </div>
  * */
@@ -4482,6 +4482,36 @@ input::-moz-placeholder {
   overflow-y: scroll;
 }
 /*****左侧菜单组件 end**********/
+/*h5上传组件*/
+.progress-box {
+  position: relative;
+  margin-bottom: 10px;
+}
+.progress-box .progress-all {
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 5px;
+  margin-bottom: 12px;
+  background: #ddd;
+}
+.progress-box .progress-now {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: orangered;
+}
+.progress-box .progress-num {
+  position: relative;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  text-align: center;
+  font-size: 12px;
+}
 /***其他****/
 .zhiding {
   position: fixed;
@@ -5209,10 +5239,34 @@ input::-moz-placeholder {
 .qy-upload .section-2 .icon-jia {
   font-size: 36px;
 }
+.qy-upload .section-2 + .section-2 {
+  border-top: 1px solid #f0f3f5;
+  padding-top: 20px;
+}
 .qy-upload .box {
   border: 2px  dotted  #ddd;
   height: 200px;
   padding-top: 40px;
+}
+.qy-upload .btns {
+  padding: 20px 10px;
+}
+.qy-upload .btns .btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  background: #09a2e9;
+  font-size: 14px;
+  transform: all .5;
+  border: 1px solid #0891d0;
+}
+.qy-upload .btns .btn:active {
+  background: #0780b8 !important;
+  border: 1px solid #066f9f;
 }
 .qy-upload-ok-item {
   position: absolute;

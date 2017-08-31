@@ -1,0 +1,39 @@
+
+/*h5上传组件*/
+
+.progress-box{
+          position: relative;
+          margin-bottom: 10px;
+         
+         @height:5px;
+        .progress-all{
+            position: relative;
+            clear: both;
+            width: 100%;
+            height: @height;
+            margin-bottom: 12px;
+            background: #ddd;
+        }
+        
+        .progress-now{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: @height;
+            background:   orangered;
+        }
+        
+        .progress-num{
+            position: relative;
+            top: @height;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            text-align: center;
+            font-size: 12px;
+         
+        }
+        
+
+}

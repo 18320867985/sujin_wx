@@ -50,7 +50,7 @@
 			if(arguments[2]){
 				btnArr2=btnsArr;
 			}
-			mui.confirm("<span class='iconfont icon-jinggao1 text-primary'></span> "+title, " ",btnArr2, function(e) {
+			mui.confirm("<span class='iconfont icon-jinggao1 text-danger'></span> "+title, " ",btnArr2, function(e) {
 				if(e.index===0){
 					fn();
 				}
