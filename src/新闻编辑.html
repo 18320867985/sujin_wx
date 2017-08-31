@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>新闻编辑</title>
+		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
+		<link rel="stylesheet" href="Content/Home/all.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav bg-white">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left text-base"></a>
+			<h1 class="mui-title">新闻编辑</h1>
+		</header>
+
+		<!--主体内容-->
+		<section class="mui-content ">
+
+			<!--定制订单-->
+			<div class="news-edit">
+
+				<form class="form" id="form">
+						
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">栏目</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="">
+								<option value="1">业务活动1</option>
+								<option value="2">业务活动2</option>
+								<option value="3">业务活动3</option>
+								<option value="4">业务活动4</option>
+								<option value="5">业务活动5</option>
+							</select>
+						</div>
+						
+					</div>
+
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">标题</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入标题" />
+						</div>
+						
+					</div>
+					
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">副标题</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入副标题" />
+						</div>
+						
+					</div>
+					
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">关键字</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入关键字" />
+						</div>
+						
+					</div>
+						
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">推荐</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="">
+								<option value="1">推荐</option>
+								<option value="2">不推荐</option>
+								
+							</select>
+						</div>
+						
+					</div>
+					
+					<div class="mui-row mui-row-group mui-clearfix ">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">发布时间</label>
+						</div>
+						<div class="mui-col-xs-10">
+							<input class="file-date mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="发布时间" />
+							<button class="btn-date" type="button">设为当前时间</button>
+						
+							
+						</div>
+					</div>
+				
+					<div class="mui-row mui-row-group mui-clearfix ">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="请选择上传文件" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide" type="file" name="" id="fileUp" value=""   accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs"></label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<img class="img" src="" alt="上传图片" />
+
+							<p class="des">
+								<span class="text-warning iconfont icon-error1"></span> 温馨提示：请上传清晰的图片，图片大小不超过3M，可上传5张，支持jpg,jpeg,png格式。
+							</p>
+						</div>
+					</div>
+
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">新闻内容</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+
+							<textarea class="textare" name="" rows="" cols=""></textarea>
+						</div>
+					</div>
+
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">作者</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入作者" />
+						</div>
+						
+					</div>
+					
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">信息来源</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入信息来源" />
+						</div>
+						
+					</div>
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs"></label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<button class="mui-btn-block ">提交</button>
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+
+		</section>
+
+		<script src="js/Home/all.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var fileupff = function(obj) {
+
+				$(obj).parents(".progress-box").find(".progress-all").show();
+
+				var file = document.getElementById("fileUp").files[0];
+				h5File.upload({
+					data: file,  //选择的文件
+					url: "",     //上传网址
+					outTime: 30000,
+					el: $(obj),  //当前element
+					size:300000000 ,//1m=1000000
+					seccess: function() {}, //成功回调
+					error: function() {} //错误回调
+
+				}); //调用上传接口
+			}
+
+			//文件上传
+			$(".btn-up").on("click", function() {
+
+				$("#fileUp").click();
+
+			});
+
+			$("#fileUp").change(function() {
+
+				fileupff(this);
+
+			});
+			
+			$(".btn-date").on("tap",function(){
+				
+				$(".file-date").val(new Date().format("yyyy-MM-dd HH:mm:ss"));
+			})
+		</script>
+	</body>
+
+</html>
