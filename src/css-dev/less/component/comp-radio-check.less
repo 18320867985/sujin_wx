@@ -1,0 +1,62 @@
+/*
+    <div class=" radio-box">
+        <input name="Checkbox" type="radio" id="inpu_1" name="radio-name">
+         <label for="inpu_1">最近一笔订单</label>
+
+     </div>
+ * 
+ * */
+
+.radio-box,
+.check-box
+{
+  //radio
+    input[type='radio']{
+       appearance:none;
+       vertical-align: middle;
+    }
+    input[type='radio']:before{
+        
+        font-family: iconfont;
+        content: "\e612";
+        font-size: 20px;
+        color:#ddd;
+      
+    }
+    
+     input[type='radio']:checked:before{
+        
+        font-family: iconfont;
+         content: "\e692"; 
+      
+        color: @text-warning;
+      
+    }
+    
+    
+    
+    //check-box
+    input[type='checkbox']{
+       appearance:none;
+       vertical-align: middle;
+    }
+    input[type='checkbox']:before{
+        
+        font-family: iconfont;
+        content: "\e60b";
+        font-size: 20px;
+        color:#ddd;
+      
+    }
+    
+     input[type='checkbox']:checked:before{
+        
+        font-family: iconfont;
+        content: "\e61d";
+        color: @text-warning;
+        
+      
+    }
+    
+    
+}

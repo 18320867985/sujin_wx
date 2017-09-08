@@ -24,17 +24,14 @@
 		<!-- 底部--->
 		<nav class="index-footer mui-bar mui-bar-tab ">
 			<a class="mui-tab-item mui-active" href="#">
-				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-icon iconfont  icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</a>
 			<a class="mui-tab-item">
 				<span class="mui-icon iconfont icon-sousuo"></span>
 				<span class="mui-tab-label">搜索</span>
 			</a>
-			<a class="mui-tab-item">
-				<span class="mui-icon iconfont icon-gouwuche"></span>
-				<span class="mui-tab-label">购物车</span>
-			</a>
+
 			<a class="mui-tab-item " href="会员信息.html">
 				<span class="mui-icon  iconfont icon-ren-copy"></span>
 				<span class="mui-tab-label">我的</span>
@@ -95,20 +92,28 @@
 			<!--导航-->
 			<nav class="index-nav mui-row">
 				<div class="mui-col-xs-3">
-					<img src="images/Home/市场报价.png" alt="导航图" />
-					<h4>市场报价</h4>
+					<a href="javascript:;">
+						<img src="images/Home/ttl_1.png" alt="导航图" />
+						<h4>市场报价</h4>
+					</a>
 				</div>
 				<div class="mui-col-xs-3">
-					<img src="images/Home/现货交易.png" alt="导航图" />
-					<h4>现货交易</h4>
+					<a href="javascript:;">
+						<img src="images/Home/ttl_2.png" alt="导航图" />
+						<h4>现货交易</h4>
+					</a>
 				</div>
 				<div class="mui-col-xs-3">
-					<img src="images/Home/行情中心.png" alt="导航图" />
-					<h4>行情中心</h4>
+					<a href="javascript:;">
+						<img src="images/Home/ttl_3.png" alt="导航图" />
+						<h4>行情中心</h4>
+					</a>
 				</div>
 				<div class="mui-col-xs-3 mui-ellipsis">
-					<img src="images/Home/金融.png" alt="导航图" />
-					<h4>供应链金融</h4>
+					<a href="javascript:;">
+						<img src="images/Home/ttl_4.png" alt="导航图" />
+						<h4>供应链金融</h4>
+					</a>
 				</div>
 
 			</nav>
@@ -150,7 +155,7 @@
 							<tr>
 								<td class="">6200</td>
 								<td class="">莫斯科</td>
-								<td class=" text-danger">
+								<td class="text-danger">
 									<span>￥</span>9333.0</td>
 								<td class="">
 									<span>16分钟前</span>
@@ -163,7 +168,9 @@
 								<td class="">6200</td>
 								<td class="">莫斯科</td>
 								<td class=" text-danger">
-									<span>￥</span>9333.0</td>
+									<span>￥</span>9333.0
+								</td>
+
 								<td class="">
 									<span>16分钟前</span>
 									<!--右图标-->
@@ -437,10 +444,10 @@
 					<h4 class="ttl">供应链金融</h4>
 					<div class="line"></div>
 				</div>
-				
+
 				<!--列表与图片-->
 				<div class="index-bj-jr-list mui-row">
-					<div  class="mui-col-xs-6">
+					<div class="mui-col-xs-6">
 						<ul>
 							<li>
 								<span class="iconfont icon-yuanshixin"></span>
@@ -459,16 +466,16 @@
 								<span>高收益</span>
 							</li>
 						</ul>
-						
+
 						<div class="btns">
 							<input class="btn" type="button" name="" id="" value="立即申请" />
 						</div>
 					</div>
-					
-					<div  class="mui-col-xs-6 mui-text-center">
+
+					<div class="mui-col-xs-6 mui-text-center">
 						<img class="tg-img" src="images/Home/托管服务器.png" alt="托管服务图片" />
 					</div>
-					
+
 				</div>
 
 			</div>
@@ -480,20 +487,17 @@
 			mui("#index_slider").slider({
 				interval: 5000
 			});
-			
-			
+
 			//选择的样式
-			window.onload=function(){
-				
-				$(".index-bj-se .xz-item").on("tap",function(){
-					
-					var p=$(this).parents(".index-bj-se");
-					$(".xz-item",p).removeClass("active");
+			window.onload = function() {
+
+				$(".index-bj-se .xz-item").on("tap", function() {
+
+					var p = $(this).parents(".index-bj-se");
+					$(".xz-item", p).removeClass("active");
 					$(this).addClass("active");
 				})
 			}
-			
-			
 		</script>
 	</body>
 

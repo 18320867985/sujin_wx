@@ -1,4 +1,3 @@
-
 /*****首页******/
 
 .index {
@@ -12,7 +11,6 @@
         .mui-indicator {
             width: 6px;
             height: 6px;
-         
             &+.mui-indicator {
                 margin-left: -3px;
             }
@@ -23,251 +21,241 @@
 }
 
 //nav导航
-.index-nav{
-   
-   padding: 20px 10px;
-   background: #fff;
-   .mui-col-xs-3{
-       text-align: center;
-       img{
-           height: 50px;
-           width: 50px;
-       }
-       
-       h4{
-           margin-top: 10px;
-           font-size: 16px;
-           font-weight: 500;
-       }
-   } 
+.index-nav {
+    padding: 20px 10px;
+    background: #fff;
+    .mui-col-xs-3 {
+        text-align: center;
+        a {
+            color: @text-base;
+        }
+        img {
+            height: 50px;
+            width: 50px;
+        }
+        h4 {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
 }
 
-
 //市场报价
-
-@index-bj-color:#44dbda; //标题字体颜色
-
-.index-bj{
-  
+@index-bj-color: #3399cc; //标题字体颜色
+.index-bj {
     padding: 10px 0;
-  
 }
 
 //ttl
-.index-bj-ttl{
+.index-bj-ttl {
     position: relative;
-    padding: 10px;
+    padding: 10px 3px 3px 3px;
     text-align: center;
     background: #fff;
     border-bottom: 1px solid @text-ash-3;
-    
-   .line{
-       position: relative;
-       top: -5px;
-       display: inline-block;
-       width: 50px;
-       border: none;
-       border-top: 1px solid @index-bj-color;
-   }
-    h4{
+    .line {
+        position: relative;
+        top: -5px;
         display: inline-block;
-        padding: 0 5px;
+        width: 50px;
+        border: none;
+        border-top: 1px solid @index-bj-color;
+    }
+    h4 {
+        display: inline-block;
+        padding: 0 6px;
         height: 20px;
-        
-        color:#44dbda;
-        font-size: 18px;
+        color: #3399cc;
+        ;
+        font-size: 16px;
         font-weight: 500;
         text-align: center;
         font-family: "微软雅黑";
-        
-        
     }
-    
-
 }
 
 //选项1
-.index-bj-se{
-  margin-top: 0;
+.index-bj-se {
+    margin-top: 0;
     text-align: center;
     border: 1px solid @text-ash-3;
     border-top: none;
     background: #fff;
-    
-    .xz-item{
-         padding:  10px 0;
-        &+.xz-item{
-        border-left:1px solid @text-ash-3 ;
-      }
-      
-   
-      h4{
-           font-size: 16px;
-           color:@text-777;
-           font-weight: 500;
-      }
-      //选择样式
-      &.active h4{
-          color:@index-bj-color;
-          
-      }
-      &.active{
-        border-bottom: 1px solid @index-bj-color;
-      }
-    
+    .xz-item {
+        padding: 7px 0;
+        &+.xz-item {
+            border-left: 1px solid @text-ash-3 ;
+        }
+        h4 {
+            font-size: 12px;
+            color: @text-777;
+            font-weight: 400;
+        }
+        //选择样式
+        &.active h4 {
+            color: @index-bj-color;
+        }
+        &.active {
+            border-bottom: 1px solid @index-bj-color;
+        }
     }
 }
-//选项2
-.index-bj-se2{
-  margin-top: -10px;
 
+//选项2
+.index-bj-se2 {
+    margin-top: -10px;
 }
+
 //表格
 .index-bj-tb {
     margin-top: -2px;
     background: #fff;
-    table.table{
+    table.table {
         margin-bottom: 0;
-    border: none !important;
+        border: none !important;
     }
- 
-   thead tr th
-   {
-       border: none !important; 
-       padding: 10px 5px !important;
-       color:@text-777;
-       font-weight: 500;
-   }
-   
-     tbody tr td
-   {
-    
-       padding: 10px 5px !important;
-      
-   }
+    thead tr th {
+        border: none !important;
+        padding: 10px 5px !important;
+        color: @text-777;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    tbody tr td {
+        padding: 10px 5px !important;
+        font-size: 12px;
+        color: @text-777;
+        .mui-icon-arrowright {
+            font-size: 12px;
+        }
+        
+        &.text-danger{
+            color:@text-warning !important;
+        }
+    }
 }
 
-
 //现货交易
-@index-bj-goods:#27e577;
-.index-bj.index-bj-goods{
-   margin-top: -25px !important;
-    .ttl
-    {color:@index-bj-goods;}
-     .line
-    {border-top: 1px solid  @index-bj-goods;}
-  
+@index-bj-goods: #fd0c00;
+.index-bj.index-bj-goods {
+    margin-top: -25px !important;
+    .ttl {
+        color: @index-bj-goods;
+    }
+    .line {
+        border-top: 1px solid @index-bj-goods;
+    }
 }
 
 //行情中心
-@index-bj-hq:#39c5e0;
-.index-bj.index-bj-hq{
+@index-bj-hq: #087e0e;
+.index-bj.index-bj-hq {
     margin-top: -25px !important;
-    .ttl
-    {color:@index-bj-hq;}
-    
-     .line {
-        border-top: 1px solid  @index-bj-hq;
-     }
-     
-    .xz-item.active{
-        border-bottom: 1px solid  @index-bj-hq;
-      
-        h4{  color:@index-bj-hq;}
+    .ttl {
+        color: @index-bj-hq;
     }
-    
-    //列表
-    ul.list{
-        margin-top:  0;
-        background: #fff;
-       padding-left: 10px;
-       padding-right: 10px;
-        li{
-            padding:  10px 5px;
-           &+li{
-             
-              border-top: 1px solid @text-ash-3;
-             
-           }
+    .line {
+        border-top: 1px solid @index-bj-hq;
+    }
+    .xz-item.active {
+        border-bottom: 1px solid @index-bj-hq;
+        h4 {
+            color: @index-bj-hq;
         }
     }
-  
+    //列表
+    ul.list {
+        margin-top: 0;
+        background: #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+        li {
+            padding: 10px 5px;
+            font-size: 12px;
+            color: @text-777;
+            &+li {
+                border-top: 1px solid @text-ash-3;
+            }
+        }
+    }
 }
 
 //供应链金融
-@index-bj-jr:#45df40;
-.index-bj.index-bj-jr{
-    
-   margin-top: -15px !important;
-   margin-bottom: 10px;
-   background: #fff;
-    .ttl
-    {color:@index-bj-jr;}
-     .line
-    {border-top: 1px solid  @index-bj-jr;}
-  
+@index-bj-jr: #d98609;
+.index-bj.index-bj-jr {
+    margin-top: -15px !important;
+    margin-bottom: 10px;
+      padding: 5px 3px 3px 3px;
+    background: #fff;
+    .ttl {
+        color: @index-bj-jr;
+    }
+    .line {
+        border-top: 1px solid @index-bj-jr;
+    }
 }
 
 //列表
-.index-bj-jr-list{
-  @index-bj-color:#8fec8c;
-  
- 
-  padding: 10px;
-  
-  //ul
-  ul{
-      
-      padding: 0 0 0 10px;
-  
-      span{
-          color: #454545;
-      }
-      .iconfont{ 
-          color: @index-bj-color;
+.index-bj-jr-list {
+    @index-bj-color: #8fec8c;
+    padding: 10px;
+    //ul
+    ul {
+        padding: 0 0 0 10px;
+        span {
+            color: #454545;
         }
-        
-        li+li{
+        .iconfont {
+            color: @index-bj-jr;
+        }
+        li+li {
             margin-top: 10px;
         }
-  }
-  
-  //按钮
-  .btns{
-      .btn{
-         .create-btn-outline(@index-bj-color,36px,120px);
-         font-weight: 500;
-         font-size: 16px;
-      }
-  }
-  
-  //右边图片
-  .tg-img{
-      position: relative;
-      top:20px;
-      width: 150px;
-      height: 150px;
-      
-  }
-  
+    }
+    //按钮
+    .btns {
+        .btn {
+            .create-btn-outline(@index-bj-jr, 36px, 120px);
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    //右边图片
+    .tg-img {
+        position: relative;
+        top: 20px;
+        width: 150px;
+        height: 150px;
+    }
 }
 
 
-
-//底部index-footer
+//页脚
 .index-footer{
     
-    background: @text-white;
-    .mui-tab-item.mui-active{
-        color:@text-primary !important;
-    }
+ 
+    padding:  2px 0;
+    background: #fff;
     
-    //icon
-    .iconfont{font-size: 20px;
-        
+    .mui-tab-label{
+       font-size: 14px !important;
+      
+   }
+    //选择样式
+     .mui-tab-item.mui-active {
+        color: @text-primary !important;
     }
+    .iconfont{
+        font-size: 24px !important;
+        margin-bottom: 3px;
+       
+    }
+   
+}
+
+.mui-bar {
+   
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
     
-    &.mui-bar.mui-bar-tab{
-     
-    }
 }
