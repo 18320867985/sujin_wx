@@ -1,37 +1,7 @@
 
-/*发布报价*/
+/*发布需求*/
 
-.fabu-nav
- {
-    width: 100%;
-    height: 50px !important;
-    padding: 0 10px;
-    background: #fff !important;
-    .mui-scroll {}
-    .mui-control-item {
-        padding: 0 5px !important;
-        line-height: 50px !important;
-        font-size: 14px !important;
-        font-weight: 400;
-       
-        
-    }
-    //选中样式
-    .mui-control-item.mui-active {
-        color: @text-primary !important; //字体颜色
-        border-bottom:  none !important;
-       
-    }
-    .mui-control-item+.mui-control-item:before {
-        content: '|';
-        padding-right: 5px;
-        color: @text-ash-3;
-        font-weight: 200;
-        font-size: 14px;
-    }
-}
-
-.fabu-form {
+.fabu-xq-form {
     margin-top: 10px;
     padding: 20px 10px;
     background: #fff;
@@ -64,13 +34,55 @@
                     }
                 }
                 
+                //牌号的选择框
+                &.sl3{
+                        
+                        select{
+                            padding: 0 5px 0 8px;
+                        } 
+                    
+                    .mui-col-xs-4+.mui-col-xs-4{
+                        padding-left: 5px !important;
+                    }
+                    
+                    //右边icon
+                    .mui-icon-arrowdown{
+                        position: absolute;
+                        right: 3px;
+                        top:8px;
+                        color:@text-ash;
+                        font-size: 18px;
+                    }
+                }
+                
+                
+                 //牌号的选择框
+                &.sl4{
+                        
+                        select{
+                            padding: 0 5px 0 8px;
+                        } 
+                    
+                    .mui-col-xs-4+.mui-col-xs-8{
+                        padding-left: 5px !important;
+                    }
+                    
+                    //右边icon
+                    .mui-icon-arrowdown{
+                        position: absolute;
+                        right: 3px;
+                        top:8px;
+                        color:@text-ash;
+                        font-size: 18px;
+                    }
+                }
                 //右边icon
                 .mui-icon-arrowdown{
                     position: absolute;
-                    right: 5px;
+                    right: 8px;
                     top:8px;
                     color:@text-ash;
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 
                  //上传图片
@@ -192,23 +204,8 @@
     .mui-radio {
         padding-left: 10px;
     }
-    //propmt
-    .propmt {
-        width: 100%;
-        clear: both;
-        padding: 0 10px;
-        margin-bottom: 10px;
-        border: 1px solid @text-danger;
-        .icon-error {
-            font-size: 18px;
-        }
-    }
-    //进度条
-    .progress-box {
-        .progress-num {
-            top: 0;
-        }
-    }
+   
+   
     
     //提交
     .submit-btns{

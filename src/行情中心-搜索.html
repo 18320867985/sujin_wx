@@ -252,18 +252,18 @@
 
 		<script>
 			(function($) {
-				
+
 				//选择的样式1
-				$(".suotation-cont-box1 li").on("tap",function(){
-					
+				$(".suotation-cont-box1 li").on("tap", function() {
+
 					$(".suotation-cont-box1 li").removeClass("active");
 					$(".suotation-cont-box2 li").removeClass("active");
 					$(this).addClass("active");
 				})
-				
+
 				//选择的样式2
-				$(".suotation-cont-box2 li").on("tap",function(){
-					
+				$(".suotation-cont-box2 li").on("tap", function() {
+
 					$(".suotation-cont-box2 li").removeClass("active");
 					$(".suotation-cont-box1 li").removeClass("active");
 					$(this).addClass("active");
@@ -284,35 +284,38 @@
 				})
 
 			})(window.Zepto);
-			
 
 			mui.init();
+			mui.ready(function() {
 
-			var btns = mui('.icon-rili');
-			btns.each(function(i, btn) {
+				var btns = mui('.icon-rili');
+				btns.each(function(i, btn) {
 
-				btn.addEventListener('tap', function() {
-					var optionsJson = this.getAttribute('data-options') || '{}';
-					var options = JSON.parse(optionsJson);
-					var id = this.getAttribute('id');
-					/*
-					 * 首次显示时实例化组件
-					 * 示例为了简洁，将 options 放在了按钮的 dom 上
-					 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
-					 */
-					var picker = new mui.DtPicker(options);
-					picker.show(function(rs) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						var picker = new mui.DtPicker(options);
+						picker.show(function(rs) {
 
-						document.querySelector(".txt-box").value = rs.text;
+							document.querySelector(".txt-box").value = rs.text;
 
-						//	alert( rs.text);
+							//	alert( rs.text);
 
-						picker.dispose();
+							picker.dispose();
 
-					});
-				}, false);
-			});
-		</script>
+						});
+					}, false);
+				});
+
+			})
+	
+	</script>
 	</body>
 
 </html>

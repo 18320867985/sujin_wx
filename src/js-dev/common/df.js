@@ -9,6 +9,8 @@ $(".mui-bar.mui-bar-tab .mui-tab-item").on("tap", function() {
 	window.location.href = this.href ;
 
 });
+
+
 	
 //
 ///*****置顶组件start*********/

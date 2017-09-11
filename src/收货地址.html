@@ -45,7 +45,7 @@
 			    
 			     <div class="mui-input-row ">
 			        <label>省市区县</label>
-			        <input class="select-city" type="text"   value="北京市-北京市-东城区" placeholder="">
+			        <input class="select-city" type="text" readonly="readonly"   value="北京市-北京市-东城区" placeholder="">
 			        <span class="mui-icon mui-icon-arrowright"></span>
 			    </div>
 			    
@@ -90,6 +90,8 @@
 				
 				$.init();
 				
+				$.ready(function(){
+					
 					// 级联示例
 					var _getParam = function(obj, param) {
 						return obj[param] || '';
@@ -111,6 +113,8 @@
 							
 						});
 					}, false);
+				
+				})
 				
 				
 			})(window.mui,window.document);
