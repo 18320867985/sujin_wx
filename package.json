@@ -46,5 +46,13 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "jihong_wx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18320867985/xsn_bx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/18320867985/xsn_bx/issues"
+  },
+  "homepage": "https://github.com/18320867985/xsn_bx#readme"
 }
