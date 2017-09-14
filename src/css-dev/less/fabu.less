@@ -1,8 +1,6 @@
+    /*发布报价*/
 
-/*发布报价*/
-
-.fabu-nav
- {
+.fabu-nav {
     width: 100%;
     height: 50px !important;
     padding: 0 10px;
@@ -13,14 +11,11 @@
         line-height: 50px !important;
         font-size: 14px !important;
         font-weight: 400;
-       
-        
     }
     //选中样式
     .mui-control-item.mui-active {
         color: @text-primary !important; //字体颜色
-        border-bottom:  none !important;
-       
+        border-bottom: none !important;
     }
     .mui-control-item+.mui-control-item:before {
         content: '|';
@@ -42,7 +37,7 @@
             line-height: 34px;
             vertical-align: middle;
             clear: both;
-            .mui-col-xs-2{
+            .mui-col-xs-2 {
                 padding: 0;
                 width: 20%;
                 text-align: center;
@@ -50,7 +45,7 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;
             }
-            .mui-col-xs-10{
+            .mui-col-xs-10 {
                 padding: 0;
                 width: 75%;
                 //select
@@ -63,33 +58,29 @@
                         border: 1px solid @text-warning;
                     }
                 }
-                
                 //右边icon
-                .mui-icon-arrowdown{
+                .mui-icon-arrowdown {
                     position: absolute;
                     right: 5px;
-                    top:8px;
-                    color:@text-ash;
+                    top: 8px;
+                    color: @text-ash;
                     font-size: 20px;
                 }
-                
-                 //上传图片
+                //上传图片
                 .file-date {
                     display: inline-block;
                     float: left;
                     width: 65%;
                     padding-right: 2px;
                     padding-left: 5px;
-                     font-size: 12px !important;
+                    font-size: 12px !important;
                     &+.btn-up {
                         border-left: none;
                     }
-                    
-                     @media (min-width:360px){
-                       
+                    @media (min-width:360px) {
                         padding-right: 8px;
                         padding-left: 5px;
-                         font-size: 14px !important;
+                        font-size: 14px !important;
                     }
                 }
                 .btn-date {
@@ -104,10 +95,8 @@
                     border-radius: 0;
                     border: 1px solid @text-primary;
                     background: @text-primary;
-                    
-                    @media (min-width:360px){
+                    @media (min-width: 360px) {
                         font-size: 14px !important;
-                        
                     }
                 }
                 //上传图片
@@ -131,16 +120,19 @@
                     border: 1px solid @text-primary;
                     background: @text-primary;
                 }
-                
-                
-                
                 input[type="radio"]:focus {
                     border: none;
                 }
                 //img
                 .img {
+                    margin-top: 5px;
                     width: 100%;
+                    min-width: 100%;
+                    max-width: 100%;
                     height: 120px;
+                    min-height: 120px;
+                    max-height: 120px;
+                    border: 1px solid @text-ash-3;
                 }
                 //提交
                 .mui-btn-block {
@@ -149,16 +141,10 @@
                     .create-btn(@text-primary, 40px, 100%);
                 }
             }
-            
-            
-            
             //radioBox 的间距
-            .radio-box{
+            .radio-box {
                 margin-right: 10px;
             }
-            
-            
-            
         }
     }
     .mui-row-group {
@@ -209,16 +195,63 @@
             top: 0;
         }
     }
-    
     //提交
-    .submit-btns{
-        .mui-btn-warning{
-             border:1px solid @text-warning;
-             background: @text-warning;
-             
-             &.mui-btn-warning{margin-left: 10px;}
+    .submit-btns {
+        .mui-btn-warning {
+            margin: 0 !important;
+           
+            padding: 8px 10px;
+            border: 1px solid @text-primary;
+            background: @text-primary;
+            &.mui-btn-warning {
+                margin-left: 10px !important;
+            }
         }
-       
+    }
+    
+    
+                //牌号的选择框
+                .sl4{
+                        
+                        select{
+                            padding: 0 2px 0 8px;
+                        } 
+                    
+                    .mui-col-xs-4+.mui-col-xs-8{
+                        padding-left: 5px !important;
+                    }
+                    
+                    //右边icon
+                    .mui-icon-arrowdown{
+                        position: absolute;
+                        right: 3px;
+                        top:8px;
+                        color:@text-ash;
+                        font-size: 18px;
+                    }
+                }
+    
+   //#form_b
+    #form_b,
+    #form_c,
+    #form_d
+     {
+        //提交
+        .submit-btns {
+            .mui-btn-warning {
+              
+                display: block;
+                margin: 0 !important;
+                margin-top: 10px !important;
+                width: 100%;
+                border: 1px solid @text-primary;
+                background: @text-primary;
+                
+                &.mui-btn-warning {
+                    margin-left: 10px;
+                }
+            }
+        }
     }
     
 }

@@ -1,0 +1,50 @@
+/*
+ * 标签选项卡
+ * <div class="tab-box">
+         <a class="tab-item active" data-target="#form_a">
+                            塑胶原料
+             </a>
+           <a class="tab-item"  data-target="#form_b">
+                            改性塑料
+            </a>
+          <a class=" tab-item"  data-target="#form_c">
+                            环保再生
+            </a>
+            <a class="tab-item"  data-target="#form_d">
+                            塑料助剂
+         </a>
+
+      </div>
+      
+        <div class="fabu-form tab-content ">
+                
+           <!--塑胶原料-->
+           <div class="form tab-content-item active" id="form_a">-塑胶原料</div>
+              <!--塑胶原料2-->
+           <div class="form tab-content-item active" id="form_b">-塑胶原料2</div>
+              <!--塑胶原料3-->
+           <div class="form tab-content-item active" id="form_c">-塑胶原料3</div>
+              <!--塑胶原料4-->
+           <div class="form tab-content-item active" id="form_d">-塑胶原料4</div>
+ *          
+ *      </div>
+ * 
+ * 
+ * 
+ * */
+
+.tab-box {
+    
+    &.active{
+        
+    }
+}
+
+.tab-content-item {
+    display: none;
+    transition: all 0.8s;
+    &.active {
+        display: block;
+        background: #fff;
+    }
+}

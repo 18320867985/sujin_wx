@@ -7,56 +7,44 @@
  * 
  * */
 
+
 .radio-box,
-.check-box
-{
-  //radio
-    input[type='radio']{
-       appearance:none;
-       vertical-align: middle;
+.check-box {
+    //radio
+    input[type='radio'] ,
+    input[type='checkbox']
+    {
+       
+        vertical-align: middle;
+        border: 0;
+        outline: 0!important;
+        background-color: transparent;
+        -webkit-appearance: none;
+        appearance: none;
     }
-    input[type='radio']:before{
-        
+    
+    
+    input[type='radio']:before {
         font-family: iconfont;
         content: "\e612";
         font-size: 20px;
-        color:#ddd;
-      
+        color: #ddd;
     }
-    
-     input[type='radio']:checked:before{
-        
+    input[type='radio']:checked:before {
         font-family: iconfont;
-         content: "\e692"; 
-      
+        content: "\e692";
         color: @text-primary;
-      
     }
-    
-    
-    
-    //check-box
-    input[type='checkbox']{
-       appearance:none;
-       vertical-align: middle;
-    }
-    input[type='checkbox']:before{
-        
+   
+    input[type='checkbox']:before {
         font-family: iconfont;
         content: "\e60b";
         font-size: 20px;
-        color:#ddd;
-      
+        color: #ddd;
     }
-    
-     input[type='checkbox']:checked:before{
-        
+    input[type='checkbox']:checked:before {
         font-family: iconfont;
         content: "\e61d";
         color: @text-primary;
-        
-      
     }
-    
-    
 }

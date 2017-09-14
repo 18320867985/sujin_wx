@@ -1,74 +1,85 @@
 /**搜索页**/
-    
-.search{
-    
-    
-}
 
-.search-head{
-    
+.search {}
+
+.search-head {
     position: fixed;
     width: 100%;
-    padding:5px 15px;
-    background: rgb(9,162,232);
+    padding: 5px 15px;
+    background: rgb(9, 162, 232);
     z-index: 9999;
-    
     //搜索icon
-    .mui-icon-search{
+    .mui-icon-search {
         position: absolute;
-        top:10px;
-        left:20px;
+        top: 10px;
+        left: 20px;
         font-size: 24px;
-        color:@text-primary;
+        color: @text-primary;
     }
-    
     //搜索框
-    input[type='text'].txt-box{
+    input[type='text'].txt-box {
         height: 34px;
-       margin: 0 !important;
-       text-indent: 25px;
-       font-size: 14px;
+        margin: 0 !important;
+        text-indent: 25px;
+        font-size: 14px;
     }
-    
 }
 
 //头部padding
-.search-head ~ .mui-content{
+.search-head~.mui-content {
     padding-top: 44px;
 }
 
 //内容
-.search-cont{
-  
-    h4{
+.search-cont {
+    h4 {
         padding: 10px;
         font-weight: 500;
         font-size: 16px;
     }
-    
-    .search-cont-item{
-    
-    padding: 10px;
-     background: #fff;
-     
-     a{
-        display: inline-block;
-        padding: 3px 8px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        border: 1px solid @text-ash-3;
-        color:@text-777;
-        border-radius: 4px;
-        
-        &:active{
-            color:@text-danger;
+    .search-cont-item {
+        padding: 10px;
+        background: #fff;
+        a {
+            display: inline-block;
+            padding: 3px 8px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            border: 1px solid @text-ash-3;
+            color: @text-777;
+            border-radius: 4px;
+            &:active {
+                color: @text-danger;
+            }
         }
-        
-     
-        
-
-     }
     }
 }
 
-//
+//页脚
+
+.seach-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    // 搜索按钮
+    input{
+        
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        
+        background: @text-primary;
+        border-radius: 0;
+        
+       //点击
+       &:active{
+            background: darken(@text-primary,10%) !important;
+       }
+    }
+}

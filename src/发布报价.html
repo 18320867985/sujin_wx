@@ -27,20 +27,22 @@
 
 		<!--主体内容-->
 		<section class="mui-content ">
+			
+				
 			<!--nav列表-->
 			<nav>
 				<div class="fabu-nav mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-					<div class="mui-scroll">
-						<a class="mui-control-item mui-active">
+					<div class="mui-scroll tab-box">
+						<a class="mui-control-item mui-active tab-item" data-target="#form_a">
 							塑胶原料
 						</a>
-						<a class="mui-control-item">
+						<a class="mui-control-item tab-item" data-target="#form_b">
 							改性塑料
 						</a>
-						<a class="mui-control-item">
+						<a class="mui-control-item tab-item" data-target="#form_c">
 							环保再生
 						</a>
-						<a class="mui-control-item">
+						<a class="mui-control-item tab-item" data-target="#form_d">
 							塑料助剂
 						</a>
 
@@ -48,9 +50,10 @@
 				</div>
 			</nav>
 
-			<div class="fabu-form">
+			<div class="fabu-form tab-content ">
 
-				<form class="form" id="form">
+				<!--塑胶原料-->
+				<div class="form tab-content-item " id="form_a">
 
 					<!--交易公司-->
 					<div class="mui-row mui-row-group">
@@ -359,7 +362,910 @@
 						</div>
 					</div>
 
-				</form>
+				</div>
+
+				<!--改性塑料-->
+				<div class="form tab-content-item " id="form_b">
+
+					<!--交易公司-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">交易公司</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<span style="margin-left: 10px;">深圳市天天美</span>
+							<!--<input type="text" name="" id="a1" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入交易公司的名称" />-->
+						</div>
+
+					</div>
+
+					<!--品名-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="a2" class="mui-text-muted-bs">品名</label>
+						</div>
+
+						<div class="mui-col-xs-10  relative">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a2">
+								<optgroup label="常用品名" style="color:rgb(0, 73, 165)">
+									<option value="1">&nbsp;&nbsp;ABS</option>
+									<option value="5">&nbsp;&nbsp;PA66</option>
+									<option value="6">&nbsp;&nbsp;PA9T</option>
+									<option value="7">&nbsp;&nbsp;PBT</option>
+									<option value="8">&nbsp;&nbsp;PC</option>
+									<option value="9">&nbsp;&nbsp;PT</option>
+									<option value="10">&nbsp;&nbsp;PMMA</option>
+									<option value="11">&nbsp;&nbsp;POM</option>
+									<option value="12">&nbsp;&nbsp;TPEE</option>
+									<option value="13">&nbsp;&nbsp;TPU</option>
+									<option value="21">&nbsp;&nbsp;COC</option>
+									<option value="22">&nbsp;&nbsp; ADPOLY</option>
+								</optgroup>
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--厂商-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="a3" class="mui-text-muted-bs">生厂商</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_b1" checked name="b1">
+								<label for="inpu_b1">自产</label>
+							</div>
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_b2" name="b1">
+								<label for="inpu_b2">其他生产企业</label>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!--牌号-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">牌号</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a3">
+								<option value="1">牌号1</option>
+								<option value="2">牌号2</option>
+								<option value="3">牌号3</option>
+								<option value="4">牌号4</option>
+								<option value="5">牌号5</option>
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--基材-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">基材</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a3">
+
+								<option value="正牌新料">正牌新料</option>
+								<option value="再生塑料">再生塑料</option>
+								<option value="副牌料">副牌料</option>
+
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--主要辅料及比例：-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">主要辅料</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a3">
+
+								<option value="">请选择</option>
+								<option value="玻璃纤维">玻璃纤维</option>
+								<option value="阻燃剂">阻燃剂</option>
+								<option value="增韧剂">增韧剂</option>
+
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--等级-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">等级</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a3">
+
+								<option value="">请选择</option>
+								<option value="玻璃纤维">等级1</option>
+								<option value="阻燃剂">等级2</option>
+								<option value="增韧剂">等级3</option>
+
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--颜色-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="b1" class="mui-text-muted-bs">颜色</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+
+							<input type="text" name="" id="b1" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入颜色" />
+						</div>
+
+					</div>
+
+					<!--特性-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="b2" class="mui-text-muted-bs">特性</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+
+							<input type="text" name="" id="b2" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入特性" />
+						</div>
+
+					</div>
+
+					<!--关键字-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="b3" class="mui-text-muted-bs">关键字</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+
+							<input type="text" name="" id="b3" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入关键字" />
+						</div>
+
+					</div>
+
+					<!--图片1-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">产品图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="产品图片1" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp1" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="产品图片1" />
+						</div>
+
+					</div>
+
+					<!--图片2-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">产品图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="产品图片2" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp2" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="产品图片2" />
+						</div>
+
+					</div>
+
+					<!--图片3-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">产品图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="产品图片3" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp3" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="产品图片3" />
+						</div>
+
+					</div>
+
+					<!--用户案例-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="b4" class="mui-text-muted-bs">用户案例</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+
+							<input type="text" name="" id="b4" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入关键字" />
+						</div>
+
+					</div>
+
+					<!--案例图片-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">案例图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="案例图片" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp4" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="产品图片3" />
+						</div>
+
+					</div>
+
+					<!--认证-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">认证</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a3">
+
+								<option value="FDA">FDA</option>
+								<option value="MSDS">MSDS</option>
+								<option value="RoHS">RoHS</option>
+								<option value="UL">UL</option>
+
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--认证图片-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">认证图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="案例图片" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp5" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="认证图片" />
+						</div>
+
+					</div>
+					
+					<!--试用量-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="b3" class="mui-text-muted-bs">试用量</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+
+							<input type="text" name="" id="b3" value="" class=" mui-form-control mui-form-control-focus" placeholder="单位:公斤,不允许试用,请填0" />
+						</div>
+
+					</div>
+					
+					<!--出厂价-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="b3" class="mui-text-muted-bs">出厂价</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+
+							<input type="text" name="" id="b3" value="" class=" mui-form-control mui-form-control-focus" placeholder="元/吨" />
+						</div>
+
+					</div>
+					
+					<!--提交-->
+					<div class="submit-btns mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs"></label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<button class="mui-btn-warning">发布</button>
+
+						
+						</div>
+					</div>
+
+				</div>
+
+
+				<!--环保再生-->
+				<div class="form tab-content-item active" id="form_c">
+
+					<!--交易公司-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">交易公司</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<span style="margin-left: 10px;">深圳市天天美</span>
+							<!--<input type="text" name="" id="a1" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入交易公司的名称" />-->
+						</div>
+
+					</div>
+
+					<!--品名-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="c2" class="mui-text-muted-bs">品名</label>
+						</div>
+
+						<div class="mui-col-xs-10  relative">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a2">
+								<optgroup label="常用品名" style="color:rgb(0, 73, 165)">
+									<option value="1">&nbsp;&nbsp;ABS</option>
+									<option value="5">&nbsp;&nbsp;PA66</option>
+									<option value="6">&nbsp;&nbsp;PA9T</option>
+									<option value="7">&nbsp;&nbsp;PBT</option>
+									<option value="8">&nbsp;&nbsp;PC</option>
+									<option value="9">&nbsp;&nbsp;PT</option>
+									<option value="10">&nbsp;&nbsp;PMMA</option>
+									<option value="11">&nbsp;&nbsp;POM</option>
+									<option value="12">&nbsp;&nbsp;TPEE</option>
+									<option value="13">&nbsp;&nbsp;TPU</option>
+									<option value="21">&nbsp;&nbsp;COC</option>
+									<option value="22">&nbsp;&nbsp; ADPOLY</option>
+								</optgroup>
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--厂商-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="c3" class="mui-text-muted-bs">生厂商</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_c1" checked name="c1" checked="">
+								<label for="inpu_c1">自产</label>
+							</div>
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_b2" name="c1">
+								<label for="inpu_c2">其他生产企业</label>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!--牌号-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">牌号</label>
+						</div>
+						
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="c3">
+								<option value="1">牌号1</option>
+								<option value="2">牌号2</option>
+								<option value="3">牌号3</option>
+								<option value="4">牌号4</option>
+								<option value="5">牌号5</option>
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--等级-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="c6" class="mui-text-muted-bs">等级</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<input type="text" name="" id="c6" value="" class=" mui-form-control mui-form-control-focus" placeholder="等级" />
+						</div>
+
+					</div>
+					
+					
+					<!--颜色-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="c7" class="mui-text-muted-bs">颜色</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<input type="text" name="" id="c7" value="" class=" mui-form-control mui-form-control-focus" placeholder="颜色" />
+						</div>
+
+					</div>
+					
+					
+
+					<!--样品图片1-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">样品图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="样品图片1" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp_c1" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="样品图片1" />
+						</div>
+
+					</div>
+
+					<!--样品图片2-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">样品图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="样品图片2" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp_c2" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="样品图片2" />
+						</div>
+
+					</div>
+
+					<!--样品图片3-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">样品图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="样品图片3" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp_c3" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="样品图片3" />
+						</div>
+
+					</div>
+
+				
+					<!--允许试用数量-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2">
+							<label for="c9" class="mui-text-muted-bs">试用数量</label>
+						</div>
+						<div class="mui-col-xs-10">
+
+							<input type="text" name="" id="c9" value="" class=" mui-form-control mui-form-control-focus rd-no2" placeholder="单位:公斤,不允许试用,请填0" />
+						</div>
+
+					</div>
+					
+					<!--牌号-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">牌号</label>
+						</div>
+						
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="c3">
+								<option value="1">牌号1</option>
+								<option value="2">牌号2</option>
+								<option value="3">牌号3</option>
+								<option value="4">牌号4</option>
+								<option value="5">牌号5</option>
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+					
+					
+					<!--交货地址-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="a2" class="mui-text-muted-bs">交货地址</label>
+						</div>
+
+						<div class="mui-col-xs-10  mui-row sl4">
+
+							<div class="mui-col-xs-4 relative">
+								<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a2">
+									<option value="1">中国大陆</option>
+
+								</select>
+								
+							</div>
+
+							<div class="mui-col-xs-8 relative">
+
+								<input type="text" name="" id="select-addr" value="" class=" mui-form-control mui-form-control-focus" readonly="readonly" placeholder="省份-地级市" />
+
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</div>
+
+						</div>
+
+					</div>
+
+					
+					<!--参考报价-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="b3" class="mui-text-muted-bs">参考报价</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+
+							<input type="text" name="" id="b3" value="" class=" mui-form-control mui-form-control-focus" placeholder="元 / 吨" />
+						</div>
+
+					</div>
+					
+					<!--提交-->
+					<div class="submit-btns mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs"></label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<button class="mui-btn-warning">发布</button>
+
+						
+						</div>
+					</div>
+
+				</div>
+
+				<!--塑料助剂-->
+				<div class="form tab-content-item" id="form_d">
+	<!--交易公司-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">交易公司</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<span style="margin-left: 10px;">深圳市天天美</span>
+							<!--<input type="text" name="" id="a1" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入交易公司的名称" />-->
+						</div>
+
+					</div>
+
+					<!--品名-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="c2" class="mui-text-muted-bs">品名</label>
+						</div>
+
+						<div class="mui-col-xs-10  relative">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a2">
+								<optgroup label="常用品名" style="color:rgb(0, 73, 165)">
+									<option value="1">&nbsp;&nbsp;ABS</option>
+									<option value="5">&nbsp;&nbsp;PA66</option>
+									<option value="6">&nbsp;&nbsp;PA9T</option>
+									<option value="7">&nbsp;&nbsp;PBT</option>
+									<option value="8">&nbsp;&nbsp;PC</option>
+									<option value="9">&nbsp;&nbsp;PT</option>
+									<option value="10">&nbsp;&nbsp;PMMA</option>
+									<option value="11">&nbsp;&nbsp;POM</option>
+									<option value="12">&nbsp;&nbsp;TPEE</option>
+									<option value="13">&nbsp;&nbsp;TPU</option>
+									<option value="21">&nbsp;&nbsp;COC</option>
+									<option value="22">&nbsp;&nbsp; ADPOLY</option>
+								</optgroup>
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--厂商-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="c3" class="mui-text-muted-bs">生厂商</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_c1" checked name="c1" checked="">
+								<label for="inpu_c1">自产</label>
+							</div>
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_b2" name="c1">
+								<label for="inpu_c2">其他生产企业</label>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!--牌号-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">牌号</label>
+						</div>
+						
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="c3">
+								<option value="1">牌号1</option>
+								<option value="2">牌号2</option>
+								<option value="3">牌号3</option>
+								<option value="4">牌号4</option>
+								<option value="5">牌号5</option>
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--等级-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="c6" class="mui-text-muted-bs">等级</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<input type="text" name="" id="c6" value="" class=" mui-form-control mui-form-control-focus" placeholder="等级" />
+						</div>
+
+					</div>
+					
+					
+					<!--颜色-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="c7" class="mui-text-muted-bs">颜色</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<input type="text" name="" id="c7" value="" class=" mui-form-control mui-form-control-focus" placeholder="颜色" />
+						</div>
+
+					</div>
+					
+					
+
+					<!--样品图片1-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">样品图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="样品图片1" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp_c1" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="样品图片1" />
+						</div>
+
+					</div>
+
+					<!--样品图片2-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">样品图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="样品图片2" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp_c2" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="样品图片2" />
+						</div>
+
+					</div>
+
+					<!--样品图片3-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">样品图片</label>
+						</div>
+						<div class="mui-col-xs-10  progress-box">
+
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="样品图片3" />
+							<button class="btn-up" type="button">选择文件</button>
+							<input class="v-hide file-up-box " type="file" name="" id="fileUp_c3" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num">0%</div>
+
+							</div>
+
+							<img class="img" src="" alt="样品图片3" />
+						</div>
+
+					</div>
+
+				
+					<!--允许试用数量-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2">
+							<label for="c9" class="mui-text-muted-bs">试用数量</label>
+						</div>
+						<div class="mui-col-xs-10">
+
+							<input type="text" name="" id="c9" value="" class=" mui-form-control mui-form-control-focus rd-no2" placeholder="单位:公斤,不允许试用,请填0" />
+						</div>
+
+					</div>
+					
+					<!--牌号-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">牌号</label>
+						</div>
+						
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="c3">
+								<option value="1">牌号1</option>
+								<option value="2">牌号2</option>
+								<option value="3">牌号3</option>
+								<option value="4">牌号4</option>
+								<option value="5">牌号5</option>
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+					
+					
+					<!--交货地址-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="a2" class="mui-text-muted-bs">交货地址</label>
+						</div>
+
+						<div class="mui-col-xs-10  mui-row sl4">
+
+							<div class="mui-col-xs-4 relative">
+								<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a2">
+									<option value="1">中国大陆</option>
+
+								</select>
+								
+							</div>
+
+							<div class="mui-col-xs-8 relative">
+
+								<input type="text" name="" id="select-addr" value="" class=" mui-form-control mui-form-control-focus" readonly="readonly" placeholder="省份-地级市" />
+
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</div>
+
+						</div>
+
+					</div>
+
+					
+					<!--参考报价-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="b3" class="mui-text-muted-bs">参考报价</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+
+							<input type="text" name="" id="b3" value="" class=" mui-form-control mui-form-control-focus" placeholder="元 / 吨" />
+						</div>
+
+					</div>
+					
+					<!--提交-->
+					<div class="submit-btns mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs"></label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<button class="mui-btn-warning">发布</button>
+
+						
+						</div>
+					</div>
+
+				</div>
 
 			</div>
 
@@ -374,8 +1280,10 @@
 			(function($, doc) {
 
 				$.init();
+
+				$.ready(function() {
+					
 				
-				$.ready(function(){
 					
 					// 级联示例
 					var _getParam = function(obj, param) {
@@ -384,24 +1292,67 @@
 					var cityPicker3 = new $.PopPicker({
 						layer: 3
 					});
-					
-					
+
 					cityPicker3.setData(cityData3);
-					var showCityPickerButton =doc.querySelector('#select-addr');
+					var showCityPickerButton = doc.querySelector('#select-addr');
 					//var cityResult3 = doc.getElementById('cityResult3');
 					showCityPickerButton.addEventListener('tap', function(event) {
 						cityPicker3.show(function(items) {
-							showCityPickerButton.value =_getParam(items[0], 'text') + "-" + _getParam(items[1], 'text') + "-" + _getParam(items[2], 'text');
+							showCityPickerButton.value = _getParam(items[0], 'text') + "-" + _getParam(items[1], 'text') + "-" + _getParam(items[2], 'text');
 							//返回 false 可以阻止选择框的关闭
 							//return false;
-							
-							
+
 						});
 					}, false);
-				
+
 				})
-				
+
 			})(window.mui, window.document);
+
+			// 改性塑料 图片上传
+			var fileupff = function(obj, fileId) {
+
+				$(obj).parents(".progress-box").find(".progress-all").show();
+
+				var file = document.getElementById(fileId).files[0];
+				h5File.upload({
+					data: file, //选择的文件
+					url: "", //上传网址
+					outTime: 30000,
+					el: $(obj), //当前element
+					size: 300000000, //1m=1000000
+					seccess: function(data) {
+
+					}, //成功回调
+					error: function(data) {
+
+						// 发布删除...
+						$(obj).parents(".progress-box").find(".img").attr("src", "images/Home/banner.png")
+					} //错误回调
+
+				}); //调用上传接口
+			}
+
+			//文件上传
+			$(".btn-up").on("click", function() {
+
+				$(this).parents(".progress-box").find(".file-up-box").click();
+				//$("#fileUp").click();
+
+			});
+
+			$(".file-up-box").change(function() {
+
+				fileupff(this, this.id);
+
+			});
+
+			// 选择nav标签事件
+			$(".tab-item").on("tab_select", function(event, element) {
+				//element 当前点击的元素	
+				//alert($(event.target).attr("data-target"));
+
+			});
 		</script>
 	</body>
 
