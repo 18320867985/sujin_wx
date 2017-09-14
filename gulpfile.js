@@ -53,18 +53,23 @@ var tsProject = ts.createProject("tsconfig.json");
 //文件路径
 var paths = {
 	jsPath: [
-		"src/js-dev/prefix-css3.min.js", //css3前缀
+		
+		//js库
+		"src/js-dev/libs/prefix-css3.min.js", //css3前缀
 
-		"src/js-dev/mui/mui.js", //mui插件
+		"src/js-dev/libs/mui/mui.js", //mui插件
 
-		"src/js-dev/zepto/zepto.js", //zepto.js
+		"src/js-dev/libs/zepto/zepto.js", //zepto.js
 
+		// 自定义js库	
 		"src/js-dev/common/com.js", //公共模块
 
 		"src/js-dev/common/df.js", //默认模块
 
+		// js组件
 		"src/js-dev/component/*.js", //公共组件
-
+		
+		// 自定义模块
 		"src/js-dev/modules/*.js", //模块
 
 		// "src/js-dev/es5/*.js", //typescript编译后的js
