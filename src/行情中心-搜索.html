@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
 		<link rel="stylesheet" href="Content/Home/all.css" />
 		<link rel="stylesheet" type="text/css" href="Content/Home/mui.picker.min.css" />
+		
 	</head>
 
 	<body>
@@ -99,7 +100,9 @@
 			</div>
 
 			<!--图文列表-->
-			<ul class="suotation-media mui-table-view">
+			<div class="suotation-load">
+			
+				<ul class="suotation-media mui-table-view">
 				<li class="mui-table-view-cell mui-media">
 					<a href="javascript:;">
 						<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
@@ -244,6 +247,30 @@
 				</li>
 
 			</ul>
+			</div>
+			<!--模板-->
+			<script type="text/html" id="must">
+				{{#must}}
+					<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
+						<div class="mui-media-body">
+							<div class="mui-clearfix">
+								<span class="mui-pull-left text-primary">
+			             	   		{{ttl}}
+			             	   	</span>
+								<span class="mui-pull-right">
+			             	   		{{data}}
+			             	   	</span>
+							</div>
+
+							<p class="mui-ellipsis-2">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+
+				{{/must}}
+			</script>
 
 		</section>
 
@@ -285,37 +312,109 @@
 
 			})(window.Zepto);
 
-			mui.init();
-			mui.ready(function() {
+			(function() {
 
-				var btns = mui('.icon-rili');
-				btns.each(function(i, btn) {
+				mui.init();
+				mui.ready(function() {
 
-					btn.addEventListener('tap', function() {
-						var optionsJson = this.getAttribute('data-options') || '{}';
-						var options = JSON.parse(optionsJson);
-						var id = this.getAttribute('id');
-						/*
-						 * 首次显示时实例化组件
-						 * 示例为了简洁，将 options 放在了按钮的 dom 上
-						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
-						 */
-						var picker = new mui.DtPicker(options);
-						picker.show(function(rs) {
+					var btns = mui('.icon-rili');
+					btns.each(function(i, btn) {
 
-							document.querySelector(".txt-box").value = rs.text;
+						btn.addEventListener('tap', function() {
+							var optionsJson = this.getAttribute('data-options') || '{}';
+							var options = JSON.parse(optionsJson);
+							var id = this.getAttribute('id');
+							/*
+							 * 首次显示时实例化组件
+							 * 示例为了简洁，将 options 放在了按钮的 dom 上
+							 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+							 */
+							var picker = new mui.DtPicker(options);
+							picker.show(function(rs) {
 
-							//	alert( rs.text);
+								document.querySelector(".txt-box").value = rs.text;
 
-							picker.dispose();
+								//	alert( rs.text);
+
+								picker.dispose();
+
+							});
+						}, false);
+					});
+
+				})
+
+			})();
+
+	;(function(mui, $) {
+
+				mui.ready(function() {
+
+					var count = 1; //页码
+					//循环初始化所有下拉刷新，上拉加载。
+					mui.each(document.querySelectorAll('.suotation-load'), function(index, pullRefreshEl) {
+
+						mui(pullRefreshEl).pullToRefresh({
+
+							up: {
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+										var ul = self.element.querySelector('.mui-table-view');
+
+										//ajax数据 ......
+//										var lists = [{
+//												a: "工程塑料标题",
+//												b: "2017-8-12",
+//											},{
+//												a: "工程塑料标题",
+//												b: "2017-8-12",
+//											},
+//											{
+//												a: "工程塑料标题",
+//												b: "2017-8-12",
+//											}
+//										
+//										];
+												
+										$.get("refresh.json"+"?id="+count,function(data2){
+											var html = Mustache.to_html($("#must").html(), {
+											must: data2
+											});
+
+											$(ul).append(html);
+											
+									});
+//										var html = Mustache.to_html($("#must").html(), {
+//											must: lists
+//										});
+//
+//										$(ul).append(html);
+
+										//self.endPullup();
+										count++; //页码
+										maxpage = 5; //最大页码
+										self.endPullUpToRefresh((count >= maxpage));
+
+									}, 1000);
+								},
+								contentinit: '上拉显示更多',
+							contentdown: '上拉显示更多',
+							contentrefresh: '正在加载...',
+							contentnomore: '没有更多数据了',
+
+							}
 
 						});
-					}, false);
+
+					});
+
 				});
 
-			})
-	
-	</script>
+			})(mui, window.Zepto);
+		
+		
+		</script>
 	</body>
 
 </html>

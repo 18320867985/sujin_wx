@@ -55,11 +55,20 @@ var paths = {
 	jsPath: [
 		
 		//js库
-		"src/js-dev/libs/prefix-css3.min.js", //css3前缀
+		"src/js-dev/libs/prefix-css3.min.js", // css3前缀
+		
+		"src/js-dev/libs/mustache/mustache.js", // mustache模板  必须放在mui之前 
 
-		"src/js-dev/libs/mui/mui.js", //mui插件
-
+		"src/js-dev/libs/mui/mui.js", // mui插件mui
+		
+		"src/js-dev/libs/mui/mui.pullToRefresh.js", // 循环初始化所有下拉刷新，上拉加载1。
+			
+		"src/js-dev/libs/mui/mui.pullToRefresh.material.js", // 循环初始化所有下拉刷新，上拉加载2。
+		
 		"src/js-dev/libs/zepto/zepto.js", //zepto.js
+		
+
+
 
 		// 自定义js库	
 		"src/js-dev/common/com.js", //公共模块

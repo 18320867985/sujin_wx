@@ -4660,6 +4660,74 @@ input::-moz-placeholder {
   -webkit-mask-box-image: none;
   background: #fff;
 }
+.mui-bar ~ .mui-content .mui-fullscreen {
+  top: 44px;
+  height: auto;
+}
+.mui-pull-top-tips {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  z-index: 1;
+}
+.mui-bar ~ .mui-pull-top-tips {
+  top: 24px;
+}
+.mui-pull-top-wrapper {
+  width: 42px;
+  height: 42px;
+  display: block;
+  text-align: center;
+  background-color: #efeff4;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  background-clip: padding-box;
+  box-shadow: 0 4px 10px #bbb;
+  overflow: hidden;
+}
+.mui-pull-top-tips.mui-transitioning {
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+.mui-pull-top-tips .mui-pull-loading {
+  /*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+  margin: 0;
+}
+.mui-pull-top-wrapper .mui-icon,
+.mui-pull-top-wrapper .mui-spinner {
+  margin-top: 7px;
+}
+.mui-pull-top-wrapper .mui-icon.mui-reverse {
+  /*-webkit-transform: rotate(180deg) translateZ(0);*/
+}
+.mui-pull-bottom-tips {
+  text-align: center;
+  background-color: #efeff4;
+  font-size: 15px;
+  line-height: 40px;
+  color: #777;
+}
+.mui-pull-top-canvas {
+  overflow: hidden;
+  background-color: #fafafa;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px #bbb;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+.mui-pull-top-canvas canvas {
+  width: 40px;
+}
+.mui-slider-indicator.mui-segmented-control {
+  background-color: #efeff4;
+}
 /*****首页******/
 .index .mui-slider img {
   min-height: 200px;
@@ -5630,8 +5698,11 @@ input::-moz-placeholder {
 .search-head ~ .mui-content {
   padding-top: 44px;
 }
+.search-cont {
+  padding-bottom: 30px;
+}
 .search-cont h4 {
-  padding: 10px;
+  padding: 8px 10px;
   font-weight: 500;
   font-size: 16px;
 }
@@ -5650,6 +5721,10 @@ input::-moz-placeholder {
 }
 .search-cont .search-cont-item a:active {
   color: #e52c67;
+}
+.search-cont .search-tb {
+  margin-top: 10px !important;
+  background: #fff;
 }
 .seach-footer {
   position: fixed;
@@ -5820,28 +5895,54 @@ input::-moz-placeholder {
 .shop {
   background: #fff;
 }
-.shop-table {
+.shop .mui-pull-bottom-tips {
+  position: relative;
+  display: block !important;
+  background: none;
+}
+.shop .mui-pull-bottom-wrapper {
+  position: relative;
+  left: 80%;
+  width: 100px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.shop .mui-pull-bottom-wrapper .mui-pull-loading {
+  display: block;
+  position: relative;
+  left: 50%;
+  margin-left: -30px;
+  text-align: center;
+}
+.shop-table.table {
   border: none !important;
 }
-.shop-table thead tr th {
+.shop-table.table thead tr th {
   padding: 10px 10px !important;
   font-size: 14px;
   color: #7a7a7a;
   font-weight: 600;
   background: #fff;
-  border: none !important;
+  border: none;
+  border-bottom: 1px solid #f0f3f5;
 }
-.shop-table thead tr th + th {
-  border-left: 1px solid #f0f3f5 !important;
-}
-.shop-table tbody tr td {
+.shop-table.table tbody tr td {
   padding: 10px 5px !important;
   font-size: 14px;
   border: none;
   border-bottom: 1px solid #f0f3f5;
 }
-.shop-table tbody tr td .mui-icon-arrowright {
+.shop-table.table tbody tr td .mui-icon-arrowright {
   font-size: 16px;
+}
+@media screen and (max-width: 767px) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: none !important;
+  }
 }
 /*市场报价*/
 .shop-nav {
@@ -6584,10 +6685,14 @@ input::-moz-placeholder {
   top: 0;
 }
 /*发布报价*/
+.fabu.mui-bar.mui-bar-nav {
+  height: 102px;
+}
 .fabu-nav {
+  position: relative!important;
   width: 100%;
   height: 50px !important;
-  padding: 0 10px;
+  border-top: 1px solid #f0f3f5 !important;
   background: #fff !important;
 }
 .fabu-nav .mui-control-item {
@@ -6608,7 +6713,7 @@ input::-moz-placeholder {
   font-size: 14px;
 }
 .fabu-form {
-  margin-top: 10px;
+  margin-top: 67px;
   padding: 20px 10px;
   background: #fff;
 }

@@ -52,7 +52,7 @@ var fabu_xq = (function($, doc, zepto) {
 		
 			}, false);
 			
-			}
+		}
 
 	return {
 		init: _init

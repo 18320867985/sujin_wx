@@ -4,10 +4,39 @@
 
 
     background: #fff;
+    
+    .mui-pull-bottom-tips{
+                
+                position: relative;
+                display: block !important;
+                background: none;
+                
+            }
+            
+            .mui-pull-bottom-wrapper{
+                position: relative;
+                
+                left: 80%;
+                width: 100px;
+                padding-left: 10px;
+                font-size: 14px;
+                
+            }
+            
+            .mui-pull-bottom-wrapper .mui-pull-loading{
+                
+                   
+                   display: block;
+                   position: relative;
+                   
+                   left: 50%;
+                   margin-left: -30px;
+                   text-align: center;
+            }
 }
 
 
-.shop-table{
+.shop-table.table{
     
     border: none !important;
     //表头
@@ -17,9 +46,10 @@
         color:@text-777;
         font-weight: 600;
         background: #fff;
-        border: none !important;
+        border: none;
+        border-bottom: 1px solid @text-ash-3;
         &+th{
-            border-left: 1px solid @text-ash-3 !important; 
+            
         }
     }
     
@@ -38,6 +68,15 @@
 }
 
 
+@media screen and (max-width: 767px){
+
+.table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: none !important;
+}}
 
 /*市场报价*/
 

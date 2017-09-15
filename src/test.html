@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>mustache</h1>
+		<div id="big">
+			
+		</div>
+			<script src="js/Home/all.js " type="text/javascript " charset="utf-8 "></script>
+		
+		<!--mustache模板-->
+		<script type="text/html" id="must">
+	
+			<ul>
+				{{#must}}
+				<li>
+					<h2>{{name}}</h2>
+					{{list.name2}}
+		
+				</li>
+				{{/must}}
+			</ul>
+		
+		</script>
+		
+		<script type="text/javascript" >
+			
+		//1
+//			$.getJSON("test.json",function(data){
+//			
+//			var html=	Mustache.to_html($("#must").html(),{must:data.list});
+//		
+//			$("#big").append(html);
+//			});
+			
+			
+			//2
+			var lists=[{name:"mini",list:{name2:"1033"}},{name:"<b>bibi</b>"}]
+			var html=	Mustache.render(window.Zepto("#must").html(),{must:lists});
+			$("#big").append(html);
+	
+	//帮助网站
+	//https://my.oschina.net/u/921053/blog/205339
+		</script>
+		
+	</body>
+</html>
