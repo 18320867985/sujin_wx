@@ -19,6 +19,13 @@ var cleanCss = require('gulp-clean-css'); //gulp-clean-css:压缩css文件 npm i
 
 var minJs = require('gulp-uglify'); //压缩javascript文件  npm install gulp-uglify
 
+/*
+ * .pipe(postcss([autoprefixer]))  // 自动添加css3缀-webkit-  适合用于手机端 
+ * */
+var postcss=require("gulp-postcss"); // 手机端自动补全css3前缀  cnpm install --save-dev gulp-postcss
+var autoprefixer = require('autoprefixer'); // npm install --save-dev autoprefixer
+
+
 var less = require('gulp-less'); //less编译  npm install gulp-less
 
 var connect = require('gulp-connect'); //gulp-connect 创建服务器  npm install --save-dev gulp-connect
@@ -31,9 +38,7 @@ var minHtml = require('gulp-htmlmin'); //使用gulp-htmlmin压缩html，可以�
 
 var rename = require("gulp-rename"); // gulp-rename 重命名文件，把一个文件储存不同版本时使用
 
-var jslint = require("gulp-jslint"); // 检查js gulp-jslint
 
-var jshint = require("gulp-jshint"); //检查js gulp-jshint
 
 var eslint = require("gulp-eslint"); // 检查es5 ees6 js gulp-eshint
 
@@ -44,7 +49,7 @@ var babel = require("gulp-babel");
 	$npm install --save-dev babel-plugin-transform-runtime
 */
 
-var amdoptimizer = require("gulp-amd-optimizer"); //require 模块优化  npm install gulp-amd-optimizer
+
 
 var ts = require("gulp-typescript"); //npm install --save-dev gulp-typescript 编译typeScript
 
@@ -55,7 +60,8 @@ var paths = {
 	jsPath: [
 		
 		//js库
-		"src/js-dev/libs/prefix-css3.min.js", // css3前缀
+		
+		// "src/js-dev/libs/prefix-css3.min.js", // pc端 自动补全css3前缀 
 		
 		"src/js-dev/libs/mustache/mustache.js", // mustache模板  必须放在mui之前 
 
@@ -135,6 +141,7 @@ gulp.task("css", function() {
 	// 合并css
 	return gulp.src(paths.allLess)
 		.pipe(less())
+		.pipe(postcss([autoprefixer]))  // 自动添加css3缀-webkit-  适合用于手机端 
 		.pipe(minCss("all.css")) // 压缩css文件
 		.pipe(gulp.dest('./src/Content/Home/'));
 
@@ -174,6 +181,8 @@ gulp.task("t_mincss", function() {
 
 	gulp.src(paths.allLess)
 		.pipe(less())
+	
+		.pipe(postcss([autoprefixer]))  // 自动添加css3缀-webkit-  适合用于手机端 
 		//.pipe(minCss("all.css")) //压缩css文件
 		.pipe(gulp.dest('./src/Content/Home/'));
 
@@ -219,6 +228,11 @@ gulp.task("watch", ['connect'], function() {
 
 
 
+
+
+
+
+
 /*===============其他=====================*/
 //检查js
 gulp.task('t_eslint', function() {
@@ -255,31 +269,5 @@ gulp.task("es6", function() {
 			   	编译 的方式 env, es2015 , transform-runtime
 			 */
 		})).pipe(gulp.dest("src/js-dev/es5"));
-
-});
-
-//requirjs 优化
-var amdConfig = {
-	baseUrl: 'js/req',
-	path: {
-		"mod1": "mod1",
-		"mod2": "mod2",
-	},
-	//不包含
-	exclude: [
-
-	]
-
-};
-
-//requirjs 优化
-gulp.task('req', function() {
-
-	return gulp.src('js/req/*.js', {
-			base: amdConfig.baseUrl
-		})
-		.pipe(amdoptimizer(amdConfig))
-		.pipe(concat('mods.js'))
-		.pipe(gulp.dest('js'));
 
 });
