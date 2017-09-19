@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 		<meta name="Keywords" content="" />
 		<meta name="Description" content="" />
 		<title>搜索</title>
@@ -206,7 +206,21 @@
 				mui.init();
 				mui.ready(function() {
 
-					var count = 1; //页码
+					var count= 1; //页码
+					var maxpage =10; //最大页码
+					// 没有更多数据
+					if(maxpage<=count){
+						var div =document.createElement("div");
+						div.innerText="没有更多数据了";
+						div.style.textAlign="center";
+						div.style.padding="10px  0";
+						div.style.marginBottom="0";
+						div.style.background="#efeff4";
+						div.style.color="#777";
+						document.querySelector('.shop ').appendChild(div);
+						return ;
+					}
+					
 					//循环初始化所有下拉刷新，上拉加载。
 					mui.each(document.querySelectorAll('.shop-table'), function(index, pullRefreshEl) {
 
@@ -219,48 +233,17 @@
 										var ul = self.element.querySelector('.shop-table-content');
 
 										//ajax数据 ......
-										var lists = [{
-												a: "6200",
-												b: "莫斯科",
-												c: "9333.0",
-												d: "16分钟前"
-											},
-											{
-												a: "6200",
-												b: "莫斯科",
-												c: "9333.0",
-												d: "16分钟前"
-											},
-											{
-												a: "6200",
-												b: "莫斯科",
-												c: "9333.0",
-												d: "16分钟前"
-											},
-											{
-												a: "6200",
-												b: "莫斯科",
-												c: "9333.0",
-												d: "16分钟前"
-											},
-											{
-												a: "6200",
-												b: "莫斯科",
-												c: "9333.0",
-												d: "16分钟前"
-											},
-
-										];
-
-										var html = Mustache.to_html($("#must").html(), {
-											must: lists
-										});
-
-										$(ul).append(html);
+										$.get("json/fabulist.json",function(lists){
+											var html = Mustache.to_html($("#must").html(), {must: lists});
+												
+											$(ul).append(html);
+										})
+										
+									
 
 										//self.endPullup();
 										count++; //页码
-										maxpage = 5; //最大页码
+									
 										self.endPullUpToRefresh((count >= maxpage));
 
 									}, 1000);
@@ -276,6 +259,19 @@
 
 					});
 
+				});
+
+				// 点击搜索
+				$(document).on("keyup", function(e) {
+
+					if($(".search-head .txt-box").val().trim() === "") {
+						return false;
+					}
+					if(e.keyCode === 13) {
+						// 点击 enter键 todo...
+						
+					//	alert("点击 enter键");
+					}
 				});
 
 			})(mui, window.Zepto);

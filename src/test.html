@@ -1,70 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
+
 	<body>
-		<h1>mustache</h1>
-		<div id="big">
+		<script src="js/Home/all.js " type="text/javascript " charset="utf-8 "></script>
+		<script type="text/javascript">
+			var timestamp4 = new Date(1472048779952).format("yyyy-MM-dd"); //直接用 new Date(时间戳) 格式转化获得当前时间
+
+			alert(timestamp4);
 			
-		</div>
-			<script src="js/Home/all.js " type="text/javascript " charset="utf-8 "></script>
-		
-		<!--mustache模板-->
-		<script type="text/html" id="must">
-	
-			<ul>
-				{{#must}}
-				<li>
-					<h2>{{name}}</h2>
-					{{list.name2}}
-		
-				</li>
-				{{/must}}
-			</ul>
-		
 		</script>
-		
-		<script type="text/javascript" >
-			
-		//1
-//			$.getJSON("test.json",function(data){
-//			
-//			var html=	Mustache.to_html($("#must").html(),{must:data.list});
-//		
-//			$("#big").append(html);
-//			});
-			
-			
-			$.ajax({
-				crossDomain:true,
-				type:"post",
-				url:"http://localhost:33952/api/values/",
-				data:"{a:1234}",
-				dataType:""
-				success:function(data){
-				
-				console.log(data)
-				},
-				error:function(data){
-					console.log(data+"erroe")
-					
-				}
-				
-				
-			})
-			
-			
-			
-//			//2
-//			var lists=[{name:"mini",list:{name2:"1033"}},{name:"<b>bibi</b>"}]
-//			var html=	Mustache.render(window.Zepto("#must").html(),{must:lists});
-//			$("#big").append(html);
-	
-	//帮助网站
-	//https://my.oschina.net/u/921053/blog/205339
-		</script>
-		
 	</body>
+
 </html>

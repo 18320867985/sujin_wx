@@ -1,0 +1,65 @@
+
+/*发布列表*/
+
+.fabulist-nav{
+  position: fixed;
+  top:44px;
+  left: 0;
+  z-index: 9999;
+  
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 1px solid @text-ash-3;
+  box-shadow: 1px 1px 2px @text-ash-3;
+}
+
+
+.fabulist-cont{
+    padding-top: 94px !important;
+    
+      //下拉加载
+    .mui-pull-bottom-tips {
+        position: absolute !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+  
+}
+
+// 页脚padding-bottom
+.fabulist-cont.mui-content {
+    padding-bottom: 73px;
+}
+
+.fabulist-table.table {
+    border: none !important;
+     background: #fff;
+    //表头
+    thead tr th {
+        padding: 10px 10px !important;
+        font-size: 14px;
+        color: @text-777;
+        font-weight: 600;
+        background: #fff;
+        border: none;
+        border-bottom: 1px solid @text-ash-3;
+        &+th {}
+    }
+    tbody tr td {
+        max-width: 70px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 10px 5px !important;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid @text-ash-3;
+        //图标
+        .mui-icon-arrowright {
+            font-size: 16px;
+        }
+    }
+}
+

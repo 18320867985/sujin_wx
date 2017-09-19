@@ -13,8 +13,9 @@
 ;(function($) {
 
 	// 选项卡tag-box
-	$(".tab-box .tab-item").on("click", function() {
+	$(".tab-box .tab-item").on("click", function(e) {
 		
+		e.preventDefault();
 		var p=$(this).parents(".tab-box").find(".tab-item").removeClass("active");
 		$(this).addClass("active");
 

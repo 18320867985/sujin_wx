@@ -1,7 +1,5 @@
 /**搜索页**/
 
-
-
 .quotation-head {
     position: fixed;
     top: 0;
@@ -52,11 +50,22 @@
 }
 
 //内容
-.quotation-cont {}
+.quotation-cont {
+    position: relative;
+}
 
 //行情ttl
+.suotation-cont-box1,
+.suotation-cont-box2 {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+  
+}
+
 .suotation-cont-box1 {
-    position: relative;
     margin-bottom: 0px;
     .icon-fx-down {
         position: absolute;
@@ -67,15 +76,18 @@
     .suotation-cont-ttl {
         margin-top: 0;
         padding: 10px 20px 15px 10px;
+          
         background: #fff;
+        border-bottom: 1px solid @text-ash-3;
+        box-shadow: 1px 1px 2px @text-ash-3;
         li {
             a {
                 padding-bottom: 5px;
                 color: @text-777;
             }
-            &.active  a{
+            &.active a {
                 border-bottom: 2px solid @text-primary ;
-                 color: @text-primary;
+                color: @text-primary;
             }
         }
     }
@@ -83,7 +95,6 @@
 
 //行情ttl
 .suotation-cont-box2 {
-    position: relative;
     display: none;
     .icon-fx-down {
         position: absolute;
@@ -95,6 +106,8 @@
         margin-top: 0;
         padding: 10px 20px 10px 10px;
         background: #fff;
+        border-bottom: 1px solid @text-ash-3;
+      
         li {
             a {
                 padding-bottom: 10px;
@@ -106,7 +119,9 @@
         margin-top: -14px;
         padding: 10px 20px 10px 10px;
         background: #fff;
-        border-top: 1px solid @text-ash-3;
+        border-bottom: 1px solid @text-ash-3;
+        box-shadow: 1px 1px 2px @text-ash-3;
+        
         li {
             margin-bottom: 15px;
             a {
@@ -119,6 +134,11 @@
             }
         }
     }
+}
+
+//页脚padding
+.suotation-cont.mui-content {
+    padding-top: 113px;
 }
 
 //图文列表

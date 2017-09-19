@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 		<meta name="Keywords" content="" />
 		<meta name="Description" content="" />
 		<title>上传资料</title>
@@ -23,6 +23,7 @@
 		</style>
 
 		<body>
+			
 			<div class="qy-upload">
 
 				<header class="mui-bar mui-bar-nav">
@@ -176,12 +177,11 @@
 			<!--js-->
 			<script src="js/Home/all.js" type="text/javascript" charset="utf-8"></script>
 			<script>
-				;
 				(function($) {
 
 					//文件上传
 
-					$(".icon-jia,.img-ttl").on("tap", function(e) {
+					$(".icon-jia,.img-ttl").on("click", function(e) {
 						e.stopPropagation();
 						e.preventDefault();
 						var p = $(this).parents(".upload-box");
@@ -214,54 +214,50 @@
 							el: $(obj), //当前element
 							size: 300000000, //1m=1000000
 							seccess: function(data) {
-								
+
 								var url = "images/Home/banner.png";
 								$(p).find(".img-ttl").show();
 								$(p).find(".progress-box").hide();
 								$(p).find("img").attr("src", url);
 								$(p).find("img").show();
 								$(p).find(".img-url").val(url);
-							
-							
+
 							}, //成功回调
 							error: function() {
-								
-//								var url = "images/Home/banner.png";
-//								$(p).find(".img-ttl").show();
-//								$(p).find(".progress-box").hide();
-//								$(p).find("img").attr("src", url);
-//								$(p).find("img").show();
-//								$(p).find(".img-url").val(url);
+
+								// 发布删掉
+								var url = "images/Home/banner.png";
+								$(p).find(".img-ttl").show();
+								$(p).find(".progress-box").hide();
+								$(p).find("img").attr("src", url);
+								$(p).find("img").show();
+								$(p).find(".img-url").val(url);
 								//alert("上传发生错误")
 							} //错误回调
 
 						}); //调用上传接口
-					}
-				
-				//上传资料按钮
-				$(".btns .btn").on("tap",function(){
-					var bl=true
-					$(".upload-box").each(function(){
-						var v=	$(this).find(".img-url").val();
-						if(v==""){
-							
-							mui.alert($(this).find(".img-ttl").text())
-							return bl=false;
-						
-							
+					};
+
+					// 上传资料按钮
+					$(".btns .btn").on("tap", function() {
+						var bl = true
+						$(".upload-box").each(function() {
+							var v = $(this).find(".img-url").val();
+							if(v == "") {
+
+								mui.alert($(this).find(".img-ttl").text(), "提示", "确定")
+								return bl = false;
+
+							}
+
+						});
+
+						//todo这里提交代码
+						if(bl) {
+							alert("todo");
 						}
-						
+
 					});
-					
-					//todo这里提交代码
-					if(bl){
-						alert("todo");
-					}
-					
-				});
-
-
-
 
 				})(window.Zepto)
 			</script>

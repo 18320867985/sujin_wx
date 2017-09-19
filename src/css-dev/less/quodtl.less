@@ -3,44 +3,70 @@
 .quodtl {
     padding: 10px;
     background: #fff;
-    
     //标题
     h4 {
         margin-top: 20px;
         margin-bottom: 15px;
-         padding: 0 10px;
-        color:#777;
+        padding: 0 10px;
+        color: #777;
         font-size: 18px;
         font-weight: 500;
     }
-    
     //时间
     .date {
         margin-bottom: 15px;
-          padding: 0 10px;
+        padding: 0 10px;
     }
-    
     //内容
     .quodtl-cont {
         padding: 10px;
-        color:#777;
-       
+        color: #444;
         img {
             max-width: 100% !important;
             height: auto !important;
         }
+    }
+}
+
+// 免责声明
+.quodtl-shengming {
+    padding: 10px;
+    h5 {
+        padding: 8px;
+        color:@text-warning;
+        text-align: center;
+        border: 1px solid @text-warning;
+        border-radius: 4px;
+        .iconfont {
+            margin-left: 20px;
+            font-size: 16px ;
+            color:@text-warning;
+        }
+    }
+    .cont {
+        display: none;
+        padding: 10px ;
+        transition: all 0.9s;
+       
+        &.active {
+            display: block;
+        }
         
+        p{
+             color:@text-warning;
+             opacity: 0.9;
+        }
         
     }
 }
 
 //页脚
-.quodtl.mui-bar.mui-bar-tab{
+.quodtl.mui-bar.mui-bar-tab {
     padding: 0;
- height: 50px;
- line-height: 50px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
-    span{
+    span {
         font-size: 16px;
         vertical-align: middle;
     }
