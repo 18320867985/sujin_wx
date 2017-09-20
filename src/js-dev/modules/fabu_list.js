@@ -4,6 +4,7 @@ var fabuList = (function($) {
 
 	var _init = function() {
 
+
 		$.init();
 		// 时间
 		var btns = mui('#select-date2');

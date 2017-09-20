@@ -2,16 +2,86 @@
 <html>
 
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>写邮件 </title>
+		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
+		<link rel="stylesheet" href="Content/Home/all.css" />
 	</head>
 
-	<body>
-		<script src="js/Home/all.js " type="text/javascript " charset="utf-8 "></script>
-		<script type="text/javascript">
-			var timestamp4 = new Date(1472048779952).format("yyyy-MM-dd"); //直接用 new Date(时间戳) 格式转化获得当前时间
+	<body class="bg-white">
+		<!--头部-->
+		<header class="rwinfo-head mui-bar mui-bar-nav bg-white ">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left text-base"></a>
+			<h1 class="mui-title">写信息</h1>
+			<span class="rwinfo-head-send mui-pull-right">发送</span>
+		</header>
 
-			alert(timestamp4);
+		<!--主体内容-->
+		<section class="rwinfo mui-content">
+
+			<form name="form" class="form">
+
+				<ul class="mui-table-view mui-clearfix ">
+					<!--禁用加上 mui-disabled"-->
+					<li class="mui-table-view-cell mui-row mui-clearfix">
+						<label for="">收件人:</label>
+
+						<input type="text" name="a" vd-req id="" value="" placeholder="74646456@qq.com" />
+
+					</li>
+					<li class="mui-table-view-cell mui-row mui-clearfix">
+						<label for="">发件人:</label>
+
+						<input type="text" name="b" id="" value="" placeholder="724234@qq.com" />
+
+					</li>
+					<li class="mui-table-view-cell mui-clearfix">
+						<label for="">主题:</label>
+
+						<input type="text" name="c" id="" value="" placeholder="习近平坐镇深改" />
+
+					</li>
+					<li class="textarea-box mui-table-view-cell mui-clearfix">
+						<label for="">内容:</label>
+						<textarea name="" rows="" cols="" placeholder="输入内容"></textarea>
+					</li>
+				</ul>
+			</form>
+		</section>
+
+		<script src="js/Home/all.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+//			$(function() {
+//				$(".rwinfo-head-send").on("tap", function() {
+//				
+//					var bl = true;
+//					$(".form .mui-table-view-cell [name]").each(function() {
+//						var p = $(this).parents(".mui-table-view-cell");
+//						var lb = $("label", p).text();
+//						var v = $(this).val();
+//						if(v === "" || v === null) {
+//							mui.alert(lb.replace(":", "") + "不能为空", " ", "确定");
+//							return bl = false;
+//						}
+//
+//					});
+//					
+//					if(bl){
+//						
+//						// 成提交数据 ajax todo...
+//						mui.alert("todo...", " ", "确定");
+//					}
+//				});
+//
+//			});
+
+			test.init();
+			console.log(test.arrs[0]);
 			
 		</script>
 	</body>
