@@ -11,24 +11,20 @@
 		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
 		<link rel="stylesheet" href="Content/Home/all.css" />
 		<style type="text/css">
-			.vd-error.mui-table-view-cell label,
-			.vd-error.mui-table-view-cell input[type=text] {
-				color: red;
-			}
 			
-			.vd-ok.mui-table-view-cell label,
-			.vd-ok.mui-table-view-cell input[type=text] {
-				color: green;
-			}
-			
-			.vd-box .dep-btn {
-				color: green;
-			}
-			
-			.vd-box.mui-table-view-cell .dep-btn.error {
-				color: #ddd;
-			}
-		</style>
+		.vd-error.mui-table-view-cell label,
+		.vd-error.mui-table-view-cell input{
+				color:red;
+		}
+		.vd-ok.mui-table-view-cell label{
+	
+				color:green;
+		}
+		
+		.vd-box  .dep-btn{color:green;}
+		.vd-box.mui-table-view-cell .dep-btn.error{color:#ddd;}
+		
+	</style>
 	</head>
 
 	<body class="bg-white">
@@ -42,56 +38,58 @@
 		<!--主体内容-->
 		<section class="rwinfo mui-content">
 
-			<form name="form1" class="form">
+			<form name="form" class="form">
 
 				<ul class="mui-table-view mui-clearfix ">
 					<!--禁用加上 mui-disabled"-->
 					<li class="mui-table-view-cell mui-row mui-clearfix vd-box">
 						<label class="a" for="">收件人:</label>
 
-						<input type="text" name="a" vd-req vd-req-msg="收件人不能为空" vd-pattern="^[a-zA-Z].{3,32}$" vd-pattern-msg="收件人格式不对" value="" placeholder="74646456@qq.com" />
+						<input type="text" name="a" vd-req  vd-req-msg="收件人不能为空" vd-pattern="^1$" vd-pattern-msg="收件人格式不对" value="2" placeholder="74646456@qq.com" />
+						<!--依赖的按钮-->
+						<input class="dep-btn error" type="button" name="" id="" value="send" />
+					</li>
+					<li class="mui-table-view-cell mui-row mui-clearfix vd-box">
+						<label for="">验证码:</label>
+
+						<input type="text" vd-req vd-req-msg="发件人不能为空" name="b"  value="qq" placeholder="输入验证码" />
 
 					</li>
 					<li class="mui-table-view-cell mui-clearfix vd-box">
 						<label for="">手机:</label>
 
-						<input type="text" vd-pattern="^1\d{10}$" vd-pattern-msg="手机格式不对" maxlength="11" name="c" id="" value="" placeholder="输入正确手机号码" />
-						<!--依赖的按钮-->
-						<span class="dep-btn error  mui-btn">发送验证码</span>
-					</li>
-					<li class="mui-table-view-cell mui-row mui-clearfix vd-box">
-						<label for="">验证码:</label>
-
-						<input type="text" vd-req vd-req-msg="验证码不能为空" vd-remote-length="6" vd-remote="json/remote.json" vd-remote-msg="验证码不对" name="yzm" maxlength="8" value="" placeholder="输入验证码" />
+						<input type="text" vd-pattern="^1\d{10}$"  vd-pattern-msg="手机格式不对" name="c" id="" value="1" placeholder="习近平坐镇深改" />
 
 					</li>
-
 					<li class="textarea-box mui-table-view-cell mui-clearfix vd-box">
 						<label for="">内容:</label>
 						<textarea name="cont" rows="" vd-req vd-req-msg="内容不能为空" cols="" placeholder="输入内容"></textarea>
 					</li>
 				</ul>
-
+				
 				<input type="button" name="vd-btn" id="" value="提交" />
 			</form>
 		</section>
 
 		<script src="js/Home/all.js" type="text/javascript" charset="utf-8"></script>
-
+		
 		<script>
-			// 初始化验证对象
-			vd.init("form1");
-			$(".rwinfo-head-send").on("click", function() {
-
-					// 是否验证成功
-					vd.isSuccess(function(a) {
-						alert("ok");
-					},function(obj) {
-					obj.el.focus();
-					mui.alert(obj.errorMsg, " ", "确认");
-					
-					});	
-			});
+		
+		// 初始化验证对象
+		vd.init();
+		$(".rwinfo-head-send").on("click",function(){
+			
+			// 是否验证成功
+			vd.isSuccess(function(){
+				alert("ok");
+			},function(msg){
+				
+			mui.alert(msg," ","确认")
+			})
+		});
+		
+	
+			
 		</script>
 	</body>
 
