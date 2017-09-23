@@ -49,13 +49,13 @@
 					<li class="mui-table-view-cell mui-row mui-clearfix vd-box">
 						<label class="a" for="">收件人:</label>
 
-						<input type="text" name="a" vd-req vd-req-msg="收件人不能为空" vd-pattern="^[a-zA-Z].{3,32}$" vd-pattern-msg="收件人格式不对" value="" placeholder="74646456@qq.com" />
+						<input type="text" name="a"   vd-pattern="^[a-zA-Z0-9]{1,32}[@][a-zA-Z0-9]{1,16}\.[a-zA-Z]{1,16}$" vd-pattern-msg="收件人格式不对" value="" placeholder="74646456@qq.com" />
 
 					</li>
 					<li class="mui-table-view-cell mui-clearfix vd-box">
 						<label for="">手机:</label>
 
-						<input type="text" vd-pattern="^1\d{10}$" vd-pattern-msg="手机格式不对" maxlength="11" name="c" id="" value="" placeholder="输入正确手机号码" />
+						<input type="text"  vd-req vd-req-msg="手机号码不能为空" vd-pattern="^1\d{10}$" vd-pattern-msg="手机格式不对" maxlength="11" name="c" id="" value="" placeholder="输入正确手机号码" />
 						<!--依赖的按钮-->
 						<span class="dep-btn error  mui-btn">发送验证码</span>
 					</li>
@@ -77,7 +77,7 @@
 		</section>
 
 		<script src="js/Home/all.js" type="text/javascript" charset="utf-8"></script>
-
+	
 		<script>
 			// 初始化验证对象
 			vd.init("form1");
@@ -88,7 +88,7 @@
 						alert("ok");
 					},function(obj) {
 					obj.el.focus();
-					mui.alert(obj.errorMsg, " ", "确认");
+					mui.alert(obj.errorMsg," ","确认");
 					
 					});	
 			});

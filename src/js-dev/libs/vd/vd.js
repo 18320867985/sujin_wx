@@ -3,6 +3,11 @@
 var vd = (function($) {
 
 	var obj = {
+		init: function(formName) {
+			this.addErrorStyle();
+			this.checkObj(formName);
+			this.addVidation();
+		},
 		arrs: [],
 		oldRemoteValue: "",
 
@@ -92,7 +97,7 @@ var vd = (function($) {
 
 			// 非空验证
 			if(_req != null) {
-				if(v.trim() === "") {
+				if(v === "") {
 					_obj2.bl = false;
 					_obj2.val = v;
 					_obj2.errorMsg = _req_msg;
@@ -106,6 +111,7 @@ var vd = (function($) {
 				} else {
 					_obj2.errorMsg = "";
 					_obj2.val = v;
+					_obj2.bl = true;
 					var p = $(el).parents(".vd-box");
 					$(p).removeClass("vd-error vd-req ");
 					$(el).removeClass("vd-error");
@@ -116,7 +122,7 @@ var vd = (function($) {
 			}
 
 			// 正则验证
-			if(_pattern != null) {
+			if(_pattern != null&&v!="") {
 
 				var reg = new RegExp(_pattern, "i");
 				if(!reg.test(v)) {
@@ -133,6 +139,7 @@ var vd = (function($) {
 				} else {
 					_obj2.errorMsg = "";
 					_obj2.val = v;
+					_obj2.bl = true;
 					var p = $(el).parents(".vd-box");
 					$(p).removeClass("vd-error vd-pattern");
 					$(el).removeClass("vd-error");
@@ -140,19 +147,25 @@ var vd = (function($) {
 					$(".dep-btn", p).removeClass("error"); //依赖按钮
 
 				}
+
+			}else{
+				
+					_obj2.errorMsg = "";
+					_obj2.val = v;
+					_obj2.bl = true;
+					var p = $(el).parents(".vd-box");
+					$(p).removeClass("vd-error vd-pattern");
+					$(el).removeClass("vd-error");
+					$(p).addClass("vd-ok");
+					$(".dep-btn", p).removeClass("error"); //依赖按钮
+				
 			}
 
 			// remote 
-			if(!isRemote) {
-				if(_obj2.bl == false) {
-					this.remoteFunError(_obj2, el, _remote_msg);
-					return;
-				} else {
-					this.remoteFunOk(_obj2, el);
-				}
-
-				return;
+			if(isRemote) {
+				_obj2.bl = true;
 			}
+			
 			if(_remote != null) {
 
 				var _index = _remote_length != null ? _remote_length : 0;
@@ -189,7 +202,7 @@ var vd = (function($) {
 					success: function(data) {
 
 						if(data == false) {
-
+	
 							$remote.remoteFunError(_obj2, el, _remote_msg);
 
 							return;
@@ -209,7 +222,8 @@ var vd = (function($) {
 
 			}
 
-			_obj2.bl = true;
+
+			
 
 		},
 
@@ -236,11 +250,7 @@ var vd = (function($) {
 
 		},
 
-		init: function(formName) {
-			this.addErrorStyle();
-			this.checkObj(formName);
-			this.addVidation();
-		},
+		
 		getObjs: function() {
 
 			return this.arrs;
