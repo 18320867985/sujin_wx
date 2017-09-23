@@ -11355,6 +11355,7 @@ var vd = (function($) {
 
 	var obj = {
 		arrs: [],
+		oldRemoteValue: "",
 
 		checkObj: function(formName) {
 			if(typeof formName === "undefined") {
@@ -11408,9 +11409,13 @@ var vd = (function($) {
 				$(el).on("keyup", _obj, function(event) {
 					this.checkElement(event.data, event.target, true);
 				}.bind(this));
-				$(el).on("change", _obj, function(event) {
-					this.checkElement(event.data, event.target, true);
-				}.bind(this));
+
+				var remote = el.getAttribute("vd-remote");
+				if(remote == null) {
+					$(el).on("change", _obj, function(event) {
+						this.checkElement(event.data, event.target, true);
+					}.bind(this));
+				}
 
 			}
 
@@ -11516,8 +11521,20 @@ var vd = (function($) {
 				}
 
 				var $remote = this;
+
+				// 检查值是否改变过
+				if(this.oldRemoteValue == v) {
+					if(_obj2.bl == false) {
+						this.remoteFunError(_obj2, el, _remote_msg);
+						return;
+					} else {
+						this.remoteFunOk(_obj2, el);
+					}
+					return;
+				}
+				this.oldRemoteValue = v;
 				$.ajax({
-					url: _remote + "?rand="+Math.random() +"&"+ el.name + "=" + v,
+					url: _remote + "?rand=" + Math.random() + "&" + el.name + "=" + v,
 					type: "get",
 					timeout: 10000,
 					success: function(data) {
