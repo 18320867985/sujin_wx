@@ -9,6 +9,17 @@ var vd = (function($) {
 			this.addVidation();
 		},
 		arrs: [],
+		compareEmit: function(pName, compareName, value) {
+			var el = document.forms[pName][compareName];
+			for(var i = 0; i < this.arrs.length; i++) {
+				if(this.arrs[i].elName.trim() === compareName.trim()) {
+					$(el).trigger("keyup");
+					break;
+				}
+
+			}
+
+		},
 		oldRemoteValue: "",
 
 		checkObj: function(formName) {
@@ -92,11 +103,16 @@ var vd = (function($) {
 			var _remote_msg = el.getAttribute("vd-remote-msg");
 			var _remote_length = el.getAttribute("vd-remote-length");
 
+			// compare 
+			var _compare = el.getAttribute("vd-compare");
+			var _compare_msg = el.getAttribute("vd-compare-msg");
+			var _compare_emit = el.getAttribute("vd-compare-emit"); // 触发目标对象
+
 			// 提交按钮
 			var _btn = document.forms[_obj2.pName]["vd-btn"];
 
 			// 非空验证
-			if(_req != null) {
+			if(_req !== null) {
 				if(v === "") {
 					_obj2.bl = false;
 					_obj2.val = v;
@@ -121,8 +137,13 @@ var vd = (function($) {
 				}
 			}
 
+			// 触发比较对象
+			if(_compare_emit !== null) {
+				this.compareEmit(_obj2.pName, _compare_emit, v);
+			}
+
 			// 正则验证
-			if(_pattern != null&&v!="") {
+			if(_pattern !== null && v != "") {
 
 				var reg = new RegExp(_pattern, "i");
 				if(!reg.test(v)) {
@@ -148,24 +169,53 @@ var vd = (function($) {
 
 				}
 
-			}else{
-				
+			} else {
+
+				_obj2.errorMsg = "";
+				_obj2.val = v;
+				_obj2.bl = true;
+				var p = $(el).parents(".vd-box");
+				$(p).removeClass("vd-error vd-pattern");
+				$(el).removeClass("vd-error");
+				$(p).addClass("vd-ok");
+				$(".dep-btn", p).removeClass("error"); //依赖按钮
+
+			}
+
+			// 比较验证
+			if(_compare !== null) {
+
+				var _compare_obj = document.forms[_obj2.pName][_compare];
+				if(v !== _compare_obj.value.trim()) {
+					_obj2.bl = false;
+					_obj2.val = v;
+					_obj2.errorMsg = _compare_msg;
+					var p = $(el).parents(".vd-box");
+					$(p).addClass("vd-error vd-compare ");
+					$(p).removeClass("vd-ok");
+					$(el).addClass("vd-error");
+					$(".dep-btn", p).addClass("error"); //依赖按钮
+
+					return;
+				} else {
 					_obj2.errorMsg = "";
 					_obj2.val = v;
 					_obj2.bl = true;
 					var p = $(el).parents(".vd-box");
-					$(p).removeClass("vd-error vd-pattern");
+					$(p).removeClass("vd-error vd-compare ");
 					$(el).removeClass("vd-error");
 					$(p).addClass("vd-ok");
 					$(".dep-btn", p).removeClass("error"); //依赖按钮
-				
+
+				}
+
 			}
 
 			// remote 
 			if(isRemote) {
 				_obj2.bl = true;
 			}
-			
+
 			if(_remote != null) {
 
 				var _index = _remote_length != null ? _remote_length : 0;
@@ -202,7 +252,7 @@ var vd = (function($) {
 					success: function(data) {
 
 						if(data == false) {
-	
+
 							$remote.remoteFunError(_obj2, el, _remote_msg);
 
 							return;
@@ -222,9 +272,6 @@ var vd = (function($) {
 
 			}
 
-
-			
-
 		},
 
 		isSuccess: function(successFun, errorFun) {
@@ -236,24 +283,50 @@ var vd = (function($) {
 			for(var i = 0; i < this.arrs.length; i++) {
 				var _obj = this.arrs[i];
 				if(_obj.bl === false) {
-
 					errorFun(_obj);
 					return false;
-
 				}
 
 			}
 
-			successFun(_obj);
+			var newObj = this.getNewObjs();
+			successFun(newObj);
 
 			return true;
-
 		},
 
-		
-		getObjs: function() {
+		getNewObjs: function() {
 
-			return this.arrs;
+			// 是否全部验证成功
+			var newObj = {};
+			for(var i = 0; i < this.arrs.length; i++) {
+
+				newObj[this.arrs[i].elName] = this.arrs[i].val;
+
+			}
+
+			return newObj;
+
+		},
+		getObj: function(name) {
+
+			// 是否全部验证成功
+			var obj={}
+			for(var i = 0; i < this.arrs.length; i++) {
+
+				if(name.trim()===this.arrs[i].elName.trim()){
+					
+					obj=this.arrs[i];
+					break;
+				}
+
+			}
+			
+			 return obj;
+			
+
+			
+
 		},
 		addErrorStyle: function() {
 

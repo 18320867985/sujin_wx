@@ -65,6 +65,18 @@
 						<input type="text" vd-req vd-req-msg="验证码不能为空" vd-remote-length="6" vd-remote="json/remote.json" vd-remote-msg="验证码不对" name="yzm" maxlength="6" value="" placeholder="输入验证码" />
 
 					</li>
+					<li class="mui-table-view-cell mui-row mui-clearfix vd-box">
+						<label class="a" for="">密码:</label>
+
+						<input type="text" name="pwd"  vd-req vd-req-msg="密码不能为空" vd-compare-emit="pwd2"  vd-pattern="^\w{8,32}$" vd-pattern-msg="密码长度8到32位" value="" placeholder="输入密码" />
+
+					</li>
+					<li class="mui-table-view-cell mui-row mui-clearfix vd-box">
+						<label class="a" for="">确认密码:</label>
+
+						<input type="text" name="pwd2"  vd-req vd-req-msg="密码不能为空"  vd-compare="pwd"  vd-compare-msg="两次密码不能相同"  value="" placeholder="输入密码" />
+
+					</li>
 
 					<li class="textarea-box mui-table-view-cell mui-clearfix vd-box">
 						<label for="">内容:</label>
@@ -84,11 +96,16 @@
 			$(".rwinfo-head-send").on("click", function() {
 
 					// 是否验证成功
-					vd.isSuccess(function(a) {
-						alert("ok");
+					vd.isSuccess(function(obj) {
+						
+						alert(JSON.stringify(obj));
 					},function(obj) {
+					
+					// error 
+					mui.alert(obj.errorMsg," ","确认",function(){
 					obj.el.focus();
-					mui.alert(obj.errorMsg," ","确认");
+					});
+					
 					
 					});	
 			});
