@@ -1,0 +1,99 @@
+/*金融页*/
+
+.jinrong {
+    background: #fff;
+    ;
+    //轮播图
+    .mui-slider {
+        img {
+            min-height: 200px;
+            max-height: 300px;
+        }
+        //轮播图片圆点
+        .mui-indicator {
+            width: 6px;
+            height: 6px;
+            &+.mui-indicator {
+                margin-left: -3px;
+            }
+        }
+    }
+}
+
+//  jinrong-tab
+.jinrong-tab {
+    padding: 5px;
+    .mui-col-xs-6 {
+        margin: 0 !important;
+        text-align: center;
+        img {
+            width: 150px;
+            height: 80px;
+            margin: 0 !important;
+        }
+    }
+}
+
+// jinrong-bz
+.jinrong-bz {
+    margin-top: 20px;
+    // 左边图片
+    .img-box {
+        text-align: center;
+        img {
+            position: relative;
+            float: none;
+            top: 10px;
+        }
+    }
+    //  右边ttl
+    h4.ttl {
+        color: @text-primary !important;
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+    p {
+        padding: 0 10px;
+        line-height: 20px;
+    }
+    &.kg {
+        //  右边ttl
+        h4.ttl {
+            color: @text-primary !important;
+            margin-bottom: 10px;
+            padding: 0 10px 10px 20px;
+        }
+        p {
+            padding: 0 10px 10px 20px;
+            line-height: 20px;
+        }
+    }
+}
+
+// 流程
+.jinrong-flow {
+    padding: 10px;
+    h5.ttl {
+        margin-bottom: 20px !important;
+        color: @text-primary !important;
+    }
+    .mui-col-xs-3 {
+        position: relative;
+        text-align: center;
+        img {
+            width: 25px;
+            height: 25px;
+            margin-bottom: 5px;
+        }
+        .img2 {
+            position: absolute;
+            width: 50px;
+            height: 30px;
+            top: -5px;
+            left: 70%;
+            @media(min-width: 400px) {
+                left:80%;
+            }
+        }
+    }
+}
