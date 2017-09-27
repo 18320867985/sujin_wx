@@ -14,7 +14,7 @@
 
 	</head>
 
-	<body class="bg-white">
+	<body class="">
 		<!--头部-->
 		<header class="search-head ">
 			<span class="mui-icon mui-icon-search"></span>
@@ -40,7 +40,7 @@
 		</nav>
 
 		<!--主体内容-->
-		<section class="shop  mui-content bg-white">
+		<section class="shop  mui-content ">
 
 			<!--列表content-->
 			<table class="shop-table table  mui-text-center">
@@ -201,7 +201,7 @@
 				mui.ready(function() {
 
 					var count = 1; //页码
-					var maxpage = 1; //最大页码
+					var maxpage = 10; //最大页码
 					// 没有更多数据
 					if(maxpage<=count){
 						var div =document.createElement("div");
@@ -211,6 +211,7 @@
 						div.style.background="#efeff4";
 						div.style.color="#777";
 						document.querySelector('.shop ').appendChild(div);
+						$(".shop-table.table").css("margin-bottom","0");
 						return ;
 					}
 					//循环初始化所有下拉刷新，上拉加载。
