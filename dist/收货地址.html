@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>收货地址</title>
+		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
+		<link rel="stylesheet" href="Content/Home/all.css" />
+		<link rel="stylesheet" type="text/css" href="Content/Home/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="Content/Home/mui.poppicker.css"/>
+			
+			<style type="text/css">
+				
+			</style>
+	
+	</head>
+
+	
+
+	<body class="">
+		<!--头部-->
+		<header class=" mui-bar mui-bar-nav bg-white">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left text-base"></a>
+			<h1 class="mui-title">收货地址</h1>
+			<!--<span class="rwinfo-head-send mui-pull-right">发送</span>-->
+		</header>
+
+		<!--主体内容-->
+		<section class=" mui-content">
+			<div class="address-edit">
+			<form class="mui-input-group2">
+			    <div class="mui-input-row ">
+			        <label class="mui-col-xs-2">收货人</label>
+			        <input type="text" class="mui-input-clear" value="李明" placeholder="姓名">
+			    </div>
+			    
+			    <div class="mui-input-row ">
+			        <label>联系方式</label>
+			        <input type="text" class="mui-input-clear" value="13866662580" placeholder="手机号码">
+			    </div>
+			    
+			     <div class="mui-input-row ">
+			        <label>省市区县</label>
+			        <input class="select-city" type="text" readonly="readonly"   value="北京市-北京市-东城区" placeholder="">
+			        <span class="mui-icon mui-icon-arrowright"></span>
+			    </div>
+			    
+			   <div class="mui-input-row  mui-clearfix ">
+			        <label class="">详细地址</label>
+			        <textarea class="mui-input-clear" value="" placeholder="详细地址需要填写楼栋层房间号信息"></textarea>
+			 
+			   </div>
+			   
+			    <div class="cst-tab mui-row  mui-clearfix ">
+			        <div class="mui-col-xs-2 mui-text-left">地址标签</div>
+			        <div class="mui-col-xs-9">
+			        <a href="javascript:;">公司</a>
+			     	<a href="javascript:;">家</a>
+			     	<a href="javascript:;">学校</a>
+			     	<a class="cst-btn" href="javascript:;">自定义 <span class="iconfont icon-jia1"></span></a>
+			 
+			        </div>
+			     	
+			   </div>
+			    
+			    <div class="btns mui-input-row  mui-clearfix ">
+			     	
+			     	 <button class="btn" type="button">确认</button>
+			 
+			   </div>
+			   
+			</form>
+				
+			</div>
+
+		</section>
+
+		<script src="js/Home/all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Home/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Home/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Home/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Home/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+			(function($,doc){
+				
+				$.init();
+				
+				$.ready(function(){
+					
+					// 级联示例
+					var _getParam = function(obj, param) {
+						return obj[param] || '';
+					};
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					
+					
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton =doc.querySelector('.select-city');
+					//var cityResult3 = doc.getElementById('cityResult3');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							showCityPickerButton.value =_getParam(items[0], 'text') + "-" + _getParam(items[1], 'text') + "-" + _getParam(items[2], 'text');
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+							
+							
+						});
+					}, false);
+				
+				})
+				
+				
+			})(window.mui,window.document);
+			
+			
+			
+			//确认按钮
+			document.querySelector(".btn").addEventListener("tap",function(){
+				
+				var showCityPickerButton =document.querySelector('.select-city');
+				//alert(showCityPickerButton.value);
+			})
+			
+			
+			
+		</script>
+	</body>
+
+</html>

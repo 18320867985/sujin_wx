@@ -29,6 +29,60 @@
     padding-top: 44px;
 }
 
+// 头部的样本2
+.search-head2 {
+    position: fixed;
+    width: 100%;
+    padding: 5px 15px;
+    background: rgb(9, 162, 232);
+    z-index: 9999;
+    // 选框
+    .select-ttl {
+        position: absolute;
+        top: 11px;
+        left: 20px;
+       
+        display: block;
+        width: 80px;
+        padding: 0 5px;
+        padding-right: 10px;
+     
+        color: @text-primary;
+        text-align: center;
+        
+       
+      
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+       
+        
+        
+      
+    }
+    //搜索icon
+    .mui-icon-search {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 24px;
+        color: @text-primary;
+        cursor: pointer;
+    }
+    //搜索框
+    input[type='text'].txt-box {
+        height: 34px;
+        margin: 0 !important;
+        padding-left:85px;
+        font-size: 14px;
+    }
+}
+
+//头部padding
+.search-head2~.mui-content {
+    padding-top: 44px;
+}
+
 //内容
 .search-cont {
     padding-bottom: 0 !important;
@@ -57,10 +111,9 @@
     .search-tb {
         margin-top: 10px !important;
         background: #fff;
-        
         //下拉加载 padding
         .mui-pull-bottom-tips {
-//          padding-bottom: 40px;
+            //          padding-bottom: 40px;
             text-align: center;
             background-color: #efeff4;
             font-size: 15px;
@@ -75,7 +128,6 @@
 //.search-cont.mui-content {
 //  padding-bottom: 44px !important;
 //}
-
 //页脚
 //.seach-footer {
 //  position: fixed;

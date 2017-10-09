@@ -20,13 +20,23 @@
 			.vd-ok.mui-table-view-cell input[type=text] {
 				color: green;
 			}
-			
 			.vd-box .dep-btn {
+				color: #ddd;
+			}
+			.vd-box .dep-btn.vd-ok {
 				color: green;
 			}
 			
-			.vd-box.mui-table-view-cell .dep-btn.error {
+			.vd-box.mui-table-view-cell .dep-btn.vd-error {
 				color: #ddd;
+			}
+			.vd-btn.vd-error{
+				background: red;
+				color:white
+			}
+			.vd-btn.vd-ok{
+				background: green;
+				color:white
 			}
 		</style>
 	</head>
@@ -68,7 +78,7 @@
 					<li class="mui-table-view-cell mui-row mui-clearfix vd-box">
 						<label class="a" for="">密码:</label>
 
-						<input  class="vd-item"  type="text" name="pwd"  vd-req vd-req-msg="密码不能为空" vd-compare-emit="pwd2"  vd-pattern="^\w{8,32}$" vd-pattern-msg="密码长度8到32位" value="" placeholder="输入密码" />
+						<input  class="vd-item"  type="text" name="pwd"  vd-req vd-req-msg="密码不能为空" vd-compare-emit="pwd2"  vd-pattern="^\S{8,32}$" vd-pattern-msg="密码长度8到32位" value="" placeholder="输入密码" />
 
 					</li>
 					<li class="mui-table-view-cell mui-row mui-clearfix vd-box">
@@ -105,19 +115,23 @@
 					</li>
 				</ul>
 
-				<input type="button" name="vd-btn" id="" value="提交" />
+				<input class="vd-btn" type="button"    id="" value="提交" />
 			</form>
 		</section>
-
+	
+		
 		<script src="js/Home/all.js" type="text/javascript" charset="utf-8"></script>
 	
-		<script>
+	<script>
+			
+		
 			// 初始化验证对象
-			vd.init(".form1");
+			var vd1=vd.create(".form1");
+			vd1.init();
 			$(".rwinfo-head-send").on("click", function() {
 	
 					// 是否验证成功
-					vd.isSuccess(function(obj) {
+					vd1.isSuccess(function(obj) {
 						
 						alert(JSON.stringify(obj));
 					},function(obj) {
@@ -125,12 +139,17 @@
 					alert(obj.errorMsg)
 					// error 
 //					mui.alert(obj.errorMsg," ","确认",function(){
-//					obj.el.focus();
+					obj.el.focus();
 //					});
 //					
 					
 					});	
 			});
+			
+			
+				
+				
+			
 		</script>
 	</body>
 

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>发布需求</title>
+		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
+		<link rel="stylesheet" href="Content/Home/all.css" />
+		<link rel="stylesheet" type="text/css" href="Content/Home/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="Content/Home/mui.poppicker.css" />
+
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav bg-white">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left text-base"></a>
+			<h1 class="mui-title">发布需求</h1>
+		</header>
+
+		<!--主体内容-->
+		<section class="mui-content ">
+
+			<div class="fabu-xq-form">
+
+				<form class="form" id="form">
+
+					<!--牌号-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="a1" class="mui-text-muted-bs">牌号</label>
+						</div>
+						<div class="mui-col-xs-10  mui-row sl3">
+							<div class="mui-col-xs-4 relative">
+								<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a2">
+									<option value="1">请选择</option>
+
+								</select>
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</div>
+
+							<div class="mui-col-xs-4 relative">
+								<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a2">
+									<option value="1">请选择</option>
+
+								</select>
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</div>
+
+							<div class="mui-col-xs-4 relative">
+								<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a2">
+									<option value="1">请选择</option>
+								</select>
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</div>
+
+						</div>
+
+					</div>
+
+					<!--原厂质量检验证书-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-5 ">
+							<label for="" class="mui-text-muted-bs">原厂质量检验证书</label>
+						</div>
+						<div class="mui-col-xs-7 mui-clearfix " style="padding-left: 10px;">
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_3" name="radio-name1" checked="checked">
+								<label for="inpu_3">提供</label>
+							</div>
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_4" name="radio-name1">
+								<label for="inpu_4">不提供</label>
+
+							</div>
+						</div>
+					</div>
+
+					<!--原厂包装标准-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="a3" class="mui-text-muted-bs ">包装标准</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a3">
+								<option value="1">15kg/包</option>
+								<option value="2">20kg/包</option>
+								<option value="3">50kg/包</option>
+								<option value="4">100kg/包</option>
+
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--包装材质-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="a3" class="mui-text-muted-bs ">包装材质</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a3">
+								<option value="1" selected="selected">纸质</option>
+
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--交货时间-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">交货时间</label>
+						</div>
+						<div class="mui-col-xs-10 relative ">
+							<input type="text" name="" id="select-date" value="" readonly="readonly" class=" mui-form-control mui-form-control-focus" placeholder="交货时间" />
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</div>
+
+					<!--交货地址-->
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="a2" class="mui-text-muted-bs">交货地址</label>
+						</div>
+
+						<div class="mui-col-xs-10  mui-row sl4">
+
+							<div class="mui-col-xs-4 relative">
+								<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="a2">
+									<option value="1">中国大陆</option>
+
+								</select>
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</div>
+
+							<div class="mui-col-xs-8 relative">
+
+								<input type="text" name="" id="select-addr" value="" class=" mui-form-control mui-form-control-focus" readonly="readonly" placeholder="省份-地级市" />
+
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</div>
+
+						</div>
+
+					</div>
+
+					<!--需求量-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">需求量</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="吨" />
+						</div>
+
+					</div>
+
+					<!--价格-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">价格</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="元 / 吨" />
+						</div>
+
+					</div>
+
+					<!--新还盘-->
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">新还盘</label>
+						</div>
+						<div class="mui-col-xs-8 mui-clearfix " style="padding-left: 10px;">
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_3" checked name="radio-name2" checked="checked">
+								<label for="inpu_3">提供</label>
+							</div>
+							<div class="radio-box mui-pull-left">
+								<input type="radio" id="inpu_4" name="radio-name2">
+								<label for="inpu_4">不提供</label>
+
+							</div>
+						</div>
+					</div>
+					<!--提交-->
+					<div class="submit-btns mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs"></label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<button class=" mui-btn-warning">发布</button>
+
+							<button class="mui-btn-warning">保存并更新</button>
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+
+		</section>
+
+		<script src="js/Home/all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Home/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Home/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Home/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Home/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			
+			//页面初始化
+			 mui.ready(function(){
+			 	
+			 	fabu_xq.init();
+			 	
+			 }) 
+			
+			
+		</script>
+	</body>
+
+</html>

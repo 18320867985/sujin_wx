@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>现货交易详情</title>
+		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
+		<link rel="stylesheet" href="Content/Home/all.css" />
+		<link rel="stylesheet" type="text/css" href="Content/Home/table.min.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav bg-white">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left text-base"></a>
+			<h1 class="mui-title">现货交易详情</h1>
+		</header>
+
+		<!--主体内容-->
+		<section class="shopdtl mui-content">
+
+			<!--厂商信息-->
+			<div class="shopdtl-xx">
+
+				<div class="des mui-clearfix">
+					<h5 class="mui-pull-left text-primary">
+					<span class="rdt iconfont icon-yuanshixin text-primary"></span>	
+					品名-厂商-牌号
+					</h5>
+					<span class="mui-pull-right text-777">
+						<span class="iconfont icon-shizhong-copy"></span> 2分钟前
+					</span>
+				</div>
+
+				<!--详情列表-->
+				<ul class="list">
+					<li class="price">
+						<span class="iconfont icon-renminbi"></span>
+						<span>12580/吨</span>
+					</li>
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-6">
+							<label for="">数量:</label>
+							<span>43吨</span>
+						</div>
+						<div class="mui-col-xs-6">
+							<label for="">票据:</label>
+							<span>其他商业发票</span>
+						</div>
+					</li>
+
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-6">
+							<label for="">厂商:</label>
+							<span>亿利</span>
+						</div>
+						<div class="mui-col-xs-6">
+							<label for="">交货地点:</label>
+							<span>广州市</span>
+						</div>
+					</li>
+					<li class="mui-row mui-clearfix">
+
+						<div class="mui-col-xs-6">
+							<label for="">品种:</label>
+							<span>PVC</span>
+						</div>
+						<div class="mui-col-xs-6">
+							<label for="">交货时间:</label>
+							<span>2017-08-12</span>
+						</div>
+					</li>
+
+				</ul>
+
+				<!--电话联系方式-->
+				
+					<div class="shopdtl-tel">
+						<span class="iconfont icon-dianhua-1"></span>
+						<span class="phone">0769-88889999 </span>
+					</div>
+
+					<!--价格走势-->
+					<div class="shopdtl-price">
+						<div class="ttl">
+							<span class="rdt iconfont icon-yuanshixin text-primary"></span>
+							<span class="text-primary wz">价格价格走势详情</span>
+						</div>
+
+						<div class="ms mui-clearfix mui-row">
+
+							<div class="mui-col-xs-6">
+								<h5 class="new">最新报价(1970-01-01)</h5>
+								
+								<span class="iconfont icon-renminbi"></span>
+								<span class="ct">6670.00</span>
+							</div>
+
+							<div class="mui-col-xs-6">
+								<h5 class="new">日涨跌幅(1970-01-01)</h5>
+								
+								<span class="iconfont icon-renminbi"></span>
+								<span class="ct">0.3%</span>
+							</div>
+
+						</div>
+
+					</div>
+
+			
+
+			</div>
+
+		</section>
+
+		<script src="js/Home/all.js " type="text/javascript " charset="utf-8 "></script>
+
+		<script type="text/javascript">
+			$(function() {
+				//删除函数
+				$(".member-cont-item .del").on("tap", function(e) {
+					e.preventDefault();
+					var el = $(this).parents(".member-cont-item");
+					//confirm
+					compt.confirm("确认删除该商品？", function() {
+						//成功执行的方法
+
+						el.remove(); //删除el
+
+					}, ["确认", "取消"]);
+
+				});
+
+				//设为默认函数
+				$(".member-cont-item .df").on("tap", function(e) {
+					e.preventDefault();
+					var el = $(this).parents(".qiugou-cont-item");
+					//confirm
+					compt.confirm("确认设为默认？", function() {
+						//成功执行的方法
+
+					}, ["确认", "取消"]);
+
+				});
+
+			})
+		</script>
+
+	</body>
+
+</html>
