@@ -13,8 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="Content/Home/table.min.css" />
 		<link rel="stylesheet" type="text/css" href="Content/Home/mui.picker.min.css" />
 		<link rel="stylesheet" type="text/css" href="Content/Home/mui.poppicker.css" />
-		
-		
+	
 	</head>
 
 	<body>
@@ -270,21 +269,23 @@
 				});
 
 				// 点击搜索
-				$(document).on("keyup", function(e) {
-
-					if($(".search-head .txt-box").val().trim() === "") {
-						return false;
-					}
-					if(e.keyCode === 13) {
-						// 点击 enter键 todo...
-						//	alert("点击 enter键");
-					}
-				});
+//				$(document).on("keyup", function(e) {
+//
+//					if($(".search-head2 .txt-box").val().trim() === "") {
+//						return false;
+//					}
+//					if(e.keyCode === 13) {
+//						// 点击 enter键 todo...
+//						//	alert("点击 enter键");
+//					}
+//				});
 
 				// 点击搜索图标
-				$(".search-head .mui-icon-search").on("tap", function() {
-
-					//alert("击搜索图标");
+				$(".search-head2 .mui-icon-search").on("tap", function() {
+					
+					var select_ttl=document.querySelector('.select-ttl').innerText;
+					
+					alert("击搜索图标："+select_ttl);
 				});
 
 				// 搜索框标题选择
