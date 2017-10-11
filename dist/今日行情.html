@@ -34,7 +34,6 @@
 		<!--主体内容-->
 		<section class="suotation-cont mui-content" id="app">
 			
-				
 			<div class="baojia-gd-cont-box1">
 				<ul class="mui-row baojia-gd-cont-ttl ">
 					<li class="mui-col-xs-3 active">
@@ -73,9 +72,10 @@
 			<div class="suotation-load">
 
 				<ul class="suotation-media mui-table-view">
+					
 					<li class="mui-table-view-cell mui-media">
 						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
+							
 							<div class="mui-media-body">
 								<div class="mui-clearfix">
 									<span class="mui-pull-left text-primary">
@@ -92,7 +92,7 @@
 					</li>
 					<li class="mui-table-view-cell mui-media">
 						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
+							
 							<div class="mui-media-body">
 								<div class="mui-clearfix">
 									<span class="mui-pull-left text-primary">
@@ -107,10 +107,9 @@
 							</div>
 						</a>
 					</li>
-
 					<li class="mui-table-view-cell mui-media">
 						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
+							
 							<div class="mui-media-body">
 								<div class="mui-clearfix">
 									<span class="mui-pull-left text-primary">
@@ -125,10 +124,9 @@
 							</div>
 						</a>
 					</li>
-
 					<li class="mui-table-view-cell mui-media">
 						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
+							
 							<div class="mui-media-body">
 								<div class="mui-clearfix">
 									<span class="mui-pull-left text-primary">
@@ -143,10 +141,9 @@
 							</div>
 						</a>
 					</li>
-
 					<li class="mui-table-view-cell mui-media">
 						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
+							
 							<div class="mui-media-body">
 								<div class="mui-clearfix">
 									<span class="mui-pull-left text-primary">
@@ -161,46 +158,9 @@
 							</div>
 						</a>
 					</li>
-
 					<li class="mui-table-view-cell mui-media">
 						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
-							<div class="mui-media-body">
-								<div class="mui-clearfix">
-									<span class="mui-pull-left text-primary">
-			             	   		工程塑料标题
-			             	   	</span>
-									<span class="mui-pull-right">
-			             	   		2017-08-12
-			             	   	</span>
-								</div>
-
-								<p class="mui-ellipsis-2">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
-							</div>
-						</a>
-					</li>
-
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
-							<div class="mui-media-body">
-								<div class="mui-clearfix">
-									<span class="mui-pull-left text-primary">
-			             	   		工程塑料标题
-			             	   	</span>
-									<span class="mui-pull-right">
-			             	   		2017-08-12
-			             	   	</span>
-								</div>
-
-								<p class="mui-ellipsis-2">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
-							</div>
-						</a>
-					</li>
-
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
+							
 							<div class="mui-media-body">
 								<div class="mui-clearfix">
 									<span class="mui-pull-left text-primary">
@@ -226,18 +186,18 @@
 				{{#must}}
 				<li class="mui-table-view-cell mui-media">
 					<a href="javascript:;">
-						<img class="mui-media-object mui-pull-left" src="images/Home/关于塑金.png">
+						
 						<div class="mui-media-body">
 							<div class="mui-clearfix">
 								<span class="mui-pull-left text-primary">
-			             	   		{{ttl}}
+			             	   		{{a}}
 			             	   	</span>
 								<span class="mui-pull-right">
-			             	   		{{data}}
+			             	   		{{b}}
 			             	   	</span>
 							</div>
 
-							<p class="mui-ellipsis-2">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+							<p class="mui-ellipsis-2">{{c}}</p>
 						</div>
 					</a>
 				</li>
@@ -273,6 +233,7 @@
 					$(".baojia-gd-cont-box2").toggle();
 				});
 
+				
 
 				// 点击enter搜索
 				$(document).on("keyup", function(e) {

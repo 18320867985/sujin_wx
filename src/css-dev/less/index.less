@@ -84,7 +84,7 @@
     background: #fff;
     .xz-item {
         padding: 7px 0;
-        border-bottom:  1px solid @text-ash-3;
+        border-bottom: 1px solid @text-ash-3;
         &+.xz-item {
             border-left: 1px solid @text-ash-3 ;
         }
@@ -105,35 +105,52 @@
 
 //选项2
 .index-bj-se2 {
-    margin-top: -10px;
+    margin-top: -5px;
 }
 
 //表格
 .index-bj-tb {
-    margin-top: -2px;
+    margin-top: 0px;
+    margin-bottom: 15px !important;
     background: #fff;
     table.table {
         margin-bottom: 0;
         border: none !important;
     }
     thead tr th {
-        border: none !important;
-        padding: 10px 5px !important;
+        padding: 10px 3px !important;
+       
         color: @text-777;
         font-weight: 500;
         font-size: 13px;
+        width: 20%;
     }
     tbody tr td {
-        padding: 10px 5px !important;
+        padding: 10px 3px !important;
         font-size: 12px;
         color: @text-777;
+        width: 20%;
+        line-height: 14px;
+        word-break: break-all;
+        div {
+            height: 32px !important;
+         
+        }
         .mui-icon-arrowright {
             font-size: 12px;
         }
         
-        &.text-danger{
-            color:@text-warning !important;
+        &.text-danger {
+            color: @text-warning !important;
         }
+        // 供应商数量 按钮
+        .sl-btn {
+            .create-btn(@text-warning, 20px, 80%);
+            font-size: 12px;
+            border-radius: 4px;
+            
+        }
+   
     }
 }
 
@@ -147,6 +164,46 @@
     .line {
         border-top: 1px solid @index-bj-goods;
     }
+    
+     thead tr th {
+        padding: 10px 3px !important;
+      
+        color: @text-777;
+        font-weight: 500;
+        font-size: 13px;
+      
+    }
+    tbody tr td {
+        padding: 10px 5px !important;
+        font-size: 12px;
+        color: @text-777;
+        width: 25%;
+        line-height: 14px;
+        word-break: break-all;
+        div {
+            height: 30px !important;
+         
+          
+           
+        }
+        .mui-icon-arrowright {
+            font-size: 12px;
+        }
+        
+        &.text-danger {
+            color: @text-warning !important;
+        }
+        // 供应商数量 按钮
+        .sl-btn {
+            .create-btn(@text-warning, 20px, 80%);
+            font-size: 12px;
+            border-radius: 4px;
+            
+        }
+   
+    }
+    
+     
 }
 
 //行情中心
@@ -180,14 +237,25 @@
             }
         }
     }
+    
+   
+    
+    // 更多
+    .gd{
+          margin-top: -15px !important;
+          margin-bottom: 15px;
+          padding: 5px;
+          border-top:  1px solid @text-ash-3;
+            background: #fff;
+    }
 }
 
 //供应链金融
 @index-bj-jr: #d98609;
 .index-bj.index-bj-jr {
     margin-top: -15px !important;
-    margin-bottom: 10px;
-      padding: 5px 3px 3px 3px;
+    margin-bottom: 15px;
+    padding: 5px 3px 3px 3px;
     background: #fff;
     .ttl {
         color: @index-bj-jr;
@@ -231,32 +299,23 @@
     }
 }
 
-
 //页脚
-.index-footer{
-    
- 
-    padding:  2px 0;
+.index-footer {
+    padding: 2px 0;
     background: #fff;
-    
-    .mui-tab-label{
-       font-size: 14px !important;
-      
-   }
+    .mui-tab-label {
+        font-size: 14px !important;
+    }
     //选择样式
-     .mui-tab-item.mui-active {
+    .mui-tab-item.mui-active {
         color: @text-primary !important;
     }
-    .iconfont{
+    .iconfont {
         font-size: 24px !important;
         margin-bottom: 3px;
-       
     }
-   
 }
 
 .mui-bar {
-   
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-    
 }

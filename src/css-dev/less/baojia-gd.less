@@ -1,0 +1,121 @@
+/*市场报价更多*/
+
+.baojia-gd-cont {
+    //  background: #fff;
+    .index-bj-tb {
+        border-bottom: 1px solid #ddd;
+    }
+    //下拉加载
+    .mui-pull-bottom-tips {
+        position: absolute !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    
+    // 表格上箭头
+    .mui-icon-arrowthinup{
+        font-size: 18px;
+        color:@text-danger;
+     }
+    
+}
+
+// padding页脚
+.mui-bar-tab~.baojia-gd-cont.mui-content {
+    padding-bottom: 82px;
+}
+
+// paddind页头
+.search-head~.baojia-gd-cont.mui-content {
+    padding-top: 92px;
+}
+
+.baojia-gd-cont-box1 {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+}
+
+.baojia-gd-cont-box2 {
+    position: fixed;
+    top: 105px;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+}
+
+.baojia-gd-cont-box1 {
+    margin-bottom: 0px;
+    .icon-fx-down {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        font-size: 20px;
+        transition: all 0.8s;
+        &.active {
+            color: @text-danger;
+            transform: rotate(180deg);
+        }
+    }
+    .baojia-gd-cont-ttl {
+        margin-top: 0;
+        padding: 10px 20px 15px 10px;
+        background: #fff;
+        border-bottom: 1px solid @text-ash-3;
+        box-shadow: 1px 1px 2px @text-ash-2;
+        li {
+            a {
+                padding-bottom: 5px;
+                color: @text-777;
+            }
+            &.active a {
+                border-bottom: 2px solid @text-primary ;
+                color: @text-primary;
+            }
+        }
+    }
+}
+
+//行情ttl
+.baojia-gd-cont-box2 {
+    display: none;
+    .icon-fx-down {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        font-size: 20px;
+    }
+    .baojia-gd-cont-ttl {
+        margin-top: 0;
+        padding: 10px 20px 0 10px;
+        background: #fff;
+        border-bottom: 1px solid @text-ash-3;
+        li {
+            a {
+                padding-bottom: 10px;
+                color: @text-777;
+            }
+        }
+    }
+    .baojia-gd-cont-ttl2 {
+        margin-top: -14px;
+        padding: 10px 20px 0 10px;
+        background: #fff;
+        border-bottom: 1px solid @text-ash-3;
+        box-shadow: 1px 1px 2px @text-ash-3;
+        li {
+            margin-bottom: 15px;
+            a {
+                padding-bottom: 3px;
+                color: @text-777;
+            }
+            &.active a {
+                border-bottom: 2px solid @text-primary ;
+                color: @text-primary;
+            }
+        }
+    }
+}

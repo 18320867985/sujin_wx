@@ -34,10 +34,14 @@
 		<!--主体内容-->
 		<section class="suotation-cont mui-content" id="app">
 			
-			<div class="suotation-cont-box1">
-				<ul class="mui-row suotation-cont-ttl ">
+				
+			<div class="baojia-gd-cont-box1">
+				<ul class="mui-row baojia-gd-cont-ttl ">
 					<li class="mui-col-xs-3 active">
 						<a href="javascript:;">今日行情</a>
+					</li>
+					<li class="mui-col-xs-3">
+						<a href="javascript:;">行情咨询</a>
 					</li>
 					<li class="mui-col-xs-3">
 						<a href="javascript:;">上游动态</a>
@@ -45,58 +49,22 @@
 					<li class="mui-col-xs-3">
 						<a href="javascript:;">外盘动态</a>
 					</li>
-					<li class="mui-col-xs-3">
-						<a href="javascript:;">行业热点</a>
-					</li>
 
 				</ul>
 				<span class="iconfont icon-fx-down btn1"></span>
 			</div>
 			<!--张开全部-->
-			<div class="suotation-cont-box2">
-				<!--张开全部ttl-->
-				<ul class="mui-row suotation-cont-ttl ">
-					<li class="mui-col-xs-3 active">
-						<a href="javascript:;">更多</a>
-					</li>
-
-				</ul>
-				<span class="iconfont icon-fx-down btn2"></span>
-
-				<!--张开全部content-->
-				<ul class="mui-row suotation-cont-ttl2 ">
-					<li class="mui-col-xs-3 active">
-						<a href="javascript:;">今日行情</a>
+			<div class="baojia-gd-cont-box2">
+				<ul class="mui-row baojia-gd-cont-ttl2 ">
+					<li class="mui-col-xs-3 ">
+						<a href="javascript:;">塑料期货</a>
 					</li>
 					<li class="mui-col-xs-3">
-						<a href="javascript:;">上游动态</a>
+						<a href="javascript:;">会员资讯</a>
 					</li>
 					<li class="mui-col-xs-3">
-						<a href="javascript:;">外盘动态</a </li>
-						<li class="mui-col-xs-3">
-							<a href="javascript:;">行业热点</a>
-						</li>
-						<li class="mui-col-xs-3 ">
-							<a href="javascript:;">今日行情</a>
-						</li>
-						<li class="mui-col-xs-3">
-							<a href="javascript:;">上游动态</a>
-						</li>
-						<li class="mui-col-xs-3">
-							<a href="javascript:;">外盘动态</a>
-						</li>
-						<li class="mui-col-xs-3">
-							<a href="javascript:;">行业热点</a>
-						</li>
-						<li class="mui-col-xs-3">
-							<a href="javascript:;">上游动态</a>
-						</li>
-						<li class="mui-col-xs-3">
-							<a href="javascript:;">外盘动态</a>
-						</li>
-						<li class="mui-col-xs-3">
-							<a href="javascript:;">行业热点</a>
-						</li>
+						<a href="javascript:;">行业热点</a>
+					</li>
 
 				</ul>
 			</div>
@@ -285,34 +253,26 @@
 			(function($) {
 
 				//选择的样式1
-				$(".suotation-cont-box1 li").on("tap", function() {
+				$(".baojia-gd-cont-box1 li").on("tap", function() {
 
-					$(".suotation-cont-box1 li").removeClass("active");
-					$(".suotation-cont-box2 li").removeClass("active");
+					$(".baojia-gd-cont-box1 li").removeClass("active");
+					$(".baojia-gd-cont-box2 li").removeClass("active");
 					$(this).addClass("active");
-				})
+				});
 
 				//选择的样式2
-				$(".suotation-cont-box2 li").on("tap", function() {
+				$(".baojia-gd-cont-box2 li").on("tap", function() {
 
-					$(".suotation-cont-box2 li").removeClass("active");
-					$(".suotation-cont-box1 li").removeClass("active");
+					$(".baojia-gd-cont-box2 li").removeClass("active");
+					$(".baojia-gd-cont-box1 li").removeClass("active");
 					$(this).addClass("active");
-				})
-
-				$(".suotation-cont-box1 .btn1").on("click", function() {
-
-					$(this).parents(".suotation-cont-box1").hide();
-					$(".suotation-cont-box2").show();
-
-				})
-
-				$(".suotation-cont-box2 .suotation-cont-ttl,.suotation-cont-box2 .btn2").on("click", function() {
-
-					$(this).parents(".suotation-cont-box2").hide();
-					$(".suotation-cont-box1").show();
-
 				});
+
+				$(".baojia-gd-cont-box1 .btn1").on("click", function() {
+					$(this).toggleClass("active");
+					$(".baojia-gd-cont-box2").toggle();
+				});
+
 
 				// 点击enter搜索
 				$(document).on("keyup", function(e) {
