@@ -9,7 +9,7 @@ var vd = (function($) {
 
 	var Obj = function(formName) {
 
-		this.formName = formName,
+			this.formName = typeof formName==="undefined"?".form":formName,
 
 			this.init = function() {
 
@@ -20,7 +20,7 @@ var vd = (function($) {
 
 			this.disabled = function(obj) {
 
-				$(obj).addAttr("disabled", "disabled");
+				$(obj).attr("disabled", "disabled");
 
 			},
 
@@ -233,7 +233,7 @@ var vd = (function($) {
 						$(p).addClass("vd-error vd-req ");
 						$(p).removeClass("vd-ok");
 						$(el).addClass("vd-error");
-						$(".dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
+						$(".vd-dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
 
 						return;
 					} else {
@@ -246,7 +246,7 @@ var vd = (function($) {
 							$(p).removeClass("vd-error vd-req ");
 							$(el).removeClass("vd-error");
 							$(p).addClass("vd-ok");
-							$(".dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
+							$(".vd-dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
 
 						}
 
@@ -270,7 +270,7 @@ var vd = (function($) {
 						$(p).addClass("vd-error vd-pattern");
 						$(el).addClass("vd-error");
 						$(p).removeClass("vd-ok");
-						$(".dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
+						$(".vd-dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
 
 						return;
 					} else {
@@ -281,7 +281,7 @@ var vd = (function($) {
 						$(p).removeClass("vd-error vd-pattern");
 						$(el).removeClass("vd-error");
 						$(p).addClass("vd-ok");
-						$(".dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
+						$(".vd-dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
 
 					}
 
@@ -296,7 +296,7 @@ var vd = (function($) {
 						$(p).removeClass("vd-error vd-pattern");
 						$(el).removeClass("vd-error");
 						$(p).addClass("vd-ok");
-						$(".dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
+						$(".vd-dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
 					}
 				}
 
@@ -314,7 +314,7 @@ var vd = (function($) {
 						$(p).addClass("vd-error vd-compare ");
 						$(p).removeClass("vd-ok");
 						$(el).addClass("vd-error");
-						$(".dep-btn", p).addClass("vd-error").removeClass("vd-ok");; //依赖按钮
+						$(".vd-dep-btn", p).addClass("vd-error").removeClass("vd-ok");; //依赖按钮
 
 						return;
 					} else {
@@ -326,7 +326,7 @@ var vd = (function($) {
 						$(p).removeClass("vd-error vd-compare ");
 						$(el).removeClass("vd-error");
 						$(p).addClass("vd-ok");
-						$(".dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
+						$(".vd-dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
 
 					}
 
@@ -344,7 +344,7 @@ var vd = (function($) {
 						$(p).addClass("vd-error vd-remote");
 						$(el).addClass("vd-error");
 						$(p).removeClass("vd-ok");
-						$(".dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
+						$(".vd-dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
 						return;
 					}
 
@@ -393,7 +393,7 @@ var vd = (function($) {
 						$(p).removeClass("vd-error vd-ck ");
 						$(el).removeClass("vd-error");
 						$(p).addClass("vd-ok");
-						$(".dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
+						$(".vd-dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
 					
 
 					} else {
@@ -404,7 +404,7 @@ var vd = (function($) {
 						$(p).addClass("vd-error vd-ck ");
 						$(p).removeClass("vd-ok");
 						$(el).addClass("vd-error");
-						$(".dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
+						$(".vd-dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
 							
 
 						return;
@@ -507,7 +507,7 @@ var vd = (function($) {
 				$(p).removeClass("vd-error vd-remote");
 				$(el).removeClass("vd-error");
 				$(p).addClass("vd-ok");
-				$(".dep-btn", p).removeClass("error"); //依赖按钮
+				$(".vd-dep-btn", p).removeClass("error"); //依赖按钮
 
 			},
 
@@ -520,7 +520,7 @@ var vd = (function($) {
 				$(p).addClass("vd-error vd-remote");
 				$(el).addClass("vd-error");
 				$(p).removeClass("vd-ok");
-				$(".dep-btn", p).addClass("error"); //依赖按钮
+				$(".vd-dep-btn", p).addClass("error"); //依赖按钮
 
 			},
 
