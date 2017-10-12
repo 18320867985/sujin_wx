@@ -1,5 +1,6 @@
 /*市场报价更多*/
 
+
 .baojia-gd-cont {
     //  background: #fff;
     .index-bj-tb {
@@ -18,8 +19,32 @@
         font-size: 18px;
         color:@text-danger;
      }
+     
     
+     // 固定表头
+   
+    thead{
+      
+      position: fixed;
+      top:44px;
+      width: 100% !important;
+      background: #fff;
+     
+       th{
+           
+           width: 200px !important;
+           padding: 5px 0;
+           overflow: hidden;
+           white-space: nowrap;
+           text-overflow: ellipsis;
+           
+           text-align: center;
+         }
+      
+     }
+   
 }
+
 
 // padding页脚
 .mui-bar-tab~.baojia-gd-cont.mui-content {
@@ -28,7 +53,7 @@
 
 // paddind页头
 .search-head~.baojia-gd-cont.mui-content {
-    padding-top: 92px;
+    padding-top: 82px;
 }
 
 .baojia-gd-cont-box1 {
