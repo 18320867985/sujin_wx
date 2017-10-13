@@ -22,30 +22,75 @@
      
     
      // 固定表头
-   
-    thead{
+// 
+//  thead{
+//    
+//    position: fixed;
+//    top:90px;
+//    width: 100% !important;
+//    background: #fff;
+//   
+//     th{
+//         
+//         width: 200px !important;
+//         padding: 5px 0;
+//         overflow: hidden;
+//         white-space: nowrap;
+//         text-overflow: ellipsis;
+//         
+//         text-align: center;
+//       }
+//    
+//   }
+     
+      .table-ttl{
       
       position: fixed;
       top:90px;
       width: 100% !important;
-      background: #fff;
+    
+      color:@text-base;
+      background: #FFF;
+      height: 42px;
      
-       th{
+  
+      border: none;
+       border-bottom:2px solid @text-ash-3;
+     
+       .table-ttl-th{
            
-           width: 200px !important;
-           padding: 5px 0;
-           overflow: hidden;
-           white-space: nowrap;
-           text-overflow: ellipsis;
-           
+           width: 20% !important;
+           padding: 8px 0 2px 0;
+//       text-overflow: ellipsis;
+//       overflow-x: hidden;
+//       white-space: nowrap;
            text-align: center;
          }
+         
+          
+        // 元/吨
+        .yuan-du{
+            position: absolute;
+            font-size: 8px !important;
+            color:@text-warning;
+            top:22px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            
+        }
       
      }
+     
+    
    
 }
 
+// 市场报价
 
+.baojia-gd-cont.dlxh .table-ttl{
+     top:44px;
+}
 
 
 
@@ -57,8 +102,9 @@
 
 // paddind页头
 .search-head~.baojia-gd-cont.mui-content {
-    padding-top: 132px;
+    padding-top: 130px;
 }
+
 
 .baojia-gd-cont-box1 {
     position: fixed;
@@ -155,29 +201,29 @@
    
      // 固定表头
    
-    thead{
-      
-      position: fixed;
-      top:44px;
-      width: 100% !important;
-      background: #fff;
-     
-       th{
-           
-           width: 200px !important;
-           padding: 5px 0;
-           overflow: hidden;
-           white-space: nowrap;
-           text-overflow: ellipsis;
-           
-           text-align: center;
-         }
-      
-     }
+//  thead{
+//    
+//    position: fixed;
+//    top:44px;
+//    width: 100% !important;
+//    background: #fff;
+//   
+//     th{
+//         
+//         width: 200px !important;
+//         padding: 5px 0;
+//         overflow: hidden;
+//         white-space: nowrap;
+//         text-overflow: ellipsis;
+//         
+//         text-align: center;
+//       }
+//    
+//   }
      
    
 }
   // paddind页头
     .search-head~.baojia-gd-cont.mui-content.dlxh {
-    padding-top: 88px;
+    padding-top: 84px;
     }
