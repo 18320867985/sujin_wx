@@ -30,8 +30,9 @@
             color: @text-base;
         }
         img {
-            height: 50px;
-            width: 50px;
+          max-width: 70%;
+          height: auto;
+         
         }
         h4 {
             margin-top: 10px;
@@ -118,11 +119,26 @@
         border: none !important;
     }
     thead tr th {
-        padding: 10px 3px !important;
+        position: relative;
+        padding: 13px 3px !important;
         width: 20%;
         color: @text-777;
         font-weight: 500;
         font-size: 13px;
+        
+        // 元/吨
+        .yuan-du{
+            position: absolute;
+            font-size: 9px !important;
+            color:@text-warning;
+            top:27px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            
+        }
+        
+       
        
     }
     tbody tr td {
