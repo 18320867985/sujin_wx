@@ -238,12 +238,14 @@
 
 										//ajax数据 ......		
 										$.get("json/refresh.json" + "?id=" + count, function(data2) {
+											this.contentdown= '正在加载...';
+											
 											var html = Mustache.to_html($("#must").html(), {
 												must: data2
 											});
-
 											$(ul).append(html);
-
+											
+											this.contentdown='上拉显示更多';
 										});
 
 										count++; //页码

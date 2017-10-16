@@ -258,12 +258,14 @@
 											},
 
 										];
-
+										this.contentdown= '正在加载...';
 										var html = Mustache.to_html($("#must").html(), {
 											must: lists
 										});
 
 										$(ul).append(html);
+										
+										this.contentdown='上拉显示更多';
 
 										//self.endPullup();
 										count++; //页码
