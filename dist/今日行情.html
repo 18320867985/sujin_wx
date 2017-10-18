@@ -32,42 +32,86 @@
 		</header>
 
 		<!--主体内容-->
-		<section class="suotation-cont mui-content" id="app">
+		<section class="suotation-cont mui-content" >
+			
+			<div  class="suotation-slide-menu">
+				
+				<!--ABS1--->
+				<div class="suotation-cont-box1">
+					<ul class="mui-row suotation-cont-ttl ">
+						<li class="mui-col-xs-3 active">
+							<a href="javascript:;">ABS</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">PP</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">PS</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">PVC</a>
+						</li>
+	
+					</ul>
+					<span class="iconfont icon-fx-down btn1"></span>
+				</div>
+				<!--张开全部-->
+				<div class="suotation-cont-box2">
+					<ul class="mui-row suotation-cont-ttl2 ">
+						<li class="mui-col-xs-3 ">
+							<a href="javascript:;">PA</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">BBA</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">PET</a>
+						</li>
+						
+	
+					</ul>
+				</div>
+			
+			<!--今日行情2-->
+			<div class="suotation-cont-box1 box-3">
+					<ul class="mui-row suotation-cont-ttl ">
+						<li class="mui-col-xs-3 active">
+							<a href="javascript:;">今日行情</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">行情咨询</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">上游动态</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">外盘动态</a>
+						</li>
+	
+					</ul>
+					<span class="iconfont icon-fx-down btn1"></span>
+				</div>
+				<!--张开全部-->
+			
+				<div class="suotation-cont-box2 box-3">
+					<ul class="mui-row suotation-cont-ttl2 ">
+						<li class="mui-col-xs-3 ">
+							<a href="javascript:;">塑料期货</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">会员资讯</a>
+						</li>
+						<li class="mui-col-xs-3">
+							<a href="javascript:;">行业热点</a>
+						</li>
+						
+	
+					</ul>
+				</div>
+			
 
-			<div class="baojia-gd-cont-box1">
-				<ul class="mui-row baojia-gd-cont-ttl ">
-					<li class="mui-col-xs-3 active">
-						<a href="javascript:;">今日行情</a>
-					</li>
-					<li class="mui-col-xs-3">
-						<a href="javascript:;">行情咨询</a>
-					</li>
-					<li class="mui-col-xs-3">
-						<a href="javascript:;">上游动态</a>
-					</li>
-					<li class="mui-col-xs-3">
-						<a href="javascript:;">外盘动态</a>
-					</li>
-
-				</ul>
-				<span class="iconfont icon-fx-down btn1"></span>
 			</div>
-			<!--张开全部-->
-			<div class="baojia-gd-cont-box2">
-				<ul class="mui-row baojia-gd-cont-ttl2 ">
-					<li class="mui-col-xs-3 ">
-						<a href="javascript:;">塑料期货</a>
-					</li>
-					<li class="mui-col-xs-3">
-						<a href="javascript:;">会员资讯</a>
-					</li>
-					<li class="mui-col-xs-3">
-						<a href="javascript:;">行业热点</a>
-					</li>
-
-				</ul>
-			</div>
-
+			
 			<!--图文列表-->
 			<div class="suotation-load">
 
@@ -127,24 +171,35 @@
 			(function($) {
 
 				//选择的样式1
-				$(".baojia-gd-cont-box1 li").on("tap", function() {
-
-					$(".baojia-gd-cont-box1 li").removeClass("active");
-					$(".baojia-gd-cont-box2 li").removeClass("active");
+				$(".suotation-cont-box1 li").on("tap", function() {
+					
+					var p=	$(this).closest(".suotation-cont-box1");
+					$(p).find("li").removeClass("active");
+					
+					p.next(".suotation-cont-box2").find("li").removeClass("active");
 					$(this).addClass("active");
 				});
 
 				//选择的样式2
-				$(".baojia-gd-cont-box2 li").on("tap", function() {
+				$(".suotation-cont-box2 li").on("tap", function() {
 
-					$(".baojia-gd-cont-box2 li").removeClass("active");
-					$(".baojia-gd-cont-box1 li").removeClass("active");
+					var p=	$(this).closest(".suotation-cont-box2");
+					$(p).find("li").removeClass("active");
+					
+					p.prev(".suotation-cont-box1").find("li").removeClass("active");
 					$(this).addClass("active");
+					
+//					$(".suotation-cont-box2 li").removeClass("active");
+//					$(".suotation-cont-box1 li").removeClass("active");
+//					$(this).addClass("active");
 				});
+				
+				
+				
 
-				$(".baojia-gd-cont-box1 .btn1").on("click", function() {
+				$(".suotation-cont-box1 .btn1").on("click", function() {
 					$(this).toggleClass("active");
-					$(".baojia-gd-cont-box2").toggle();
+					$(this).parents(".suotation-cont-box1 ").next(".suotation-cont-box2").toggle();
 				});
 
 				// 点击enter搜索
@@ -233,17 +288,20 @@
 							up: {
 								callback: function() {
 									var self = this;
+								
 									setTimeout(function() {
 										var ul = self.element.querySelector('.mui-table-view');
 
 										//ajax数据 ......		
 										$.get("json/refresh.json" + "?id=" + count, function(data2) {
+											
 											var html = Mustache.to_html($("#must").html(), {
 												must: data2
 											});
 
 											$(ul).append(html);
-
+											
+											
 										});
 
 										count++; //页码

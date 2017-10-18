@@ -55,23 +55,31 @@
 }
 
 //行情ttl
-.suotation-cont-box1,
-.suotation-cont-box2 {
-    position: fixed;
+.suotation-slide-menu{
+   position: fixed;
     top: 44px;
     left: 0;
     z-index: 9999;
-    width: 100%;
-  
+    width: 100%; 
+   
 }
 
+
 .suotation-cont-box1 {
+    position:  relative;
     margin-bottom: 0px;
+    margin-bottom: 0;
     .icon-fx-down {
         position: absolute;
         top: 10px;
         right: 5px;
         font-size: 20px;
+        transition: all 0.8s;
+        &.active {
+            color: @text-danger;
+            transform: rotate(180deg);
+        }
+   
     }
     .suotation-cont-ttl {
         margin-top: 0;
@@ -79,7 +87,7 @@
           
         background: #fff;
         border-bottom: 1px solid @text-ash-3;
-        box-shadow: 1px 1px 2px @text-ash-3;
+      
         li {
             a {
                 padding-bottom: 5px;
@@ -117,13 +125,14 @@
     }
     .suotation-cont-ttl2 {
         margin-top: -14px;
-        padding: 10px 20px 10px 10px;
+        padding: 10px 20px 0 10px;
+        
         background: #fff;
         border-bottom: 1px solid @text-ash-3;
-        box-shadow: 1px 1px 2px @text-ash-3;
+      
         
         li {
-            margin-bottom: 15px;
+           padding-bottom: 15px;
             a {
                 padding-bottom: 3px;
                 color: @text-777;
@@ -136,9 +145,18 @@
     }
 }
 
+.suotation-cont-box1.box-3{
+    border-top: 1px solid @text-ash-2;
+    margin-top: -14px;
+}
+
+.suotation-cont-box2.box-3{
+    box-shadow: 2px 2px 5px @text-ash-3;
+}
+
 //页脚padding
 .suotation-cont.mui-content {
-    padding-top: 113px;
+    padding-top: 158px;
 }
 
 //图文列表
