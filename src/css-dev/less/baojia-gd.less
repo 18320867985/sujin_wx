@@ -1,6 +1,5 @@
 /*市场报价更多*/
 
-
 .baojia-gd-cont {
     //  background: #fff;
     .index-bj-tb {
@@ -12,88 +11,66 @@
         width: 100% !important;
         display: block !important;
     }
-    
-    
     // 表格上箭头
-    .mui-icon-arrowthinup{
+    .mui-icon-arrowthinup {
         font-size: 18px;
-        color:@text-danger;
-     }
-     
-    
-     // 固定表头
-// 
-//  thead{
-//    
-//    position: fixed;
-//    top:90px;
-//    width: 100% !important;
-//    background: #fff;
-//   
-//     th{
-//         
-//         width: 200px !important;
-//         padding: 5px 0;
-//         overflow: hidden;
-//         white-space: nowrap;
-//         text-overflow: ellipsis;
-//         
-//         text-align: center;
-//       }
-//    
-//   }
-     
-      .table-ttl{
-      
-      position: fixed;
-      top:90px;
-      width: 100% !important;
-    
-      color:@text-base;
-      background: #FFF;
-      height: 42px;
-     
-  
-      border: none;
-       border-bottom:2px solid @text-ash-3;
-     
-       .table-ttl-th{
-           
-           width: 20% !important;
-           padding: 8px 0 2px 0;
-//       text-overflow: ellipsis;
-//       overflow-x: hidden;
-//       white-space: nowrap;
-           text-align: center;
-         }
-         
-          
+        color: @text-danger;
+    }
+    // 固定表头
+    // 
+    //  thead{
+    //    
+    //    position: fixed;
+    //    top:90px;
+    //    width: 100% !important;
+    //    background: #fff;
+    //   
+    //     th{
+    //         
+    //         width: 200px !important;
+    //         padding: 5px 0;
+    //         overflow: hidden;
+    //         white-space: nowrap;
+    //         text-overflow: ellipsis;
+    //         
+    //         text-align: center;
+    //       }
+    //    
+    //   }
+    .table-ttl {
+        position: fixed;
+        top: 90px;
+        width: 100% !important;
+        color: @text-base;
+        background: #FFF;
+        height: 42px;
+        border: none;
+        border-bottom: 2px solid @text-ash-3;
+        .table-ttl-th {
+            width: 20% !important;
+            padding: 8px 0 2px 0;
+            //       text-overflow: ellipsis;
+            //       overflow-x: hidden;
+            //       white-space: nowrap;
+            text-align: center;
+        }
         // 元/吨
-        .yuan-du{
+        .yuan-du {
             position: absolute;
             font-size: 8px !important;
-            color:@text-warning;
-            top:22px;
+            color: @text-warning;
+            top: 22px;
             left: 0;
             width: 100%;
             text-align: center;
-            
         }
-      
-     }
-     
-    
-   
+    }
 }
 
 // 市场报价
-
-.baojia-gd-cont.dlxh .table-ttl{
-     top:44px;
+.baojia-gd-cont.dlxh .table-ttl {
+    top: 44px;
 }
-
-
-
 
 // padding页脚
 .mui-bar-tab~.baojia-gd-cont.mui-content {
@@ -104,7 +81,6 @@
 .search-head~.baojia-gd-cont.mui-content {
     padding-top: 130px;
 }
-
 
 .baojia-gd-cont-box1 {
     position: fixed;
@@ -140,7 +116,7 @@
         padding: 10px 20px 15px 10px;
         background: #fff;
         border-bottom: 1px solid @text-ash-3;
-//      box-shadow: 1px 1px 2px @text-ash-2;
+        //      box-shadow: 1px 1px 2px @text-ash-2;
         li {
             a {
                 padding-bottom: 5px;
@@ -195,35 +171,82 @@
     }
 }
 
-
 // 大陆现货
 .baojia-gd-cont.dlxh {
-   
-     // 固定表头
-   
-//  thead{
-//    
-//    position: fixed;
-//    top:44px;
-//    width: 100% !important;
-//    background: #fff;
-//   
-//     th{
-//         
-//         width: 200px !important;
-//         padding: 5px 0;
-//         overflow: hidden;
-//         white-space: nowrap;
-//         text-overflow: ellipsis;
-//         
-//         text-align: center;
-//       }
-//    
-//   }
-     
-   
+    // 固定表头
+    //  thead{
+    //    
+    //    position: fixed;
+    //    top:44px;
+    //    width: 100% !important;
+    //    background: #fff;
+    //   
+    //     th{
+    //         
+    //         width: 200px !important;
+    //         padding: 5px 0;
+    //         overflow: hidden;
+    //         white-space: nowrap;
+    //         text-overflow: ellipsis;
+    //         
+    //         text-align: center;
+    //       }
+    //    
+    //   }
 }
-  // paddind页头
-    .search-head~.baojia-gd-cont.mui-content.dlxh {
+
+// paddind页头
+.search-head~.baojia-gd-cont.mui-content.dlxh {
     padding-top: 84px;
+}
+
+// 报价更多 baojia-gd-list
+// paddind页头
+.search-head~.baojia-gd-cont.mui-content.scbj {
+    padding-top: 78px;
+}
+
+.baojia-gd-list {
+    padding-bottom: 15px;
+    
+    a{
+        color:@text-base;
+        &:active{
+            color:@text-777;
+        }
+        
     }
+    
+    ul {
+        margin-bottom: 0;
+        padding: 10px 5px !important;
+        background: #fff;
+        border-bottom: 1px solid #ddd !important;
+        .ttl {
+            padding-left: 5px;
+            font-size: 14px;
+            color: @text-base;
+            font-weight: 600;
+            color: #666;
+        }
+        .l1 {
+            font-size: 12px;
+            span {
+                font-size: 14px;
+            }
+        }
+        .l2 {
+            font-size: 12px;
+            span {
+                margin-right: 5px;
+            }
+        }
+        li+li {
+            margin-top: 5px;
+        }
+    }
+    .item+.item ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
