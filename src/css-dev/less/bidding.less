@@ -1,0 +1,62 @@
+
+
+/*竞价*/
+.bidding{
+    padding-bottom: 10px;
+    
+}
+
+/**bidding-list**/
+    .bidding-item{
+       
+       margin-top: 10px;
+       padding: 10px;
+        font-size: 12px;
+        background: @text-white;
+        
+        ul{
+            margin:0;
+            padding: 0;
+        }
+        .l{
+            padding-right: 5px;
+            
+            li+li{
+                margin-top: 5px;
+            }
+        }
+        
+        .r{
+           
+            padding-left:15px ;
+            border-left:  1px solid @text-ash-3;
+            
+            // li-btn
+            .li-btn{
+                
+                margin-top: 60px;
+                
+                .btn{
+                    padding: 3px 10px !important;
+                     color: #fff;
+                     border: none;
+                    
+                    &.disabled{
+                        
+                       background: @text-999;
+                    }
+                    
+                    &.warning{
+                        
+                         background:   orangered; 
+                    }
+                    
+                     &.primary{
+                        
+                         background:   @text-primary; 
+                    }
+                }
+            }
+            
+        }
+    }

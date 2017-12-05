@@ -1,0 +1,171 @@
+
+
+/*竞价*/
+.biddingdtl{
+   padding: 15px;
+    background: @text-white;
+  
+}
+
+
+/*水印*/
+
+.watermark{
+    position:  absolute;
+    right:5% ;
+    top:90px;
+    z-index: 9;
+    height: 100px;
+    width: 100px;
+    
+    
+}
+    
+    
+/**biddingdtl-list-1**/
+ .biddingdtl-list-1{
+     
+      padding: 0;
+    
+     li{
+         span{font-size: 16px;}
+     }
+     li+li{
+         padding-top: 10px;
+     }
+        
+    }
+ 
+
+/**biddingdtl-list-2**/
+   .biddingdtl-list-2{
+          padding: 0;
+    
+     
+       margin:  0 auto;
+       padding: 15px 30px;
+     
+        
+          background: @text-ash-3;
+          
+          li{
+              span{
+                  font-size: 16px;
+              }
+              
+              .iconfont{
+                  margin-right: -5px;
+                
+              }
+          }
+        
+        li+li{
+            margin-top: 10px;
+        }
+    }
+
+
+/**biddingdtl-desc**/ 
+.biddingdtl-desc{
+    margin-top: 30px;
+    h4{
+      font-weight: 400;
+      font-size: 16px;
+    }
+    
+    ul{
+        padding: 0;
+        
+        li{
+              border: 1px solid @text-ash-2;
+              
+              &+li{
+                  border-top: none;
+              }
+            
+            label,
+            span{
+                display: block;
+                float: left;
+                padding: 8px 10px;
+              
+            }
+            
+            label{
+                width: 30%;
+                 background:#ddd ;
+                 text-align: right;
+            }
+            
+             span{
+              width:70%;
+             padding-left: 20px;
+            }
+            
+            
+        }
+    }
+}
+
+
+/** biddingdtl-table**/
+    
+.biddingdtl-table{
+ 
+ 
+    margin-top: 150px;
+    
+    .price{
+        padding: 3px 15px;
+        background: @text-primary;
+        color:#fff;
+    }
+}
+
+
+
+/**biddingdtl-search**/
+    
+    .biddingdtl-search{
+     padding-bottom: 15px;
+        
+        input{
+            display:block;
+            float: left;
+            height: 40px;
+            padding:  8px 10px !important;
+             margin: 0;
+             border-radius:0 ;
+             border: 1px solid @text-primary;
+        }
+        
+        .txt{
+            width: 70%;
+        }
+      
+        .btn{
+             width: 30%;
+             color:@text-white;
+             background: @text-primary;
+             &:active{
+             color:@text-white;
+             background: @text-primary ;
+             }
+        }
+        
+        .txt+.btn{
+            border-left:none ;
+        }
+    }
+    
+
+/*说明*/
+.biddingdtl-explain{
+    
+    margin-top: 30px;
+    h5{color:@text-base;}
+    p{
+        text-indent: 30px;
+    }
+    
+}
