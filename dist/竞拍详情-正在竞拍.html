@@ -10,10 +10,10 @@
 		<title>竞拍详情</title>
 		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
 		<link rel="stylesheet" href="Content/Home/all.css" />
-		<link rel="stylesheet" type="text/css" href="Content/Home/table.min.css"/>
+		<link rel="stylesheet" type="text/css" href="Content/Home/table.min.css" />
 	</head>
 
-	<body  class="bg-white">
+	<body class="bg-white">
 		<!--头部-->
 		<header class="mui-bar mui-bar-nav bg-white">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left text-base"></a>
@@ -23,10 +23,10 @@
 		<!--主体内容-->
 
 		<section class="biddingdtl mui-content bg-white  relative">
-			
+
 			<!--竞拍水印-->
 			<img class="watermark" src="images/Home/jingpai-3.png" alt="竞拍水印" />
-			
+
 			<!--list1-->
 			<ul class="biddingdtl-list-1 mui-col-xs-12">
 
@@ -85,7 +85,11 @@
 			</ul>
 
 			<div class="biddingdtl-desc">
-				<h4>拍卖描述</h4>
+				<h4>
+				<span class="mui-pull-right ret-time  "></span>	
+				<span>拍卖描述</span>
+				
+				</h4>
 				<ul>
 					<li class="mui-ellipsis">
 						<label for="">竞拍编号</label>
@@ -100,8 +104,7 @@
 				</ul>
 
 			</div>
-			
-			
+
 			<table class="table table-bordered table-hover biddingdtl-table">
 				<thead>
 					<tr class="mui-text-center">
@@ -110,7 +113,7 @@
 						<th>时间</th>
 					</tr>
 				</thead>
-				
+
 				<tbody>
 					<tr class="mui-text-center">
 						<td>
@@ -121,19 +124,19 @@
 						</td>
 						<td>
 							<span class="text-primary">18:30:45</span>
-						
+
 						</td>
 					</tr>
 				</tbody>
 
 			</table>
-			
+
 			<!--searchbox-->
 			<div class="biddingdtl-search  mui-clearfix">
-			
+
 				<input class="txt" type="text" name="" id="" value="" />
-				<input  class="btn" type="button" name="" id="" value="出价" />
-				
+				<input class="btn" type="button" name="" id="" value="出价" />
+
 			</div>
 
 		</section>
@@ -141,6 +144,43 @@
 		<script src="js/Home/all.js " type="text/javascript " charset="utf-8 "></script>
 
 		<script>
+			(function($) {
+
+				setIntervalFun(20, function() {
+
+				});
+
+
+				// 倒计时fun
+				function setIntervalFun(time, fn) {
+					var yzmClickBl = true;
+
+					if(yzmClickBl) {
+						yzmClickBl = false;
+
+						var yzmTime = time || 60;
+
+						var i = setInterval(function() {
+							if(yzmTime > 0) {
+								yzmTime = yzmTime - 1;
+								var yzmTime2 = yzmTime.toString().length > 1 ? yzmTime : "0" + yzmTime;
+								if(yzmTime === 0) {
+
+									$(".ret-time").text("结束了...").addClass('mui-active');
+									yzmClickBl = true;
+									clearInterval(i);
+									fn();
+
+								} else {
+									$(".ret-time ").html("倒计时:<span class='text-danger'>" + yzmTime2 + "s</span>");
+								}
+							}
+						}, 1000);
+
+					};
+				}
+
+			})(window.Zepto)
 		</script>
 
 	</body>
