@@ -23,7 +23,9 @@ Date.prototype.format = function(fmt) { //author: meizz
 	return fmt;
 }
 
+
 common = (function($) {
+
 
 	/***url对象***/
 	var url_fn = {

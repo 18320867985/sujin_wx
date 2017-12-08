@@ -48,6 +48,8 @@ var fabuList = (function($) {
 			});
 		}, false);
 
+
+
 		// 塑料助剂 地址选择
 		var cityPicker3 = new $.PopPicker({
 			layer: 2

@@ -81,9 +81,7 @@ var paths = {
 
 
 		// 自定义js库	
-		"src/js-dev/common/com.js", //公共模块
-
-		"src/js-dev/common/df.js", //默认模块
+		"src/js-dev/common/*.js", //公共模块
 
 		// js组件
 		"src/js-dev/component/*.js", //公共组件
