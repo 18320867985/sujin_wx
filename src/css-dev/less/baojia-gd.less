@@ -207,17 +207,13 @@
 }
 
 .baojia-gd-list {
-    
     padding-bottom: 15px;
-    
-    a{
-        color:@text-base;
-        &:active{
-            color:@text-777;
+    a {
+        color: @text-base;
+        &:active {
+            color: @text-777;
         }
-        
     }
-    
     ul {
         margin-bottom: 0;
         padding: 10px 5px !important;
@@ -251,3 +247,46 @@
         margin-bottom: 0;
     }
 }
+
+.baojia-gd-cont.baojia-gd-lrlink {
+    
+    // 左右滑动链接 mui-scroll-wrapper 
+    .mui-scroll-wrapper {
+        position: fixed;
+        top: 44px;
+    }
+    .baojia-gd-cont-box1 {
+        position: fixed;
+        top: 82px;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+    }
+    .baojia-gd-cont-box2 {
+        position: fixed;
+        top: 143px;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+    }
+    
+   // 表头
+  .table-ttl{
+      top:128px;
+        
+    }
+    
+   // index-bj-tb
+   .index-bj-tb{
+       margin-top: 42px;
+   }
+    
+    
+    .mui-scroll-wrapper .mui-control-item.mui-active{
+       
+       border-bottom: none; 
+    }
+    
+}
+
+

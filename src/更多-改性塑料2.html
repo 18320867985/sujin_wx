@@ -267,7 +267,7 @@
 									var self = this;
 									setTimeout(function() {
 										var ul = self.element.querySelector('.baojia-gd-list-cont');
-										this.contentdown = '正在加载...';
+									
 										//ajax数据 ......		
 										$.get("json/baojia-gd.json" + "?id=" + count, function(data2) {
 											var html = Mustache.to_html($("#must").html(), {
@@ -275,14 +275,12 @@
 											});
 
 											$(ul).append(html);
-											this.contentdown = '上拉显示更多';
+											
+											count++; //页码
+											self.endPullUpToRefresh((count >= maxpage));
 										});
 
-										//self.endPullup();
-										count++; //页码
-
-										self.endPullUpToRefresh((count >= maxpage));
-
+										
 									}, 1000);
 								},
 								contentinit: '上拉显示更多',

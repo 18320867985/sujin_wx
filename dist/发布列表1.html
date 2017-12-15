@@ -233,7 +233,7 @@
 				mui.ready(function() {
 
 					var count = 1; //页码
-					var maxpage = 1; //最大页码
+					var maxpage = 10; //最大页码
 					
 					// 没有更多数据
 					if(maxpage<=count){
@@ -262,11 +262,11 @@
 										var ul = self.element.querySelector('.shop-table-content');
 
 										//ajax数据 ......
-										$.get("json/fabulist.json" + "?id=" + count, function(data2) {
+										$.get("json/fabulist2.json" + "?id=" + count, function(data2) {
 											
-//												data2.forEach(function(item) {
-//													item.d=	new Date(Number(item.d)).format("yyyy-MM-dd");
-//												});
+												data2.forEach(function(item) {
+													item.d=	new Date(Number(item.d)).format("yyyy-MM-dd");
+												});
 
 											var html = Mustache.to_html($("#must").html(), {
 												must: data2
@@ -304,6 +304,8 @@
 				});
 
 			})(mui, window.Zepto);
+			
+			
 		</script>
 	</body>
 

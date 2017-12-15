@@ -10,6 +10,7 @@
 		<title>基本信息</title>
 		<link rel="stylesheet" type="text/css" href="Content/Home/cstfont/iconfont.css" />
 		<link rel="stylesheet" href="Content/Home/all.css" />
+		
 	</head>
 
 	<body>
@@ -26,10 +27,10 @@
 				<li class="head-img mui-table-view-cell   progress-box">
 					<a class="mui-navigate-right mui-clearfix " href="#sheet " id="openSheet ">
 						<span class="ttl mui-pull-left ">头像</span>
-						<img class="head-img mui-pull-right " src="images/Home/头像.png " alt="头像图 " />
-					</a>
-
-					<!--图片上传-->
+						<button class="mui-pull-right" type="button">
+							<img class=" mui-pull-right " src="images/Home/头像.png " alt="头像图 "  />
+						</button>
+						<!--图片上传-->
 					<div class=" mui-clearfix">
 						<input class="v-hide file-up-box " type="file" name="" id="fileUp1" value="" accept="image/*" />
 						<!--进度条-->
@@ -38,6 +39,9 @@
 							<div class="progress-num v-hide">0%</div>
 
 						</div>
+					</a>
+
+					
 
 				</li>
 				<li class="mui-table-view-cell ">
@@ -65,7 +69,7 @@
 					<a class="mui-navigate-right ">
 
 						<span class="mui-pull-left ">电子邮件</span>
-						<span class="mui-pull-right xx-item" data-filed="email">665123123@qq.com</span>
+						<span class="mui-pull-right xx-item" data-filed="email"></span>
 					</a>
 				</li>
 
@@ -140,8 +144,8 @@
 				}
 
 				//文件上传
-				$(".head-img ").on("click", function() {
-					$(this).parents(".progress-box").find(".file-up-box").click();
+				$(".head-img  button").on("tap", function() {
+					$(this).parents(".progress-box").find(".file-up-box").trigger("click");
 				});
 
 				$(".file-up-box").change(function() {

@@ -38,8 +38,33 @@
 		</nav>
 
 		<!--主体内容-->
-		<section class="baojia-gd-cont mui-content">
-
+		<section class="baojia-gd-cont mui-content baojia-gd-lrlink">
+			
+			<!--左右滑动链接-->
+				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				    <div class="mui-scroll">
+				        <a class="mui-control-item mui-active"  href="javascript:;">
+				            推荐
+				        </a>
+				        <a class="mui-control-item"  href="javascript:;">
+				          热点
+				        </a>
+				        <a class="mui-control-item"  href="javascript:;">
+				           北京
+				        </a>
+				        <a class="mui-control-item"  href="javascript:;">
+				           社会
+				        </a>
+				        <a class="mui-control-item"  href="javascript:;">
+				           娱乐
+				        </a>
+				        <a class="mui-control-item"  href="javascript:;">
+				           科技
+				        </a>
+				    </div>
+				</div>
+		
+			
 			<div class="baojia-gd-cont-box1">
 				<ul class="mui-row baojia-gd-cont-ttl ">
 					<li class="mui-col-xs-3 active">
@@ -368,7 +393,9 @@
 		<script>
 			// 页面初始化
 			baojia_gd.init();
-
+			$(".mui-scroll-wrapper .mui-control-item").on("click",function(){
+			 	window.location.assign($(this).attr("href"));
+			});
 			// 分页
 			(function(mui, $) {
 				mui.init();
@@ -395,25 +422,27 @@
 						mui(pullRefreshEl).pullToRefresh({
 
 							up: {
+									
 								callback: function() {
 									var self = this;
+								
 									setTimeout(function() {
 										var ul = self.element.querySelector('.table-content');
-										this.contentdown= '正在加载...';
+									
 										//ajax数据 ......		
 										$.get("json/baojia-gd.json" + "?id=" + count, function(data2) {
+												
 											var html = Mustache.to_html($("#must").html(), {
 												must: data2
 											});
-
 											$(ul).append(html);
-											this.contentdown= '上拉显示更多';
+											
+											count++; //页码
+											self.endPullUpToRefresh((count >= maxpage));
 										});
 
-										//self.endPullup();
-										count++; //页码
-
-										self.endPullUpToRefresh((count >= maxpage));
+										
+									
 
 									}, 1000);
 								},
@@ -421,6 +450,7 @@
 								contentdown: '上拉显示更多',
 								contentrefresh: '正在加载...',
 								contentnomore: '没有更多数据了',
+								
 							}
 
 						});

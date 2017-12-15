@@ -301,11 +301,12 @@
 
 											$(ul).append(html);
 											
+											count++; //页码
+											self.endPullUpToRefresh((count >= maxpage));
 											
 										});
 
-										count++; //页码
-										self.endPullUpToRefresh((count >= maxpage));
+										
 
 									}, 1000);
 								},
