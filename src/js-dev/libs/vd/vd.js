@@ -33,11 +33,11 @@ var vd = (function($) {
 
 			this.compareEmit = function(pName, compareName, value) {
 				var el = $("" + pName + " [name=" + compareName + "]");
-				if(el.val().trim() === "") {
+				if($.trim(el.val()) === "") {
 					return;
 				}
 				for(var i = 0; i < this.arrs.length; i++) {
-					if(this.arrs[i].elName.trim() === compareName.trim()) {
+					if($.trim(this.arrs[i].elName) ===$.trim( compareName)) {
 						$(el).trigger("keyup");
 						break;
 					}
@@ -114,18 +114,18 @@ var vd = (function($) {
 				for(var i = 0; i < this.arrs.length; i++) {
 					var _obj = this.arrs[i];
 					var el = _obj.el; // document.forms[_obj.pName][_obj.elName];
-
+					var $this=this;
 					$(el).on("keyup", _obj, function(event) {
-						this.checkElement(event.data, event.target, true, true);
-						this.addVdBtnStyle(el);
-					}.bind(this));
+						$this.checkElement(event.data, event.target, true, true);
+						$this.addVdBtnStyle(el);
+					});
 
 					var remote = el.getAttribute("vd-remote");
 					if(remote === null) {
 						$(el).on("change", _obj, function(event) {
-							this.checkElement(event.data, event.target, true, true);
-							this.addVdBtnStyle(el);
-						}.bind(this));
+							$this.checkElement(event.data, event.target, true, true);
+							$this.addVdBtnStyle(el);
+						});
 					}
 
 				}
@@ -164,7 +164,7 @@ var vd = (function($) {
 				var _rd_msg = el.getAttribute("vd-rd-msg");
 
 				// 当前的值
-				var v = el.value.trim();
+				var v = $.trim(el.value);
 
 				
 
@@ -183,16 +183,13 @@ var vd = (function($) {
 
 						// 遍历选择项 设为false
 						for(var i = 0; i < this.arrs.length; i++) {
-							if(this.arrs[i].elName.trim() === _obj2.elName) {
+							if($.trim(this.arrs[i].elName) ===$.trim( _obj2.elName)) {
 								this.arrs[i].rd_req = false; // radio组是否为空  false为空
 								_obj2.bl = false;
 								_obj2.val = v;
 								_obj2.errorMsg = _rd_msg;
 							}
 						}
-						
-						$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
-						$(p).find(".vd-req").addClass("vd-error").text(_obj2.errorMsg);
 						//  流程终止
 						return;
 					} else {
@@ -202,8 +199,6 @@ var vd = (function($) {
 						$(p).removeClass("vd-error vd-rd ");
 						$(el).removeClass("vd-error");
 						$(p).addClass("vd-ok");
-						
-					$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
 
 						// 选择了 流程以下走
 					}
@@ -213,7 +208,7 @@ var vd = (function($) {
 
 						// 遍历选择项 设为false
 						for(var i = 0; i < this.arrs.length; i++) {
-							if(this.arrs[i].elName.trim() === _obj2.elName) {
+							if($.trim(this.arrs[i].elName) ===$.trim( _obj2.elName)) {
 								this.arrs[i].bl = false;
 								this.arrs[i].rd_req = true; // radio组是否为空 true不为空
 							}
@@ -386,7 +381,13 @@ var vd = (function($) {
 							type: "get",
 							timeout: 10000,
 							success: function(data) {
-
+								data=data||false;
+								
+								if(typeof data!=="number"){
+									var _num=Number(data);
+									data=isNaN(_num)?false:_num;
+								}
+								
 								if(!data) {
 
 									$remote.remoteFunError(_obj2, el, _remote_msg);
@@ -432,9 +433,6 @@ var vd = (function($) {
 						$(el).removeClass("vd-error");
 						$(p).addClass("vd-ok");
 						$(".vd-dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
-						
-						$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
-												
 					
 
 					} else {
@@ -446,9 +444,7 @@ var vd = (function($) {
 						$(p).removeClass("vd-ok");
 						$(el).addClass("vd-error");
 						$(".vd-dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
-						
-						$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
-						$(p).find(".vd-req").addClass("vd-error").text(_ck_msg);
+							
 
 						return;
 
@@ -519,7 +515,7 @@ var vd = (function($) {
 				var obj = {}
 				for(var i = 0; i < this.arrs.length; i++) {
 
-					if(name.trim() === this.arrs[i].elName.trim()) {
+					if($.trim(name) === $.trim(this.arrs[i].elName)) {
 
 						obj = this.arrs[i];
 						break;
@@ -549,7 +545,7 @@ var vd = (function($) {
 
 				var p = $(el).parents(".vd-box");
 				$(p).removeClass("vd-error ");
-				$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
+				
 				$(p).find(".vd-remote").removeClass("vd-error").text("");
 				$(el).removeClass("vd-error");
 				$(p).addClass("vd-ok");

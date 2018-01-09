@@ -42,6 +42,57 @@
     }
 }
 
+// nav btns 
+.index-nav-btns{
+    ul{
+        margin: 10px 0 0 0;
+        padding: 15px 0 10px 0;
+        background: @text-white;
+        
+        li{
+            padding:0 3px;
+            text-align: center;
+            
+            a{
+                display: inline-block;
+                padding: 10px 10px;
+                background: @text-primary;
+                color:@text-white;
+                border-radius: 6px;
+                
+            }
+            
+            &+li{
+                margin-top: 15px;
+            }
+            
+          @media only screen and (min-width:320px ) {
+             
+            a{
+                padding: 10px 3px !important;
+                width: 75px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }     
+          }
+          
+           @media only screen and (min-width:360px ) {
+             
+            a{padding: 10px 5px !important;
+               width: 85px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+               }     
+          }
+          
+         
+        }
+    }
+}
+
+
 //市场报价
 @index-bj-color: #3399cc; //标题字体颜色
 .index-bj {

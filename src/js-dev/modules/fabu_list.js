@@ -6,6 +6,7 @@ var fabuList = (function($) {
 
 
 		$.init();
+		
 		// 时间
 		var btns = mui('#select-date2');
 		btns.each(function(i, btn) {
