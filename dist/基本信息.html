@@ -30,9 +30,9 @@
 						<button class="mui-pull-right" type="button">
 							<img class=" mui-pull-right " src="images/Home/头像.png " alt="头像图 "  />
 						</button>
-						<!--图片上传-->
+					<!--图片上传-->
 					<div class=" mui-clearfix">
-						<input class="v-hide file-up-box " type="file" name="" id="fileUp1" value="" accept="image/*" />
+						<input class="v-hide file-up-box " type="file" name="" id="fileUp1" value=""  />
 						<!--进度条-->
 						<div class="progress-all v-hide ">
 							<div class="progress-now"></div>
@@ -102,12 +102,13 @@
 		<script src="js/Home/all.js " type="text/javascript " charset="utf-8 "></script>
 
 		<script>
+			
 			mui.init();
 
-			// 文件上传
+		
 			$(function() {
 	
-				// 改性塑料 图片上传
+				//  图片上传
 				var fileupff = function(obj, fileId) {
 
 					var img = $(obj).parents(".progress-box").find(".progress-all");
@@ -119,9 +120,9 @@
 						url: "", //上传网址
 						outTime: 30000,
 						el: $(obj), //当前element
-						size: 300000000, //1m=1000000
+						size: 300000000, //1m=1000000 300000000
 						seccess: function(data) {
-							img.hide();
+						//	img.hide();
 							// 成功回调
 							// 成功设置img的src
 							var url = "images/Home/客服.png";
@@ -130,7 +131,7 @@
 
 						},
 						error: function(data) {
-							img.hide();
+							//img.hide();
 
 							// 错误回调
 							// 发布删除下面代码... 
@@ -152,10 +153,7 @@
 					fileupff(this, this.id);
 				});
 
-			});
-			
-			//修改信息
-			$(function() {
+				
 				
 				// 修改信息api
 				baseInfo.editor(function(){
@@ -181,7 +179,10 @@
 					
 				});
 		
-			})
+		
+			});
+			
+			
 		
 		</script>
 

@@ -273,12 +273,13 @@
 											});
 
 											$(ul).append(html);
-
-										});
-										//self.endPullup();
+											//self.endPullup();
 										count++; //页码
 
 										self.endPullUpToRefresh((count >= maxpage));
+
+										});
+										
 
 									}, 1000);
 								},
@@ -303,7 +304,7 @@
 					}
 				});
 
-			})(mui, window.Zepto);
+			})(mui,window.jQuery || window.Zepto);
 			
 			
 		</script>

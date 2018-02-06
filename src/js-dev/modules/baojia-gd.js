@@ -33,4 +33,4 @@ var baojia_gd=(function($){
 	}
 	
 	
-})(window.Zepto);
+})(window.jQuery || window.Zepto);

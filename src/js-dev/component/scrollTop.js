@@ -15,7 +15,7 @@
 		mui.scrollTo(0,300);
 	});
 	
-})(window.Zepto,mui);
+})(window.jQuery || window.Zepto,mui);
 	
 	
 	

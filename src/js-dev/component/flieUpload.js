@@ -105,4 +105,4 @@
 		
 	};
 	
-	})(window.Zepto,window.mui);
+	})(window.Zepto||window.jQuery,window.mui);

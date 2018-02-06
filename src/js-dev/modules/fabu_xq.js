@@ -57,4 +57,4 @@ var fabu_xq = (function($, doc, zepto) {
 	return {
 		init: _init
 	}
-})(window.mui, window.document, window.Zepto);
+})(window.mui, window.document, window.jQuery || window.Zepto);

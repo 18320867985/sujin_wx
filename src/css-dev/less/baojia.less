@@ -1,36 +1,76 @@
-
 /*报价列表*/
-.baojia{
+
+.baojia {
+    //导航条
+    .shop-nav a.mui-control-item {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+    }
+}
+
+// baojia-head
+.baojia-head2.bg-white.mui-bar.mui-bar-nav {
+    border-bottom: 1px solid #ddd;
+    box-shadow: none;
+}
+
+//baojia-nav
+.baojia-nav2 {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
     
-   
-   //导航条
-   .shop-nav a.mui-control-item{
-     
-       font-size: 14px !important;
-       font-weight: 500 !important;
+    .all-select{
+        &.active{
+             color:@text-danger;
+        }
+    }
+}
+
+.baojia  input[type='checkbox']:checked:before {
+       
+         color:@text-danger;
    }
+
+// baojia-select
+.baojia-select {
+    width: 100%;
+    padding: 8px 10px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    a {
+        padding: 4px 10px;
+        color: @text-base;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+// body padding-top
+.baojia-head2~.mui-content {
+    padding-top: 130px;
 }
 
 //head背景
 .bg-white.mui-bar.mui-bar-nav {
     background: #fff !important;
     box-shadow: 0 1px 1px #ddd;
-    
     h1.mui-title,
-    .mui-action-back{
-        color:@text-base;
+    .mui-action-back {
+        color: @text-base;
     }
-    
 }
 
-
-.baojia-cont{
-  margin-top: 10px;
+.baojia-cont {
+    margin-top: 10px;
     padding: 10px;
     background: #fff;
-    
     //标题
-    h4{
+    h4 {
         margin-top: 10px;
         padding-bottom: 10px;
         text-align: center;
@@ -39,54 +79,54 @@
         font-size: 16px;
         border-bottom: 1px solid @text-ash-3;
     }
-    
     //列表
-    ul{
+    ul {
         padding: 0;
-     
-        padding-left: 10px;
-        
-        li+li{
+        padding-left: 15px;
+        // check-box
+        li {
+            position: relative;
+        }
+        .check-box {
+            position: absolute;
+            top: 0px;
+            left: -23px;
+        }
+        li+li {
             margin-top: 10px;
-         }
-        
+        }
         //op
-        .op{
-            span{
-                margin:  0 3px;
+        .op {
+            span {
+                margin: 0 3px;
                 font-weight: 200;
-                color:@text-ash-2;
+                color: @text-ash-2;
             }
         }
-        
         //相连的每一项
-        &+ul{
+        &+ul {
             padding-top: 10px;
             border-top: 1px solid @text-ash-3;
-        
         }
-        
         //按钮
         .btns {
-            .btn{
-                .create-btn(@text-warning,22px,60px);
+            .btn {
+                .create-btn(@text-warning, 22px, 60px);
                 font-size: 12px;
                 border-radius: 0;
             }
-            label{
+            label {
                 vertical-align: top;
                 margin-left: 5px;
             }
-            
-            select{
+            select {
                 display: inline-block !important;
                 width: 60px;
                 height: 22px;
                 padding: 0 5px;
                 text-indent: 5px;
-              
                 border-radius: 0;
-                border:1px solid  @text-ash !important;
+                border: 1px solid @text-ash !important;
                 vertical-align: top;
             }
         }

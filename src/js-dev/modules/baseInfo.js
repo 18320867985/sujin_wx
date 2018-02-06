@@ -34,5 +34,5 @@ var baseInfo = (function($) {
 	return {
 		editor: obj.editor
 	}
-})(window.Zepto);
+})(window.jQuery || window.Zepto);
 

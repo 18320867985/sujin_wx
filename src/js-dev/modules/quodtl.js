@@ -27,4 +27,4 @@
 	}
 
 	quodtl.init();
-})(window.Zepto)
+})(window.jQuery || window.Zepto)

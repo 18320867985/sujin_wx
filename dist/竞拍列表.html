@@ -457,12 +457,13 @@
 
 											$(ul).append(html);
 											this.contentdown = '上拉显示更多';
-										});
-
-										//self.endPullup();
+											//self.endPullup();
 										count++; //页码
 
 										self.endPullUpToRefresh((count >= maxpage));
+										});
+
+										
 
 									}, 1000);
 								},
